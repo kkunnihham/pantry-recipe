@@ -256,7 +256,7 @@ BATCH2_B = [
     ),
     R(
         title='치킨 스테이크', tier='discovery', kind='grill', cuisine='western', meal=['main'], method='grill',
-        minutes=20, difficulty='easy', aliases=['닭다리살 스테이크'],
+        minutes=25, difficulty='easy', aliases=['닭다리살 스테이크'],
         summary='닭다리살을 껍질 쪽부터 눌러 구워 바삭하게 만들고 버터와 마늘로 마무리해요. 소스 없이도 맛있어요.',
         groups=[
             G('닭다리살', 'core', ['닭다리살 250g'], subs={'닭다리살': [('닭가슴살', 0.8, '두께를 펴고 굽는 시간을 줄여요')]}),

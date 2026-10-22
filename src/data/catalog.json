@@ -1,6 +1,6 @@
 {
   "version": "batch2-80",
-  "generatedAt": "2026-10-22T17:50:15+00:00",
+  "generatedAt": "2026-10-22T17:52:26+00:00",
   "ingredients": [
     {
       "id": "I001",
@@ -1577,7 +1577,7 @@
         "main"
       ],
       "method": "grill",
-      "minutes": 20,
+      "minutes": 25,
       "difficulty": "very_easy",
       "baseServings": 1,
       "tools": [],
@@ -2091,7 +2091,7 @@
         "soup"
       ],
       "method": "no_cook",
-      "minutes": 15,
+      "minutes": 20,
       "difficulty": "very_easy",
       "baseServings": 1,
       "tools": [],
@@ -12445,7 +12445,7 @@
         "soup"
       ],
       "method": "boil",
-      "minutes": 20,
+      "minutes": 25,
       "difficulty": "easy",
       "baseServings": 1,
       "tools": [],
@@ -13867,7 +13867,7 @@
           "timerSeconds": 30
         },
         {
-          "text": "애호박을 넣고 새우젓이나 소금을 넣어 3분 볶아요. 호박이 투명해지고 가장자리가 살짝 노릇해지면 됐어요. 너무 오래 볶으면 물러져요.",
+          "text": "애호박을 넣고 새우젓이나 소금, 국간장 중 하나로 간을 해 3분 볶아요. 호박이 투명해지고 가장자리가 살짝 노릇해지면 됐어요. 너무 오래 볶으면 물러져요.",
           "timerSeconds": 180
         },
         {
@@ -16659,7 +16659,7 @@
         "main"
       ],
       "method": "grill",
-      "minutes": 20,
+      "minutes": 25,
       "difficulty": "easy",
       "baseServings": 1,
       "tools": [],

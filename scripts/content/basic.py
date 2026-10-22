@@ -33,7 +33,7 @@ BASIC = [
     ),
     R(
         title='삼겹살구이', tier='basic', kind='grill', cuisine='korean', meal=['main'], method='grill',
-        minutes=20, difficulty='very_easy', source='GRC-301',
+        minutes=25, difficulty='very_easy', source='GRC-301',
         summary='기름 없이 달군 팬에 삼겹살을 올려 양면을 노릇하게 구워요. 김치와 마늘을 같이 구우면 더 좋아요.',
         groups=[
             G('삼겹살', 'core', ['삼겹살 200g']),
@@ -96,7 +96,7 @@ BASIC = [
     ),
     R(
         title='오이냉국', tier='basic', kind='soup', cuisine='korean', meal=['side', 'soup'], method='no_cook',
-        minutes=15, difficulty='very_easy', source='GRC-263',
+        minutes=20, difficulty='very_easy', source='GRC-263',
         summary='얇게 썬 오이를 새콤달콤한 냉국물에 넣어 차갑게 먹어요. 불 쓸 일이 없어요.',
         groups=[
             G('오이', 'core', ['오이 1개']),
