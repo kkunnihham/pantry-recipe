@@ -1,0 +1,21 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-20T09:30:00Z"},
+  "title": "냉장고 레시피 앱 색 방향 시안",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 390, "h": 844, "title": "A 세이지 그린 · 다크", "radius": 36},
+    "B-teal.dc.html": {"x": 470, "y": 0, "w": 390, "h": 844, "title": "B 민트 틸 · 다크", "radius": 36},
+    "C-terracotta.dc.html": {"x": 940, "y": 0, "w": 390, "h": 844, "title": "C 테라코타 · 다크", "radius": 36},
+    "A-light.dc.html": {"x": 0, "y": 1200, "w": 390, "h": 844, "title": "A 세이지 그린 · 라이트", "radius": 36},
+    "B-light.dc.html": {"x": 470, "y": 1200, "w": 390, "h": 844, "title": "B 민트 틸 · 라이트", "radius": 36},
+    "C-light.dc.html": {"x": 940, "y": 1200, "w": 390, "h": 844, "title": "C 테라코타 · 라이트", "radius": 36}
+  },
+  "order": ["Main.dc.html", "B-teal.dc.html", "C-terracotta.dc.html", "A-light.dc.html", "B-light.dc.html", "C-light.dc.html"],
+  "notes": {
+    "dark-title": {"x": 0, "y": -260, "text": "다크 모드 (기본)", "kind": "title1", "maxW": 1330},
+    "light-title": {"x": 0, "y": 940, "text": "라이트 모드 (전환 시)", "kind": "title1", "maxW": 1330}
+  },
+  "designSystems": []
+}
