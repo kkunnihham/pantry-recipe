@@ -3,7 +3,7 @@ import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import Icon from '../components/Icon'
 import { ingredientById, recipeById } from '../data/catalog'
 import type { Rating, StockState } from '../lib/db'
-import { formatTimer } from '../lib/format'
+import { formatNumber, formatTimer, scaleAmount } from '../lib/format'
 import { logCook, rateRecipe, setStocks, useAppState } from '../state/store'
 
 /** 화면 꺼짐 방지. 지원 안 하면 조용히 무시. */
@@ -136,6 +136,7 @@ export default function Cook() {
   const [rating, setRating] = useState<Rating | null>(null)
   const [photo, setPhoto] = useState<File | null>(null)
   const [saving, setSaving] = useState(false)
+  const [showIngredients, setShowIngredients] = useState(false)
   useWakeLock(!!recipe && !finishing)
 
   if (!recipe) {
@@ -262,6 +263,32 @@ export default function Cook() {
         {recipe.steps.map((_, i) => (
           <span key={i} className={i <= step ? 'is-done' : undefined} />
         ))}
+      </div>
+
+      <div className="cook-ingredients">
+        <button type="button" className="cook-ingredients-toggle" aria-expanded={showIngredients} onClick={() => setShowIngredients((v) => !v)}>
+          <span>재료 {servings}인분 기준</span>
+          <Icon name="chevron" size={16} style={{ transform: showIngredients ? 'rotate(90deg)' : 'none', transition: 'transform 0.15s' }} />
+        </button>
+        {showIngredients && (
+          <ul className="cook-ingredient-list">
+            {recipe.groups.flatMap((g) =>
+              g.items.map((it) => (
+                <li key={`${g.id}-${it.ingredientId}`}>
+                  <span>{ingredientById.get(it.ingredientId)?.name ?? it.ingredientId}</span>
+                  <span className="meta">{scaleAmount(it.amount, it.unit, servings)}</span>
+                </li>
+              )),
+            )}
+            {recipe.water?.map((w) => (
+              <li key={w.name}>
+                <span>{w.name}</span>
+                <span className="meta">{formatNumber(w.amountMl * servings)}ml</span>
+              </li>
+            ))}
+          </ul>
+        )}
+        {servings > 1 && <p className="meta">단계 문장의 숫자는 1인분 기준이에요. 위 목록대로 늘려요.</p>}
       </div>
 
       <div className="cook-step" key={step}>

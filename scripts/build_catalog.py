@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / 'content'
 OUT = ROOT.parent / 'src' / 'data' / 'catalog.json'
-VERSION = 'pilot-30'
+VERSION = 'batch1-55'
 
 
 def load(name: str):
@@ -30,6 +30,8 @@ def main() -> int:
     ingredients = load('ingredients').INGREDIENTS
     basic = load('basic').BASIC
     discovery = load('discovery').DISCOVERY
+    batch1_a = load('batch1_a').BATCH1_A
+    batch1_b = load('batch1_b').BATCH1_B
 
     # 식재료: 작성 순서대로 ID 부여 (범주별로 묶여 있어 냉장고 화면 순서로도 쓴다)
     name_to_id: dict[str, str] = {}
@@ -57,7 +59,7 @@ def main() -> int:
 
     recipes_out = []
     errors = 0
-    for idx, r in enumerate(basic + discovery, start=1):
+    for idx, r in enumerate(basic + discovery + batch1_a + batch1_b, start=1):
         rid = f'R{idx:03d}'
         try:
             for g in r['groups']:
