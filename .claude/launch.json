@@ -10,7 +10,7 @@
     {
       "name": "preview-pages",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "preview", "--", "--port", "4173", "--strictPort"],
+      "runtimeArgs": ["run", "preview", "--", "--port", "4173", "--strictPort", "--base", "/pantry-recipe/"],
       "port": 4173
     }
   ]
