@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / 'content'
 OUT = ROOT.parent / 'src' / 'data' / 'catalog.json'
-VERSION = 'batch1-55'
+VERSION = 'batch2-80'
 
 
 def load(name: str):
@@ -32,6 +32,8 @@ def main() -> int:
     discovery = load('discovery').DISCOVERY
     batch1_a = load('batch1_a').BATCH1_A
     batch1_b = load('batch1_b').BATCH1_B
+    batch2_a = load('batch2_a').BATCH2_A
+    batch2_b = load('batch2_b').BATCH2_B
 
     # 식재료: 작성 순서대로 ID 부여 (범주별로 묶여 있어 냉장고 화면 순서로도 쓴다)
     name_to_id: dict[str, str] = {}
@@ -59,7 +61,7 @@ def main() -> int:
 
     recipes_out = []
     errors = 0
-    for idx, r in enumerate(basic + discovery + batch1_a + batch1_b, start=1):
+    for idx, r in enumerate(basic + discovery + batch1_a + batch1_b + batch2_a + batch2_b, start=1):
         rid = f'R{idx:03d}'
         try:
             for g in r['groups']:
@@ -77,6 +79,24 @@ def main() -> int:
 
     if errors:
         return 1
+
+    # ID 안정성: 이미 배포된 catalog.json의 식재료 ID→이름, 레시피 ID→제목이 바뀌면 사용자 데이터가 깨진다.
+    if OUT.exists():
+        prev = json.loads(OUT.read_text(encoding='utf-8'))
+        prev_ing = {i['id']: i['name'] for i in prev.get('ingredients', [])}
+        for e in ing_out:
+            old = prev_ing.get(e['id'])
+            if old is not None and old != e['name']:
+                print(f"ERROR 식재료 ID {e['id']} 가 '{old}' 에서 '{e['name']}' 으로 바뀜. 새 재료는 목록 맨 끝에 추가해야 한다.")
+                errors += 1
+        prev_rec = {r['id']: r['title'] for r in prev.get('recipes', [])}
+        for r in recipes_out:
+            old = prev_rec.get(r['id'])
+            if old is not None and old != r['title']:
+                print(f"ERROR 레시피 ID {r['id']} 가 '{old}' 에서 '{r['title']}' 으로 바뀜. 새 레시피는 목록 맨 끝에 추가해야 한다.")
+                errors += 1
+        if errors:
+            return 1
     out = {
         'version': VERSION,
         'generatedAt': datetime.now(timezone.utc).isoformat(timespec='seconds'),

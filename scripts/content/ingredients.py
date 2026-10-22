@@ -180,4 +180,7 @@ INGREDIENTS = [
     ('아몬드', 'fruit_etc', [], False),
     ('건포도', 'fruit_etc', [], False),
     ('두유', 'fruit_etc', [], False),
+    # --- 추가분은 반드시 맨 끝에. ID는 순서로 매겨져 기존 재고 데이터와 묶여 있다. ---
+    ('베이킹파우더', 'seasoning', ['베이킹 파우더'], False),
+    ('가쓰오부시', 'seafood', ['가츠오부시', '훈제 가다랑어포'], False),
 ]
