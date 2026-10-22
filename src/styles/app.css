@@ -698,3 +698,79 @@
   object-fit: cover;
   border-radius: var(--radius);
 }
+
+/* 장보기 */
+.shopping-header {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.shopping-row .card-body {
+  overflow-wrap: anywhere;
+}
+
+.shopping-name {
+  font-size: 16px;
+}
+
+.shopping-actions {
+  display: flex;
+  flex: none;
+  gap: 4px;
+}
+
+.shopping-actions .icon-btn {
+  flex: none;
+}
+
+.shopping-check {
+  color: var(--primary);
+}
+
+/* 레시피 검색·필터 */
+.recipe-search input {
+  min-width: 0;
+}
+
+.recipe-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filter-row::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-row > * {
+  flex: none;
+  white-space: nowrap;
+}
+
+.recipe-row .card-body {
+  gap: 2px;
+  overflow-wrap: anywhere;
+}
+
+.recipe-row .card-title {
+  font-size: 16px;
+}
+
+.recipe-status {
+  flex: none;
+  white-space: nowrap;
+}
+
+.recipe-chevron {
+  flex: none;
+  color: var(--text-muted);
+}
