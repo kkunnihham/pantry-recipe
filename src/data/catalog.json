@@ -1,6 +1,6 @@
 {
-  "version": "batch2-80",
-  "generatedAt": "2026-10-22T17:52:26+00:00",
+  "version": "batch3-105",
+  "generatedAt": "2026-10-22T17:57:46+00:00",
   "ingredients": [
     {
       "id": "I001",
@@ -16853,6 +16853,5273 @@
         }
       ],
       "contentStatus": "reviewed"
+    },
+    {
+      "id": "R081",
+      "title": "시금치된장국",
+      "aliases": [],
+      "summary": "멸치 육수에 된장을 풀고 시금치를 넣어 짧게 끓여요. 시금치는 마지막에 넣어야 색이 살아요.",
+      "tier": "basic",
+      "kind": "soup",
+      "cuisine": "korean",
+      "meal": [
+        "soup",
+        "breakfast"
+      ],
+      "method": "boil",
+      "minutes": 15,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "시금치",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 150,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.85,
+                  "note": "알배추를 썰어 5분 더 끓여요",
+                  "ingredientIds": [
+                    "I031"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I014"
+                  ]
+                }
+              ],
+              "ingredientId": "I013"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "된장",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I117"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "육수",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I141"
+            },
+            {
+              "amount": 6,
+              "unit": "마리",
+              "substitutions": [],
+              "ingredientId": "I057"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "마늘",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "대파",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 10,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I005"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 50,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I078"
+            },
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I120"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I018"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "물",
+          "amountMl": 450
+        }
+      ],
+      "steps": [
+        {
+          "text": "시금치는 뿌리를 자르고 흐르는 물에 여러 번 씻어요. 길면 반으로 잘라요. 대파는 송송 썰어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "냄비에 물 450ml와 육수 재료를 넣고 끓여요. 멸치는 5분 뒤 건져요. 된장을 체에 걸러 풀고 마늘을 넣어요.",
+          "timerSeconds": 300
+        },
+        {
+          "text": "두부를 넣는다면 깍둑썰어 넣고 2분 끓여요. 시금치를 넣고 1분만 끓여요. 오래 끓이면 색이 죽어요.",
+          "timerSeconds": 180
+        },
+        {
+          "text": "대파와 고춧가루를 넣고 불을 꺼요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R082",
+      "title": "어묵탕",
+      "aliases": [
+        "오뎅탕",
+        "어묵국"
+      ],
+      "summary": "무와 멸치로 국물을 내고 어묵을 넣어 끓여요. 포장마차 국물 그대로예요.",
+      "tier": "basic",
+      "kind": "soup",
+      "cuisine": "korean",
+      "meal": [
+        "soup",
+        "snack"
+      ],
+      "method": "boil",
+      "minutes": 20,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "어묵",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 150,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I089"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "육수",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 8,
+              "unit": "마리",
+              "substitutions": [],
+              "ingredientId": "I057"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I141"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "무",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 100,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I030"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "국간장",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [
+                {
+                  "fit": 0.9,
+                  "ingredientIds": [
+                    "I113"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "note": "색이 진해져요",
+                  "ingredientIds": [
+                    "I115"
+                  ]
+                }
+              ],
+              "ingredientId": "I116"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "대파",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 20,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I005"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "마늘",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I056"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I018"
+            },
+            {
+              "amount": 50,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I092"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            },
+            {
+              "amount": 30,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "물",
+          "amountMl": 600
+        }
+      ],
+      "steps": [
+        {
+          "text": "무는 5mm 두께로 나박썰기해요. 어묵은 한입 크기로 썰거나 꼬치에 꿰어요. 대파는 어슷하게 썰어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "냄비에 물 600ml, 멸치, 다시마, 무를 넣고 끓여요. 끓어오르면 중불에서 8분 끓이고 멸치와 다시마를 건져요. 코인육수면 물에 풀고 무만 8분 끓여요.",
+          "timerSeconds": 480
+        },
+        {
+          "text": "어묵을 넣고 국간장과 마늘로 간해 5분 끓여요. 어묵에서 기름이 뜨면 숟가락으로 걷어요.",
+          "timerSeconds": 300
+        },
+        {
+          "text": "대파와 청양고추, 후추를 넣고 1분 더 끓여요. 간장에 고추냉이를 섞어 어묵을 찍어 먹어요.",
+          "timerSeconds": 60
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R083",
+      "title": "두부김치",
+      "aliases": [],
+      "summary": "김치와 돼지고기를 볶고 데친 두부를 곁들여요. 술안주로도 밥반찬으로도 좋아요.",
+      "tier": "basic",
+      "kind": "side",
+      "cuisine": "korean",
+      "meal": [
+        "side",
+        "snack"
+      ],
+      "method": "stirfry",
+      "minutes": 20,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "두부",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "모",
+              "substitutions": [],
+              "ingredientId": "I078"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "김치",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 200,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I075"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "돼지고기",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 100,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.95,
+                  "ingredientIds": [
+                    "I040"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I080"
+                  ]
+                }
+              ],
+              "ingredientId": "I039"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "식용유",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I122"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "설탕",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "양념",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I120"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I115"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "마무리",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I124"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I143"
+            },
+            {
+              "amount": 15,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I005"
+            },
+            {
+              "amount": 30,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "두부 데칠 물",
+          "amountMl": 600
+        }
+      ],
+      "steps": [
+        {
+          "text": "두부는 1.5cm 두께로 썰어요. 김치는 2cm 폭으로, 돼지고기는 얇게 썰어요. 양파와 대파도 썰어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "냄비에 물 600ml와 소금 한 꼬집을 넣고 끓여 두부를 2분 데쳐요. 건져서 접시에 둘러 담아요.",
+          "timerSeconds": 120
+        },
+        {
+          "text": "팬을 중강불로 달구고 식용유를 둘러 돼지고기를 3분 볶아요. 김치와 양파, 설탕, 고춧가루, 마늘을 넣고 5분 더 볶아요. 김치가 부드럽고 윤기가 나면 됐어요.",
+          "timerSeconds": 480
+        },
+        {
+          "text": "간장으로 간을 맞추고 대파를 넣어 30초 볶아요. 불을 끄고 참기름과 깨를 뿌려 두부 가운데에 담아요.",
+          "timerSeconds": 30
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R084",
+      "title": "잡채",
+      "aliases": [],
+      "summary": "당면을 삶아 간장 양념에 버무리고 따로 볶은 채소, 고기와 섞어요. 채소를 따로 볶는 게 귀찮지만 그래서 맛있어요.",
+      "tier": "basic",
+      "kind": "side",
+      "cuisine": "korean",
+      "meal": [
+        "side",
+        "main"
+      ],
+      "method": "stirfry",
+      "minutes": 50,
+      "difficulty": "normal",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "당면",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 100,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I109"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "양념",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "all_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 2.5,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I115"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I124"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "채소",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "at_least",
+          "weight": 6,
+          "items": [
+            {
+              "amount": 50,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            },
+            {
+              "amount": 30,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I003"
+            },
+            {
+              "amount": 50,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I013"
+            },
+            {
+              "amount": 40,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I025"
+            },
+            {
+              "amount": 40,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I021"
+            },
+            {
+              "amount": 30,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I032"
+            }
+          ],
+          "minCount": 2
+        },
+        {
+          "id": "g4",
+          "name": "고기",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 80,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I044"
+            },
+            {
+              "amount": 80,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I039"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "식용유",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I122"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "마늘",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "소금",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I113"
+            }
+          ]
+        },
+        {
+          "id": "g8",
+          "name": "깨",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I143"
+            }
+          ]
+        },
+        {
+          "id": "g9",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I131"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "당면은 미지근한 물에 30분 불려요. 양파, 당근, 파프리카는 채 썰고 버섯은 얇게 썰어요. 시금치는 데쳐 물기를 짜요. 고기는 가늘게 썰어 간장 1작은술과 마늘 조금에 재워요.",
+          "timerSeconds": 1800
+        },
+        {
+          "text": "팬을 중불에 올리고 식용유를 조금씩 두르며 채소를 종류별로 따로 1분씩 소금 한 꼬집에 볶아 큰 볼에 모아요. 고기는 2분 볶아요. 달걀을 넣는다면 지단을 부쳐 채 썰어요.",
+          "timerSeconds": 480
+        },
+        {
+          "text": "끓는 물에 불린 당면을 5분 삶아 찬물에 헹구고 물기를 빼요. 가위로 두세 번 잘라요.",
+          "timerSeconds": 300
+        },
+        {
+          "text": "팬에 당면과 간장, 설탕, 마늘을 넣고 중불에서 2분 볶아 양념을 입혀요. 국물이 없어지면 됐어요.",
+          "timerSeconds": 120
+        },
+        {
+          "text": "큰 볼에 당면과 볶은 채소, 고기를 넣고 참기름, 깨, 후추를 넣어 손으로 버무려요. 간이 부족하면 간장을 조금 더해요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed",
+      "sourceId": "GRC-036"
+    },
+    {
+      "id": "R085",
+      "title": "오이무침",
+      "aliases": [],
+      "summary": "오이를 썰어 고춧가루, 식초, 설탕에 무쳐요. 아삭하고 새콤해서 여름 반찬으로 딱이에요.",
+      "tier": "basic",
+      "kind": "side",
+      "cuisine": "korean",
+      "meal": [
+        "side"
+      ],
+      "method": "no_cook",
+      "minutes": 10,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "오이",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I010"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "양념",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "all_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I120"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I126"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            },
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "간",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I113"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I129"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "참기름",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I124"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "깨",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I143"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 30,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            },
+            {
+              "amount": 10,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I005"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I018"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I118"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "오이는 소금으로 문질러 씻고 반 갈라 5mm 두께로 어슷하게 썰어요. 소금 한 꼬집을 뿌려 5분 두었다가 물기를 살짝 짜요. 양파와 대파는 채 썰어요.",
+          "timerSeconds": 300
+        },
+        {
+          "text": "볼에 고춧가루, 식초, 설탕, 마늘, 액젓(또는 소금)을 섞어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "오이와 양파, 대파를 넣고 가볍게 버무려요. 참기름과 깨를 넣어 마무리해요. 바로 먹어야 아삭해요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed",
+      "sourceId": "GRC-083"
+    },
+    {
+      "id": "R086",
+      "title": "무생채",
+      "aliases": [],
+      "summary": "채 썬 무를 고춧가루에 먼저 물들이고 양념에 무쳐요. 비빔밥에 넣으면 좋아요.",
+      "tier": "basic",
+      "kind": "side",
+      "cuisine": "korean",
+      "meal": [
+        "side"
+      ],
+      "method": "no_cook",
+      "minutes": 15,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "무",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 300,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I030"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "양념",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "all_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 1.5,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I120"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I126"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "간",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I113"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I129"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "대파",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 15,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.95,
+                  "ingredientIds": [
+                    "I006"
+                  ]
+                }
+              ],
+              "ingredientId": "I005"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "깨",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I143"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I008"
+            },
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I124"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "무는 껍질을 벗기고 5mm 굵기로 채 썰어요. 대파는 송송 썰어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "무에 고춧가루를 먼저 넣고 버무려 5분 두면 붉게 물들어요.",
+          "timerSeconds": 300
+        },
+        {
+          "text": "마늘, 설탕, 식초, 액젓(또는 소금), 생강, 대파를 넣고 무쳐요. 10분 두면 무에서 물이 나와 간이 배요. 깨를 뿌려요.",
+          "timerSeconds": 600
+        }
+      ],
+      "contentStatus": "reviewed",
+      "sourceId": "GRC-084"
+    },
+    {
+      "id": "R087",
+      "title": "멸치볶음",
+      "aliases": [],
+      "summary": "잔멸치를 기름 없이 먼저 볶아 비린내를 날리고 간장 올리고당에 볶아요. 일주일 밑반찬이에요.",
+      "tier": "basic",
+      "kind": "side",
+      "cuisine": "korean",
+      "meal": [
+        "side"
+      ],
+      "method": "stirfry",
+      "minutes": 10,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "잔멸치",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 50,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I058"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "양념",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "all_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I115"
+            },
+            {
+              "amount": 1.5,
+              "unit": "큰술",
+              "substitutions": [
+                {
+                  "fit": 0.85,
+                  "note": "1큰술. 물 1큰술을 더해요",
+                  "ingredientIds": [
+                    "I114"
+                  ]
+                }
+              ],
+              "ingredientId": "I131"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "식용유",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I122"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "마늘",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "깨",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I143"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I018"
+            },
+            {
+              "amount": 20,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I162"
+            },
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I124"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I127"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "팬을 중불에 올리고 기름 없이 멸치를 2분 볶아요. 비린내가 날아가고 바삭해져요. 체에 밭쳐 가루를 털어요.",
+          "timerSeconds": 120
+        },
+        {
+          "text": "팬에 식용유와 마늘, 송송 썬 고추를 넣고 30초 볶은 뒤 멸치와 땅콩을 넣어 1분 볶아요.",
+          "timerSeconds": 90
+        },
+        {
+          "text": "불을 약불로 줄이고 간장과 맛술을 넣어 30초, 올리고당을 넣어 30초 볶아요. 올리고당은 마지막에 넣어야 안 딱딱해져요.",
+          "timerSeconds": 60
+        },
+        {
+          "text": "불을 끄고 깨와 참기름을 넣어 섞어요. 식혀서 보관해요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed",
+      "sourceId": "GRC-081"
+    },
+    {
+      "id": "R088",
+      "title": "메추리알 장조림",
+      "aliases": [],
+      "summary": "삶은 메추리알을 간장 국물에 조려요. 냉장고에서 일주일 가는 반찬이에요.",
+      "tier": "basic",
+      "kind": "side",
+      "cuisine": "korean",
+      "meal": [
+        "side"
+      ],
+      "method": "boil",
+      "minutes": 25,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "메추리알",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 30,
+              "unit": "개",
+              "substitutions": [
+                {
+                  "fit": 0.85,
+                  "note": "삶은 달걀 4개를 통째로 조려요",
+                  "ingredientIds": [
+                    "I051"
+                  ]
+                }
+              ],
+              "ingredientId": "I052"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "양념",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "all_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 4,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I115"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I127"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "마늘",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 4,
+              "unit": "쪽",
+              "substitutions": [],
+              "ingredientId": "I007"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "올리고당",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I131"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I018"
+            },
+            {
+              "amount": 20,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I005"
+            },
+            {
+              "amount": 100,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I043"
+            },
+            {
+              "amount": 30,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I025"
+            },
+            {
+              "amount": 3,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I019"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "조림 물",
+          "amountMl": 200
+        }
+      ],
+      "steps": [
+        {
+          "text": "메추리알은 삶아진 것을 사면 편해요. 생것이면 끓는 물에 소금 조금 넣고 6분 삶아 찬물에 식혀 껍질을 벗겨요. 소고기를 넣는다면 한입 크기로 썰어 먼저 10분 삶아요.",
+          "timerSeconds": 360
+        },
+        {
+          "text": "냄비에 물 200ml, 간장, 설탕, 맛술, 마늘을 넣고 끓여요. 메추리알과 소고기, 버섯을 넣고 중불에서 10분 조려요.",
+          "timerSeconds": 600
+        },
+        {
+          "text": "고추와 대파, 올리고당을 넣고 5분 더 조려요. 국물이 3분의 1로 줄면 불을 꺼요. 국물째 식혀 보관해요.",
+          "timerSeconds": 300
+        }
+      ],
+      "contentStatus": "reviewed",
+      "sourceId": "GRC-078"
+    },
+    {
+      "id": "R089",
+      "title": "에그마요 샌드위치",
+      "aliases": [
+        "달걀 샌드위치",
+        "계란 샌드위치"
+      ],
+      "summary": "삶은 달걀을 으깨 마요네즈에 섞어 식빵에 넣어요. 소금, 설탕 조금이 비결이에요.",
+      "tier": "basic",
+      "kind": "bread",
+      "cuisine": "western",
+      "meal": [
+        "breakfast",
+        "snack"
+      ],
+      "method": "boil",
+      "minutes": 20,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "달걀",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 3,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "마요네즈",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I133"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "식빵",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I103"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "간",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "all_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I113"
+            },
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I135"
+            },
+            {
+              "amount": 20,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            },
+            {
+              "amount": 0.25,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I010"
+            },
+            {
+              "amount": 2,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I016"
+            },
+            {
+              "amount": 5,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I066"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "삶을 물",
+          "amountMl": 600
+        }
+      ],
+      "steps": [
+        {
+          "text": "냄비에 물을 끓여 달걀을 넣고 10분 삶아요. 찬물에 5분 담가 식히고 껍질을 벗겨요.",
+          "timerSeconds": 900
+        },
+        {
+          "text": "달걀을 포크로 으깨요. 흰자는 조금 굵게 남기면 식감이 좋아요. 마요네즈, 소금, 설탕, 후추, 머스타드를 넣고 섞어요. 양파나 오이를 넣는다면 잘게 다져 물기를 짜서 넣어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "식빵에 버터를 얇게 바르고 달걀 샐러드를 두툼하게 올려 덮어요. 상추를 넣어도 좋아요. 랩으로 싸서 5분 두면 썰기 쉬워요. 반으로 잘라요.",
+          "timerSeconds": 300
+        }
+      ],
+      "contentStatus": "reviewed",
+      "sourceId": "GRC-397"
+    },
+    {
+      "id": "R090",
+      "title": "오므라이스",
+      "aliases": [],
+      "summary": "케첩 볶음밥을 얇은 달걀로 감싸요. 달걀을 반숙으로 올리기만 해도 돼요.",
+      "tier": "basic",
+      "kind": "rice",
+      "cuisine": "japanese",
+      "meal": [
+        "main"
+      ],
+      "method": "stirfry",
+      "minutes": 25,
+      "difficulty": "normal",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "밥",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 200,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I097"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "달걀",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "케첩",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 7,
+          "items": [
+            {
+              "amount": 3,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I134"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "양파",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 50,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "고기",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 40,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I081"
+            },
+            {
+              "amount": 40,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I083"
+            },
+            {
+              "amount": 50,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I048"
+            },
+            {
+              "amount": 40,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I080"
+            },
+            {
+              "amount": 50,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I041"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "식용유",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I122"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "버터",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 10,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I122"
+                  ]
+                }
+              ],
+              "ingredientId": "I066"
+            }
+          ]
+        },
+        {
+          "id": "g8",
+          "name": "소금",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I113"
+            }
+          ]
+        },
+        {
+          "id": "g9",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 20,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I003"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I065"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I071"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "양파와 당근, 고기를 5mm로 잘게 썰어요. 달걀은 소금 한 꼬집과 우유를 넣고 잘 풀어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "팬을 중불에 올리고 버터를 녹여 양파와 고기를 3분 볶아요. 밥을 넣고 2분 볶은 뒤 케첩 2큰술과 소금, 후추를 넣어 1분 더 볶아요. 접시에 타원형으로 담아요.",
+          "timerSeconds": 360
+        },
+        {
+          "text": "팬을 닦고 식용유를 둘러 중약불로 달궈요. 달걀물을 붓고 팬을 돌려 얇게 편 뒤, 가장자리가 익고 가운데가 촉촉할 때 불을 꺼요.",
+          "timerSeconds": 60
+        },
+        {
+          "text": "달걀을 밥 위에 미끄러뜨려 덮고 양 끝을 밥 아래로 밀어 넣어요. 남은 케첩 1큰술을 위에 뿌려요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed",
+      "sourceId": "GRC-048"
+    },
+    {
+      "id": "R091",
+      "title": "함박스테이크",
+      "aliases": [
+        "햄버그스테이크",
+        "함바그"
+      ],
+      "summary": "다진 고기에 볶은 양파와 빵가루를 섞어 두툼하게 빚고 팬에서 뚜껑을 덮어 익혀요. 소스는 케첩과 간장이면 돼요.",
+      "tier": "basic",
+      "kind": "grill",
+      "cuisine": "western",
+      "meal": [
+        "main"
+      ],
+      "method": "grill",
+      "minutes": 30,
+      "difficulty": "normal",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "고기",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "at_least",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 200,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I041"
+            },
+            {
+              "amount": 200,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I045"
+            }
+          ],
+          "minCount": 1
+        },
+        {
+          "id": "g2",
+          "name": "양파",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 6,
+          "items": [
+            {
+              "amount": 80,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "반죽",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "all_of",
+          "weight": 6,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            },
+            {
+              "amount": 30,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.9,
+                  "note": "한 장을 잘게 뜯어요",
+                  "ingredientIds": [
+                    "I103"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "note": "2큰술",
+                  "ingredientIds": [
+                    "I099"
+                  ]
+                }
+              ],
+              "ingredientId": "I102"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "소스",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "all_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "큰술",
+              "substitutions": [
+                {
+                  "fit": 0.9,
+                  "ingredientIds": [
+                    "I136"
+                  ]
+                }
+              ],
+              "ingredientId": "I134"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I115"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "밑간",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "all_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I113"
+            },
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I121"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "식용유",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I122"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "버터",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 10,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I066"
+            }
+          ]
+        },
+        {
+          "id": "g8",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I065"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            },
+            {
+              "amount": 1,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I069"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "소스 물",
+          "amountMl": 50
+        }
+      ],
+      "steps": [
+        {
+          "text": "양파를 잘게 다져 버터에 5분 볶아 갈색이 나면 식혀요. 빵가루는 우유에 적셔 둬요.",
+          "timerSeconds": 300
+        },
+        {
+          "text": "볼에 고기, 식힌 양파, 빵가루, 달걀, 소금, 후추, 마늘을 넣고 끈기가 생길 때까지 2분 치대요. 반으로 나눠 공 모양으로 뭉친 뒤 손바닥에 던지듯 공기를 빼고 2cm 두께로 빚어요. 가운데를 살짝 눌러요.",
+          "timerSeconds": 120
+        },
+        {
+          "text": "팬을 중불로 달구고 식용유를 둘러요. 고기를 올려 3분 굽고 뒤집어 뚜껑을 덮은 뒤 약불에서 7분 익혀요. 꼬치로 찔러 맑은 즙이 나오면 됐어요. 치즈를 올린다면 마지막 1분에.",
+          "timerSeconds": 600
+        },
+        {
+          "text": "고기를 꺼내고 팬에 남은 기름에 케첩, 간장, 설탕, 물 50ml를 넣어 1분 끓여 소스를 만들어요. 고기에 끼얹고 반숙 후라이를 올려요.",
+          "timerSeconds": 60
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R092",
+      "title": "돼지고기 김치찜",
+      "aliases": [],
+      "summary": "묵은지와 돼지고기를 통째로 넣고 물을 자작하게 부어 푹 끓여요. 오래 끓일수록 맛있고 손은 안 가요.",
+      "tier": "basic",
+      "kind": "soup",
+      "cuisine": "korean",
+      "meal": [
+        "main"
+      ],
+      "method": "boil",
+      "minutes": 50,
+      "difficulty": "easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "김치",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 300,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I075"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "돼지고기",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 9,
+          "items": [
+            {
+              "amount": 250,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.95,
+                  "note": "덩어리 삼겹살이 제일 좋아요",
+                  "ingredientIds": [
+                    "I040"
+                  ]
+                },
+                {
+                  "fit": 0.75,
+                  "ingredientIds": [
+                    "I080"
+                  ]
+                }
+              ],
+              "ingredientId": "I039"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "양파",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 60,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "대파",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 30,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I005"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "양념",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "all_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I120"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "식용유",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I122"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "간",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I116"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I129"
+            }
+          ]
+        },
+        {
+          "id": "g8",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 100,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I078"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I018"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I141"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I127"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "물 또는 쌀뜨물",
+          "amountMl": 400
+        }
+      ],
+      "steps": [
+        {
+          "text": "김치는 포기째 또는 큼직하게 썰어요. 돼지고기는 덩어리째 두거나 4cm로 썰어요. 양파는 굵게, 대파는 길게 썰어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "냄비를 중불에 올리고 식용유를 둘러 돼지고기를 3분 구워 겉을 익혀요. 김치를 넣고 3분 더 볶아요.",
+          "timerSeconds": 360
+        },
+        {
+          "text": "물 400ml와 고춧가루, 마늘, 설탕, 맛술, 양파를 넣고 끓어오르면 뚜껑을 덮고 약불에서 30분 끓여요. 중간에 국물이 모자라면 물을 보태요.",
+          "timerSeconds": 1800
+        },
+        {
+          "text": "두부와 대파, 청양고추를 넣고 5분 더 끓여요. 국간장이나 액젓으로 간을 맞춰요. 고기를 꺼내 썰어 김치와 함께 담아요.",
+          "timerSeconds": 300
+        }
+      ],
+      "contentStatus": "reviewed",
+      "sourceId": "GRC-024"
+    },
+    {
+      "id": "R093",
+      "title": "야키소바",
+      "aliases": [
+        "일본식 볶음면"
+      ],
+      "summary": "중화면을 삶아 돼지고기, 양배추와 소스에 볶아요. 소스는 오코노미야키소스나 돈가스소스면 돼요.",
+      "tier": "discovery",
+      "kind": "noodle",
+      "cuisine": "japanese",
+      "meal": [
+        "main",
+        "snack"
+      ],
+      "method": "stirfry",
+      "minutes": 20,
+      "difficulty": "easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "면",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 150,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.85,
+                  "note": "스프 없이 삶아요",
+                  "ingredientIds": [
+                    "I110"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I106"
+                  ]
+                },
+                {
+                  "fit": 0.75,
+                  "ingredientIds": [
+                    "I107"
+                  ]
+                }
+              ],
+              "ingredientId": "I111"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "소스",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "큰술",
+              "substitutions": [
+                {
+                  "fit": 0.9,
+                  "ingredientIds": [
+                    "I136"
+                  ]
+                },
+                {
+                  "fit": 0.75,
+                  "note": "케첩 1큰술, 간장 1큰술, 굴소스 1작은술",
+                  "ingredientIds": [
+                    "I134",
+                    "I115"
+                  ]
+                }
+              ],
+              "ingredientId": "I137"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "양배추",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 5,
+          "items": [
+            {
+              "amount": 100,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I009"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "돼지고기",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 80,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.95,
+                  "ingredientIds": [
+                    "I040"
+                  ]
+                },
+                {
+                  "fit": 0.85,
+                  "ingredientIds": [
+                    "I084"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I083"
+                  ]
+                }
+              ],
+              "ingredientId": "I039"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "양파",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 40,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "식용유",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I122"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "소금·후추",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "all_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I113"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            }
+          ]
+        },
+        {
+          "id": "g8",
+          "name": "토핑",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I168"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I133"
+            },
+            {
+              "amount": 0.5,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I053"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            },
+            {
+              "amount": 20,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I003"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "양배추는 3cm로 썰고 양파는 채, 돼지고기는 한입 크기로 썰어요. 면은 끓는 물에 봉지 표기보다 1분 덜 삶아 찬물에 헹궈 물기를 빼요.",
+          "timerSeconds": 180
+        },
+        {
+          "text": "팬을 센불로 달구고 식용유를 둘러 돼지고기를 2분 볶아요. 소금, 후추를 뿌려요.",
+          "timerSeconds": 120
+        },
+        {
+          "text": "양파와 양배추, 당근을 넣고 2분 볶아요. 양배추 숨이 살짝 죽으면 됐어요.",
+          "timerSeconds": 120
+        },
+        {
+          "text": "면을 넣고 1분 볶은 뒤 소스를 넣어 1분 더 볶아요. 면에 소스가 고루 묻고 살짝 눌은 향이 나면 접시에 담아요. 가쓰오부시, 마요네즈, 김을 올려요.",
+          "timerSeconds": 120
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R094",
+      "title": "콩나물 불고기",
+      "aliases": [
+        "콩불"
+      ],
+      "summary": "매콤한 양념 돼지고기 위에 콩나물을 산처럼 올리고 뚜껑을 덮어 익혀요. 마지막엔 밥을 볶아 먹어요.",
+      "tier": "discovery",
+      "kind": "stirfry",
+      "cuisine": "korean",
+      "meal": [
+        "main"
+      ],
+      "method": "stirfry",
+      "minutes": 25,
+      "difficulty": "easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "돼지고기",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 200,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.95,
+                  "note": "대패삼겹살이 제일 좋아요",
+                  "ingredientIds": [
+                    "I040"
+                  ]
+                }
+              ],
+              "ingredientId": "I039"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "콩나물",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 200,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I014"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "양념",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "all_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I118"
+            },
+            {
+              "amount": 1.5,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I120"
+            },
+            {
+              "amount": 1.5,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I115"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "양파",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 60,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "대파",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 20,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I005"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "맛술",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I127"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "참기름",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I124"
+            }
+          ]
+        },
+        {
+          "id": "g8",
+          "name": "후추",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            }
+          ]
+        },
+        {
+          "id": "g9",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I018"
+            },
+            {
+              "amount": 30,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I109"
+            },
+            {
+              "amount": 5,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I017"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I143"
+            }
+          ]
+        },
+        {
+          "id": "g10",
+          "name": "볶음밥",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 200,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I097"
+            },
+            {
+              "amount": 1,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I053"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "물",
+          "amountMl": 50
+        }
+      ],
+      "steps": [
+        {
+          "text": "고추장, 고춧가루, 간장, 설탕, 마늘, 맛술, 후추를 섞어 양념장을 만들고 돼지고기를 버무려 10분 재워요. 콩나물은 씻고 양파는 채, 대파는 어슷하게 썰어요.",
+          "timerSeconds": 600
+        },
+        {
+          "text": "넓은 팬에 양파를 깔고 재운 고기를 올린 뒤 콩나물을 수북하게 덮어요. 물 50ml를 가장자리로 부어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "뚜껑을 덮고 중불에서 7분 익혀요. 콩나물에서 물이 나와요. 뚜껑을 열면 비린내가 나니 참아요.",
+          "timerSeconds": 420
+        },
+        {
+          "text": "뚜껑을 열고 센불로 올려 섞어가며 3분 볶아요. 대파, 청양고추, 당면(불린 것)을 넣고 2분 더 볶아요. 참기름을 둘러요.",
+          "timerSeconds": 300
+        },
+        {
+          "text": "반쯤 먹고 남은 양념에 밥과 김가루, 참기름을 넣어 볶아 먹어요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R095",
+      "title": "두부 스테이크",
+      "aliases": [],
+      "summary": "두부를 두껍게 썰어 전분을 묻혀 노릇하게 굽고 간장 버터 소스를 끼얹어요. 고기 없는 날의 메인이에요.",
+      "tier": "discovery",
+      "kind": "grill",
+      "cuisine": "japanese",
+      "meal": [
+        "main",
+        "side"
+      ],
+      "method": "grill",
+      "minutes": 20,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "두부",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "모",
+              "substitutions": [],
+              "ingredientId": "I078"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "전분",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 6,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "큰술",
+              "substitutions": [
+                {
+                  "fit": 0.85,
+                  "ingredientIds": [
+                    "I099"
+                  ]
+                },
+                {
+                  "fit": 0.85,
+                  "ingredientIds": [
+                    "I100"
+                  ]
+                }
+              ],
+              "ingredientId": "I145"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "소스",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "all_of",
+          "weight": 7,
+          "items": [
+            {
+              "amount": 1.5,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I115"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            },
+            {
+              "amount": 10,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I124"
+                  ]
+                }
+              ],
+              "ingredientId": "I066"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "식용유",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I122"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "마늘",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "대파",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 15,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I005"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I127"
+            },
+            {
+              "amount": 40,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I025"
+            },
+            {
+              "amount": 30,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I143"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "소스 물",
+          "amountMl": 30
+        }
+      ],
+      "steps": [
+        {
+          "text": "두부는 2cm 두께로 썰어 키친타월로 감싸 10분 물기를 빼요. 소금과 후추를 뿌리고 전분을 얇게 묻혀요. 마늘은 다지고 대파는 송송 썰어요.",
+          "timerSeconds": 600
+        },
+        {
+          "text": "팬을 중불에 올리고 식용유를 둘러요. 두부를 올려 한 면 3분씩 노릇하게 구워 접시에 덜어요. 버섯이나 양파를 넣는다면 같은 팬에 2분 볶아요.",
+          "timerSeconds": 480
+        },
+        {
+          "text": "팬 기름을 닦고 버터, 마늘을 넣어 30초 볶은 뒤 간장, 설탕, 맛술, 물 2큰술을 넣고 30초 끓여요.",
+          "timerSeconds": 60
+        },
+        {
+          "text": "소스를 두부에 끼얹고 대파와 깨를 올려요. 반숙 후라이를 올리면 더 든든해요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R096",
+      "title": "감자 수프",
+      "aliases": [
+        "감자 크림 수프"
+      ],
+      "summary": "감자와 양파를 버터에 볶아 끓이고 블렌더로 갈아 우유를 섞어요. 빵을 찍어 먹어요.",
+      "tier": "discovery",
+      "kind": "soup",
+      "cuisine": "western",
+      "meal": [
+        "soup",
+        "breakfast"
+      ],
+      "method": "boil",
+      "minutes": 30,
+      "difficulty": "easy",
+      "baseServings": 1,
+      "tools": [
+        "blender"
+      ],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "감자",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 300,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I001"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "우유",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 200,
+              "unit": "ml",
+              "substitutions": [
+                {
+                  "fit": 0.9,
+                  "note": "100ml에 물 100ml",
+                  "ingredientIds": [
+                    "I067"
+                  ]
+                },
+                {
+                  "fit": 0.85,
+                  "ingredientIds": [
+                    "I166"
+                  ]
+                }
+              ],
+              "ingredientId": "I065"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "양파",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 5,
+          "items": [
+            {
+              "amount": 80,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "버터",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 15,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I123"
+                  ]
+                },
+                {
+                  "fit": 0.75,
+                  "ingredientIds": [
+                    "I122"
+                  ]
+                }
+              ],
+              "ingredientId": "I066"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "육수",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I140"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "소금",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I113"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "후추",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            }
+          ]
+        },
+        {
+          "id": "g8",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            },
+            {
+              "amount": 1,
+              "unit": "줄",
+              "substitutions": [],
+              "ingredientId": "I084"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I071"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I149"
+            },
+            {
+              "amount": 1,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I103"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "물",
+          "amountMl": 300
+        }
+      ],
+      "steps": [
+        {
+          "text": "감자는 껍질을 벗겨 2cm로 썰고 양파는 채 썰어요. 베이컨을 넣는다면 잘게 썰어 먼저 바삭하게 볶아 덜어 둬요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "냄비를 중불에 올리고 버터를 녹여 양파와 마늘을 5분 볶아 투명하게 만들어요. 감자를 넣고 2분 더 볶아요.",
+          "timerSeconds": 420
+        },
+        {
+          "text": "물 300ml와 치킨스톡을 넣고 끓어오르면 뚜껑을 덮고 약불에서 15분 끓여요. 감자가 포크로 쉽게 부서지면 됐어요.",
+          "timerSeconds": 900
+        },
+        {
+          "text": "불을 끄고 블렌더나 핸드블렌더로 곱게 갈아요. 뜨거울 때 갈면 넘치니 조금 식혀서. 우유를 넣고 약불에서 2분 데우며 소금, 후추로 간해요. 베이컨과 치즈, 파슬리를 올려요.",
+          "timerSeconds": 120
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R097",
+      "title": "김치 치즈 토스트",
+      "aliases": [],
+      "summary": "볶은 김치와 치즈를 식빵에 넣고 눌러 구워요. 매콤한 김치와 녹은 치즈가 생각보다 잘 맞아요.",
+      "tier": "discovery",
+      "kind": "bread",
+      "cuisine": "korean",
+      "meal": [
+        "snack",
+        "breakfast"
+      ],
+      "method": "grill",
+      "minutes": 12,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "식빵",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I103"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "김치",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 60,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I075"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "치즈",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "장",
+              "substitutions": [
+                {
+                  "fit": 0.9,
+                  "note": "40g",
+                  "ingredientIds": [
+                    "I070"
+                  ]
+                },
+                {
+                  "fit": 0.9,
+                  "ingredientIds": [
+                    "I068"
+                  ]
+                }
+              ],
+              "ingredientId": "I069"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "버터",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 10,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.85,
+                  "note": "겉면에 발라 구워요",
+                  "ingredientIds": [
+                    "I133"
+                  ]
+                },
+                {
+                  "fit": 0.75,
+                  "ingredientIds": [
+                    "I122"
+                  ]
+                }
+              ],
+              "ingredientId": "I066"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "설탕",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 40,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I080"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            },
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I124"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I133"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "김치는 잘게 썰어 기름 없이 팬에 2분 볶아 물기를 날리고 설탕을 넣어요. 참기름을 넣으면 향이 좋아요. 스팸을 넣는다면 얇게 썰어 같이 구워요.",
+          "timerSeconds": 120
+        },
+        {
+          "text": "식빵 한 장에 치즈 한 장, 볶은 김치, 스팸, 치즈 한 장 순서로 올리고 나머지 식빵으로 덮어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "팬을 약불에 올리고 버터 절반을 녹여요. 토스트를 올려 뒤집개로 누르며 3분 구워요. 뒤집어 남은 버터를 넣고 3분 더 구워요. 치즈가 녹으면 반으로 잘라요.",
+          "timerSeconds": 360
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R098",
+      "title": "밥솥 치킨라이스",
+      "aliases": [
+        "하이난 치킨라이스",
+        "전기밥솥 닭고기 밥"
+      ],
+      "summary": "쌀 위에 생강과 마늘로 밑간한 닭다리살을 올리고 밥솥 버튼만 눌러요. 닭 기름이 밥에 배어요.",
+      "tier": "discovery",
+      "kind": "rice",
+      "cuisine": "southeast_asian",
+      "meal": [
+        "main"
+      ],
+      "method": "steam",
+      "minutes": 50,
+      "difficulty": "easy",
+      "baseServings": 1,
+      "tools": [
+        "rice_cooker"
+      ],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "쌀",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "컵",
+              "substitutions": [
+                {
+                  "fit": 0.7,
+                  "note": "밥으로는 안 돼요. 쌀이어야 해요",
+                  "ingredientIds": [
+                    "I097"
+                  ]
+                }
+              ],
+              "ingredientId": "I098"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "닭다리살",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 9,
+          "items": [
+            {
+              "amount": 250,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.9,
+                  "note": "2개",
+                  "ingredientIds": [
+                    "I049"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "note": "퍽퍽해질 수 있어요",
+                  "ingredientIds": [
+                    "I048"
+                  ]
+                }
+              ],
+              "ingredientId": "I047"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "생강",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 6,
+          "items": [
+            {
+              "amount": 10,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I008"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "마늘",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 3,
+              "unit": "쪽",
+              "substitutions": [],
+              "ingredientId": "I007"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "간",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I113"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I140"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "맛술",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I127"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "참기름",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I124"
+            }
+          ]
+        },
+        {
+          "id": "g8",
+          "name": "소스",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I115"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I128"
+            },
+            {
+              "amount": 15,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I005"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I018"
+            },
+            {
+              "amount": 0.5,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I010"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "밥물",
+          "amountMl": 200
+        }
+      ],
+      "steps": [
+        {
+          "text": "쌀은 씻어 20분 불려요. 닭다리살은 소금, 맛술을 뿌리고 간 생강 절반과 으깬 마늘로 버무려 10분 둬요.",
+          "timerSeconds": 1200
+        },
+        {
+          "text": "밥솥에 불린 쌀을 넣고 물 200ml(평소 밥물보다 조금 적게)에 치킨스톡과 남은 생강을 넣어요. 닭을 껍질이 위로 가게 쌀 위에 올려요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "백미 취사로 밥을 지어요. 보통 30분쯤이에요.",
+          "timerSeconds": 1800
+        },
+        {
+          "text": "닭을 꺼내 썰고 밥은 참기름을 넣어 섞어요. 간장과 굴소스, 다진 대파, 고추를 섞은 소스를 곁들이고 오이를 썰어 올려요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R099",
+      "title": "밥솥 콩나물밥",
+      "aliases": [
+        "콩나물밥"
+      ],
+      "summary": "쌀 위에 콩나물과 돼지고기를 올려 밥을 짓고 양념장에 비벼요. 밥물만 평소보다 적게.",
+      "tier": "discovery",
+      "kind": "rice",
+      "cuisine": "korean",
+      "meal": [
+        "main"
+      ],
+      "method": "steam",
+      "minutes": 55,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [
+        "rice_cooker"
+      ],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "쌀",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "컵",
+              "substitutions": [],
+              "ingredientId": "I098"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "콩나물",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 9,
+          "items": [
+            {
+              "amount": 200,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I014"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "양념장",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "all_of",
+          "weight": 7,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I115"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I120"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I124"
+            },
+            {
+              "amount": 15,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I005"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "돼지고기",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 80,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.95,
+                  "ingredientIds": [
+                    "I041"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I080"
+                  ]
+                },
+                {
+                  "fit": 0.9,
+                  "ingredientIds": [
+                    "I044"
+                  ]
+                }
+              ],
+              "ingredientId": "I039"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "마늘",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "깨",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I143"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I018"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            },
+            {
+              "amount": 1,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I053"
+            },
+            {
+              "amount": 30,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I025"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "밥물",
+          "amountMl": 180
+        }
+      ],
+      "steps": [
+        {
+          "text": "쌀은 씻어 20분 불려요. 콩나물은 씻어 꼬리를 떼요. 돼지고기는 잘게 썰어 간장 1작은술, 마늘에 버무려요.",
+          "timerSeconds": 1200
+        },
+        {
+          "text": "밥솥에 쌀을 넣고 물 180ml(평소보다 20% 적게. 콩나물에서 물이 나와요)를 부어요. 고기와 콩나물, 버섯을 쌀 위에 올려요. 섞지 마요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "백미 취사로 밥을 지어요.",
+          "timerSeconds": 1800
+        },
+        {
+          "text": "간장, 고춧가루, 참기름, 송송 썬 대파와 고추, 깨를 섞어 양념장을 만들어요. 밥이 되면 주걱으로 위아래를 섞고 그릇에 담아 양념장을 올려 비벼요. 반숙 후라이와 김을 올려도 좋아요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed",
+      "sourceId": "GRC-096"
+    },
+    {
+      "id": "R100",
+      "title": "소고기 토마토 스튜",
+      "aliases": [
+        "비프 스튜"
+      ],
+      "summary": "소고기 국거리를 볶아 토마토와 감자, 당근과 함께 1시간 뭉근히 끓여요. 빵이나 밥 둘 다 어울려요.",
+      "tier": "discovery",
+      "kind": "soup",
+      "cuisine": "western",
+      "meal": [
+        "main",
+        "soup"
+      ],
+      "method": "boil",
+      "minutes": 60,
+      "difficulty": "easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "소고기",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 250,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.85,
+                  "note": "돼지고기 스튜가 돼요",
+                  "ingredientIds": [
+                    "I039"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "note": "끓이는 시간을 30분으로",
+                  "ingredientIds": [
+                    "I047"
+                  ]
+                }
+              ],
+              "ingredientId": "I043"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "토마토",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 200,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.9,
+                  "ingredientIds": [
+                    "I138"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "note": "2개를 잘게 썰어요",
+                  "ingredientIds": [
+                    "I022"
+                  ]
+                }
+              ],
+              "ingredientId": "I087"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "감자",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 150,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I001"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "당근",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 60,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I003"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "양파",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 100,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "마늘",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "식용유",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I122"
+            }
+          ]
+        },
+        {
+          "id": "g8",
+          "name": "간",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "all_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I113"
+            },
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I121"
+            }
+          ]
+        },
+        {
+          "id": "g9",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 10,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I066"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I099"
+            },
+            {
+              "amount": 1,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I150"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I134"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I140"
+            },
+            {
+              "amount": 50,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I029"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "물",
+          "amountMl": 400
+        }
+      ],
+      "steps": [
+        {
+          "text": "소고기는 3cm로 썰어 소금, 후추를 뿌리고 밀가루를 얇게 묻혀요. 감자와 당근은 3cm, 양파는 굵게 썰어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "냄비를 센불로 달구고 식용유를 둘러 소고기를 겉면이 갈색이 나게 4분 구워 덜어요. 같은 냄비에 버터를 넣고 양파와 마늘을 중불에서 5분 볶아요.",
+          "timerSeconds": 540
+        },
+        {
+          "text": "고기를 다시 넣고 토마토 통조림, 물 400ml, 월계수잎, 치킨스톡, 케첩을 넣어 끓여요. 끓어오르면 거품을 걷고 뚜껑을 덮어 약불에서 30분 끓여요.",
+          "timerSeconds": 1800
+        },
+        {
+          "text": "감자, 당근, 버섯을 넣고 뚜껑을 덮어 20분 더 끓여요. 고기가 포크로 쉽게 찢어지면 됐어요. 소금, 후추, 설탕으로 간을 맞춰요.",
+          "timerSeconds": 1200
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R101",
+      "title": "독일식 감자 샐러드",
+      "aliases": [
+        "따뜻한 감자 샐러드"
+      ],
+      "summary": "삶은 감자를 뜨거울 때 식초, 머스타드, 베이컨 드레싱에 버무려요. 마요네즈 없는 감자 샐러드예요.",
+      "tier": "discovery",
+      "kind": "salad",
+      "cuisine": "western",
+      "meal": [
+        "side"
+      ],
+      "method": "boil",
+      "minutes": 25,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "감자",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 300,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I001"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "드레싱",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "all_of",
+          "weight": 7,
+          "items": [
+            {
+              "amount": 1.5,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I126"
+            },
+            {
+              "amount": 1.5,
+              "unit": "큰술",
+              "substitutions": [
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I122"
+                  ]
+                }
+              ],
+              "ingredientId": "I123"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [
+                {
+                  "fit": 0.75,
+                  "note": "마요 감자 샐러드가 돼요",
+                  "ingredientIds": [
+                    "I133"
+                  ]
+                }
+              ],
+              "ingredientId": "I135"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "양파",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 40,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.9,
+                  "ingredientIds": [
+                    "I006"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "note": "흰 부분만 잘게",
+                  "ingredientIds": [
+                    "I005"
+                  ]
+                }
+              ],
+              "ingredientId": "I004"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "베이컨",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "줄",
+              "substitutions": [
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I081"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I083"
+                  ]
+                }
+              ],
+              "ingredientId": "I084"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "간",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "all_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I113"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "설탕",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I149"
+            },
+            {
+              "amount": 0.25,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I010"
+            },
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I140"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "감자는 껍질째 끓는 물에 소금을 넣고 15분 삶아요. 젓가락이 쑥 들어가면 됐어요. 뜨거울 때 껍질을 벗기고 1cm 두께로 썰어요.",
+          "timerSeconds": 900
+        },
+        {
+          "text": "감자를 삶는 동안 베이컨을 잘게 썰어 팬에 바삭하게 볶아요. 양파는 잘게 다져요.",
+          "timerSeconds": 240
+        },
+        {
+          "text": "볼에 식초, 올리브유, 머스타드, 설탕, 소금, 후추를 섞어요. 베이컨 기름 1큰술을 넣으면 더 맛있어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "따뜻한 감자에 드레싱과 양파, 베이컨을 넣고 살살 버무려요. 뜨거울 때 버무려야 간이 배요. 파슬리를 뿌려 따뜻하게 먹거나 식혀 먹어요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R102",
+      "title": "스크램블 에그 토스트",
+      "aliases": [
+        "스크램블 에그"
+      ],
+      "summary": "약불에서 천천히 저은 크리미한 스크램블을 버터 토스트에 올려요. 불을 일찍 끄는 게 요령이에요.",
+      "tier": "discovery",
+      "kind": "bread",
+      "cuisine": "western",
+      "meal": [
+        "breakfast"
+      ],
+      "method": "grill",
+      "minutes": 10,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "달걀",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "식빵",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 7,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I103"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "버터",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 15,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.75,
+                  "note": "풍미가 덜해요",
+                  "ingredientIds": [
+                    "I122"
+                  ]
+                }
+              ],
+              "ingredientId": "I066"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "소금",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I113"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I065"
+            },
+            {
+              "amount": 1,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I069"
+            },
+            {
+              "amount": 5,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I006"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I134"
+            },
+            {
+              "amount": 1,
+              "unit": "줄",
+              "substitutions": [],
+              "ingredientId": "I084"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "식빵을 토스터나 마른 팬에 노릇하게 구워 버터 5g을 발라요. 달걀에 소금과 우유를 넣고 잘 풀어요.",
+          "timerSeconds": 120
+        },
+        {
+          "text": "팬을 약불에 올리고 버터 10g을 녹여요. 달걀물을 붓고 10초 기다린 뒤 주걱으로 바닥을 긁듯 천천히 저어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "1분 30초쯤 뒤 절반쯤 굳고 아직 촉촉할 때 불을 꺼요. 남은 열로 10초 더 저어요. 치즈를 넣는다면 이때 찢어 넣어요. 마르면 늦은 거예요.",
+          "timerSeconds": 100
+        },
+        {
+          "text": "토스트 위에 올리고 후추와 쪽파를 뿌려요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed",
+      "sourceId": "GRC-610"
+    },
+    {
+      "id": "R103",
+      "title": "치킨마요덮밥",
+      "aliases": [
+        "치킨 마요 동"
+      ],
+      "summary": "닭다리살을 튀기듯 구워 간장 소스를 입히고 밥에 올린 뒤 마요네즈를 뿌려요. 분식집 치킨마요예요.",
+      "tier": "discovery",
+      "kind": "rice",
+      "cuisine": "japanese",
+      "meal": [
+        "main"
+      ],
+      "method": "fry",
+      "minutes": 25,
+      "difficulty": "easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "밥",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 200,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I097"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "닭다리살",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 9,
+          "items": [
+            {
+              "amount": 150,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I048"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "note": "에어프라이어에 구워 소스에 버무려요",
+                  "ingredientIds": [
+                    "I096"
+                  ]
+                }
+              ],
+              "ingredientId": "I047"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "소스",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "all_of",
+          "weight": 7,
+          "items": [
+            {
+              "amount": 1.5,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I115"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I114"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I127"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "마요네즈",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 4,
+          "items": [
+            {
+              "amount": 1.5,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I133"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "전분",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "큰술",
+              "substitutions": [
+                {
+                  "fit": 0.9,
+                  "ingredientIds": [
+                    "I101"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "ingredientIds": [
+                    "I099"
+                  ]
+                }
+              ],
+              "ingredientId": "I145"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "식용유",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 3,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I122"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "밑간",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "all_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I113"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            }
+          ]
+        },
+        {
+          "id": "g8",
+          "name": "고명",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            },
+            {
+              "amount": 1,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I053"
+            },
+            {
+              "amount": 10,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I006"
+            },
+            {
+              "amount": 50,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I009"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I143"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "닭다리살은 3cm로 썰어 소금, 후추를 뿌리고 전분을 묻혀요. 간장, 설탕, 맛술을 섞어 소스를 만들어요. 양배추를 곁들인다면 채 썰어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "팬을 중강불로 달구고 식용유 3큰술을 둘러요. 닭을 넣고 한 면 3분씩 튀기듯 구워 겉이 바삭해지면 기름을 키친타월로 닦아내요.",
+          "timerSeconds": 360
+        },
+        {
+          "text": "소스를 붓고 1분 졸여 닭에 윤기 나게 입혀요.",
+          "timerSeconds": 60
+        },
+        {
+          "text": "밥 위에 양배추와 김을 깔고 닭을 올려요. 마요네즈를 지그재그로 뿌리고 쪽파와 깨를 올려요. 반숙 후라이를 올리면 완성이에요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R104",
+      "title": "버터 간장 소면",
+      "aliases": [
+        "간장 버터 비빔면",
+        "버터 간장 파스타"
+      ],
+      "summary": "삶은 소면에 버터와 간장, 달걀노른자를 넣고 비벼요. 5분 만에 되는데 이상하게 맛있어요.",
+      "tier": "discovery",
+      "kind": "noodle",
+      "cuisine": "japanese",
+      "meal": [
+        "main",
+        "snack"
+      ],
+      "method": "boil",
+      "minutes": 10,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "소면",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 100,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.9,
+                  "note": "삶는 시간이 길어요",
+                  "ingredientIds": [
+                    "I108"
+                  ]
+                },
+                {
+                  "fit": 0.85,
+                  "ingredientIds": [
+                    "I106"
+                  ]
+                },
+                {
+                  "fit": 0.8,
+                  "note": "스프 없이",
+                  "ingredientIds": [
+                    "I110"
+                  ]
+                }
+              ],
+              "ingredientId": "I105"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "버터",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 15,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I066"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "간장",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I115"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "달걀",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 10,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I006"
+            },
+            {
+              "amount": 0.5,
+              "unit": "장",
+              "substitutions": [],
+              "ingredientId": "I053"
+            },
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I143"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            },
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I124"
+            },
+            {
+              "amount": 1,
+              "unit": "큰술",
+              "substitutions": [],
+              "ingredientId": "I071"
+            },
+            {
+              "amount": 0.5,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I128"
+            }
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "text": "냄비에 물을 끓여 소면을 3분 삶아요. 쪽파는 송송 썰고 달걀은 노른자만 분리해요.",
+          "timerSeconds": 180
+        },
+        {
+          "text": "면을 건져 뜨거울 때 바로 볼에 담고 버터를 넣어 녹여요. 찬물에 헹구지 마요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "간장과 후추를 넣고 비벼요. 노른자를 가운데 올리고 쪽파, 김, 깨를 뿌려요. 노른자를 터뜨려 비벼 먹어요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed"
+    },
+    {
+      "id": "R105",
+      "title": "찬밥 토마토 리조또",
+      "aliases": [
+        "토마토 리조또"
+      ],
+      "summary": "찬밥을 토마토소스와 우유에 끓여 치즈를 섞어요. 진짜 리조또는 아니지만 10분 만에 비슷해져요.",
+      "tier": "discovery",
+      "kind": "rice",
+      "cuisine": "western",
+      "meal": [
+        "main"
+      ],
+      "method": "boil",
+      "minutes": 15,
+      "difficulty": "very_easy",
+      "baseServings": 1,
+      "tools": [],
+      "groups": [
+        {
+          "id": "g1",
+          "name": "밥",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 10,
+          "items": [
+            {
+              "amount": 200,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I097"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "name": "토마토소스",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 8,
+          "items": [
+            {
+              "amount": 120,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.9,
+                  "note": "으깨고 소금을 조금 더",
+                  "ingredientIds": [
+                    "I087"
+                  ]
+                },
+                {
+                  "fit": 0.7,
+                  "note": "3큰술에 물 100ml",
+                  "ingredientIds": [
+                    "I134"
+                  ]
+                }
+              ],
+              "ingredientId": "I138"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "name": "치즈",
+          "role": "core",
+          "isCoreGate": true,
+          "matchRule": "one_of",
+          "weight": 6,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "큰술",
+              "substitutions": [
+                {
+                  "fit": 0.85,
+                  "note": "1장",
+                  "ingredientIds": [
+                    "I069"
+                  ]
+                },
+                {
+                  "fit": 0.85,
+                  "note": "30g",
+                  "ingredientIds": [
+                    "I070"
+                  ]
+                },
+                {
+                  "fit": 0.85,
+                  "ingredientIds": [
+                    "I068"
+                  ]
+                }
+              ],
+              "ingredientId": "I071"
+            }
+          ]
+        },
+        {
+          "id": "g4",
+          "name": "양파",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 40,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I004"
+            }
+          ]
+        },
+        {
+          "id": "g5",
+          "name": "버터",
+          "role": "major",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 3,
+          "items": [
+            {
+              "amount": 10,
+              "unit": "g",
+              "substitutions": [
+                {
+                  "fit": 0.85,
+                  "ingredientIds": [
+                    "I123"
+                  ]
+                },
+                {
+                  "fit": 0.75,
+                  "ingredientIds": [
+                    "I122"
+                  ]
+                }
+              ],
+              "ingredientId": "I066"
+            }
+          ]
+        },
+        {
+          "id": "g6",
+          "name": "마늘",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 2,
+          "items": [
+            {
+              "amount": 1,
+              "unit": "작은술",
+              "substitutions": [],
+              "ingredientId": "I007"
+            }
+          ]
+        },
+        {
+          "id": "g7",
+          "name": "소금",
+          "role": "support",
+          "isCoreGate": false,
+          "matchRule": "one_of",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 2,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I113"
+            }
+          ]
+        },
+        {
+          "id": "g8",
+          "name": "추가",
+          "role": "optional",
+          "isCoreGate": false,
+          "matchRule": "optional",
+          "weight": 1,
+          "items": [
+            {
+              "amount": 50,
+              "unit": "ml",
+              "substitutions": [],
+              "ingredientId": "I065"
+            },
+            {
+              "amount": 1,
+              "unit": "줄",
+              "substitutions": [],
+              "ingredientId": "I084"
+            },
+            {
+              "amount": 40,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I083"
+            },
+            {
+              "amount": 40,
+              "unit": "g",
+              "substitutions": [],
+              "ingredientId": "I029"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I121"
+            },
+            {
+              "amount": 1,
+              "unit": "꼬집",
+              "substitutions": [],
+              "ingredientId": "I152"
+            },
+            {
+              "amount": 1,
+              "unit": "개",
+              "substitutions": [],
+              "ingredientId": "I051"
+            }
+          ]
+        }
+      ],
+      "water": [
+        {
+          "name": "물",
+          "amountMl": 100
+        }
+      ],
+      "steps": [
+        {
+          "text": "양파와 마늘은 다져요. 베이컨이나 소시지, 버섯을 넣는다면 잘게 썰어요.",
+          "timerSeconds": null
+        },
+        {
+          "text": "팬을 중불에 올리고 버터를 녹여 양파, 마늘, 베이컨을 3분 볶아요.",
+          "timerSeconds": 180
+        },
+        {
+          "text": "밥을 넣고 주걱으로 풀어가며 1분 볶은 뒤 토마토소스와 물 100ml(우유를 넣는다면 우유)를 붓고 중약불에서 저어가며 4분 끓여요. 밥알이 소스를 머금고 걸쭉해지면 됐어요.",
+          "timerSeconds": 300
+        },
+        {
+          "text": "불을 끄고 치즈를 넣어 섞어요. 소금, 후추로 간하고 바질을 뿌려요. 반숙 후라이를 올려도 좋아요.",
+          "timerSeconds": null
+        }
+      ],
+      "contentStatus": "reviewed",
+      "sourceId": "GRC-452"
     }
   ]
 }
