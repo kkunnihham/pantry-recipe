@@ -7,6 +7,7 @@ import RecipeDetail from './screens/RecipeDetail'
 import Cook from './screens/Cook'
 import Shopping from './screens/Shopping'
 import Settings from './screens/Settings'
+import History from './screens/History'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/cook/:id" element={<Cook />} />
         <Route path="/shopping" element={<Shopping />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/history" element={<History />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <BottomNav />

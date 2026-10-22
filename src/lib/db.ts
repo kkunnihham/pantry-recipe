@@ -95,3 +95,76 @@ export async function exportAll() {
     kv,
   }
 }
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value)
+}
+
+/** 백업용: 유효한 항목만 남기고 모든 사용자 데이터를 한 번에 교체한다. */
+export async function importAll(data: unknown): Promise<{ inventory: number; cookLog: number; ratings: number; shopping: number }> {
+  if (!isRecord(data) || data.format !== 'pantry-recipe-backup' || data.version !== 1) {
+    throw new Error('백업 파일 형식이 아니에요')
+  }
+
+  const now = Date.now()
+  const inventory: InventoryRow[] = []
+  for (const row of Array.isArray(data.inventory) ? data.inventory : []) {
+    if (!isRecord(row) || typeof row.ingredientId !== 'string' || (row.state !== 'have' && row.state !== 'low' && row.state !== 'none')) continue
+    inventory.push({
+      ingredientId: row.ingredientId,
+      state: row.state,
+      updatedAt: typeof row.updatedAt === 'number' && Number.isFinite(row.updatedAt) ? row.updatedAt : now,
+    })
+  }
+  const cookLog: CookLogRow[] = []
+  for (const row of Array.isArray(data.cookLog) ? data.cookLog : []) {
+    if (!isRecord(row) || typeof row.recipeId !== 'string' || typeof row.cookedAt !== 'number' || !Number.isFinite(row.cookedAt)
+      || typeof row.servings !== 'number' || !Number.isFinite(row.servings)) continue
+    cookLog.push({ recipeId: row.recipeId, cookedAt: row.cookedAt, servings: row.servings })
+  }
+  const ratings: RatingRow[] = []
+  for (const row of Array.isArray(data.ratings) ? data.ratings : []) {
+    if (!isRecord(row) || typeof row.recipeId !== 'string' || (row.rating !== 'again' && row.rating !== 'meh')) continue
+    ratings.push({
+      recipeId: row.recipeId,
+      rating: row.rating,
+      ratedAt: typeof row.ratedAt === 'number' && Number.isFinite(row.ratedAt) ? row.ratedAt : now,
+    })
+  }
+  const shopping: ShoppingRow[] = []
+  for (const row of Array.isArray(data.shopping) ? data.shopping : []) {
+    if (!isRecord(row) || typeof row.ingredientId !== 'string' || typeof row.addedAt !== 'number' || !Number.isFinite(row.addedAt)
+      || !Array.isArray(row.fromRecipeIds) || !row.fromRecipeIds.every((id) => typeof id === 'string') || typeof row.checked !== 'boolean') continue
+    shopping.push({ ingredientId: row.ingredientId, addedAt: row.addedAt, fromRecipeIds: row.fromRecipeIds, checked: row.checked })
+  }
+
+  const db = await getDB()
+  const stores = ['inventory', 'cookLog', 'ratings', 'shopping', 'kv'] as const
+  const tx = db.transaction(stores, 'readwrite')
+  try {
+    await Promise.all(stores.map((store) => tx.objectStore(store).clear()))
+    for (const row of inventory) await tx.objectStore('inventory').put(row)
+    for (const row of cookLog) await tx.objectStore('cookLog').add(row)
+    for (const row of ratings) await tx.objectStore('ratings').put(row)
+    for (const row of shopping) await tx.objectStore('shopping').put(row)
+    if (isRecord(data.kv)) {
+      for (const [key, value] of Object.entries(data.kv)) await tx.objectStore('kv').put(value, key)
+    }
+    const [inventoryCount, cookLogCount, ratingsCount, shoppingCount] = await Promise.all([
+      tx.objectStore('inventory').count(),
+      tx.objectStore('cookLog').count(),
+      tx.objectStore('ratings').count(),
+      tx.objectStore('shopping').count(),
+    ])
+    await tx.done
+    return { inventory: inventoryCount, cookLog: cookLogCount, ratings: ratingsCount, shopping: shoppingCount }
+  } catch (error) {
+    try {
+      tx.abort()
+    } catch {
+      // 요청 오류로 이미 중단된 트랜잭션일 수 있다.
+    }
+    await tx.done.catch(() => {})
+    throw error
+  }
+}

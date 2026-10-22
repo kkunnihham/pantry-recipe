@@ -1,12 +1,15 @@
-import { useState } from 'react'
+import { useRef, useState, type ChangeEvent } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '../components/Icon'
 import { getTheme, setTheme, type Theme } from '../lib/theme'
-import { exportAll } from '../lib/db'
+import { exportAll, importAll } from '../lib/db'
+import { loadState } from '../state/store'
 
 export default function Settings() {
   const [theme, setThemeState] = useState<Theme>(getTheme())
   const [status, setStatus] = useState<string | null>(null)
+  const [importing, setImporting] = useState(false)
+  const fileInput = useRef<HTMLInputElement>(null)
 
   function pick(t: Theme) {
     setTheme(t)
@@ -23,6 +26,31 @@ export default function Settings() {
     a.click()
     URL.revokeObjectURL(url)
     setStatus('백업 파일을 내려받았어요.')
+  }
+
+  async function upload(event: ChangeEvent<HTMLInputElement>) {
+    const input = event.currentTarget
+    const file = input.files?.[0]
+    input.value = ''
+    if (!file || importing) return
+    if (!window.confirm('지금 앱에 있는 재고·기록·장보기를 모두 지우고 백업 파일 내용으로 바꿔요. 계속할까요?')) return
+
+    setImporting(true)
+    setStatus(null)
+    try {
+      const data: unknown = JSON.parse(await file.text())
+      const counts = await importAll(data)
+      await loadState()
+      setStatus(`가져왔어요. 재고 ${counts.inventory}, 기록 ${counts.cookLog}, 평가 ${counts.ratings}, 장보기 ${counts.shopping}`)
+    } catch (error) {
+      setStatus(error instanceof SyntaxError
+        ? 'JSON 파일을 읽을 수 없어요. 백업 파일인지 확인해 주세요.'
+        : error instanceof Error && error.message === '백업 파일 형식이 아니에요'
+          ? error.message
+          : '가져오지 못했어요. 백업 파일을 확인하고 다시 시도해 주세요.')
+    } finally {
+      setImporting(false)
+    }
   }
 
   return (
@@ -51,13 +79,27 @@ export default function Settings() {
       <section className="section">
         <h2 className="section-title">백업</h2>
         <div className="row-list">
-          <button className="row" onClick={download}>
+          <button className="row" onClick={download} disabled={importing}>
             <span>JSON으로 내보내기</span>
             <Icon name="chevron" size={18} style={{ color: 'var(--text-sub)' }} />
           </button>
+          <button type="button" className="row" onClick={() => fileInput.current?.click()} disabled={importing}>
+            <span>JSON 가져오기</span>
+            <Icon name="chevron" size={18} style={{ color: 'var(--text-sub)' }} />
+          </button>
         </div>
-        <p className="meta">가져오기는 데이터 구조가 확정되는 1단계 뒤에 붙여요.</p>
-        {status && <p className="meta">{status}</p>}
+        <input ref={fileInput} type="file" accept="application/json,.json" hidden disabled={importing} onChange={upload} />
+        {status && <p className="meta" role="status">{status}</p>}
+      </section>
+
+      <section className="section">
+        <h2 className="section-title">기록</h2>
+        <div className="row-list">
+          <Link className="row" to="/history">
+            <span>조리 기록</span>
+            <Icon name="chevron" size={18} style={{ color: 'var(--text-sub)' }} />
+          </Link>
+        </div>
       </section>
     </main>
   )

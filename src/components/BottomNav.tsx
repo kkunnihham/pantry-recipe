@@ -3,7 +3,7 @@ import Icon, { type IconName } from './Icon'
 
 const tabs: { to: string; label: string; icon: IconName; match: (p: string) => boolean }[] = [
   { to: '/fridge', label: '냉장고', icon: 'fridge', match: (p) => p.startsWith('/fridge') || p.startsWith('/shopping') },
-  { to: '/', label: '오늘', icon: 'today', match: (p) => p === '/' || p.startsWith('/settings') },
+  { to: '/', label: '오늘', icon: 'today', match: (p) => p === '/' || p.startsWith('/settings') || p.startsWith('/history') },
   { to: '/recipes', label: '레시피', icon: 'recipes', match: (p) => p.startsWith('/recipe') },
 ]
 

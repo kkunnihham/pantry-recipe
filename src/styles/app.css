@@ -774,3 +774,30 @@
   flex: none;
   color: var(--text-muted);
 }
+
+/* 조리 기록 */
+.history-header {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.history-photo {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.history-row .card-body {
+  overflow-wrap: anywhere;
+}
+
+.history-row .card-title {
+  font-size: 16px;
+}
+
+.history-row .chip {
+  flex: none;
+  white-space: nowrap;
+}
