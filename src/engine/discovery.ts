@@ -30,6 +30,23 @@ export interface DiscoveryOptions {
 }
 
 /**
+ * "하나만 사면 새 요리": near 목록에서 구매 1개짜리 안 해본 레시피를 하루 하나 고른다.
+ * 발견층을 우선하고, 없으면 기본층도 허용한다.
+ */
+export function pickNearDiscovery(near: readonly Recommendation[], opts: DiscoveryOptions): Recommendation | null {
+  const skip = opts.skipIds ?? new Set<string>()
+  let pool = near.filter((r) => r.neverCooked && r.purchaseCount === 1 && !skip.has(r.recipeId))
+  if (opts.preferDiscoveryTier !== false && opts.tierOf) {
+    const disc = pool.filter((r) => opts.tierOf!(r.recipeId) === 'discovery')
+    if (disc.length > 0) pool = disc
+  }
+  if (pool.length === 0) return null
+  const sorted = [...pool].sort((a, b) => a.recipeId.localeCompare(b.recipeId))
+  const idx = hashString(`near|${opts.dateKey}|${sorted.map((r) => r.recipeId).join(',')}`) % sorted.length
+  return sorted[idx]
+}
+
+/**
  * ready 목록(점수순)에서 안 해본 레시피를 모아 날짜 해시로 하나 고른다.
  * 같은 날, 같은 후보 집합이면 항상 같은 결과.
  */

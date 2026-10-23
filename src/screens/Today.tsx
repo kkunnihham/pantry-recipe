@@ -7,7 +7,7 @@ import type { Recommendation } from '../engine/recommend'
 import { useRecommendations } from '../engine/useRecommendations'
 import { formatMinutes } from '../lib/format'
 import { getTheme, toggleTheme } from '../lib/theme'
-import { addDiscoverySkip, addToShopping, useAppState } from '../state/store'
+import { addDiscoverySkip, addNearSkip, addToShopping, useAppState } from '../state/store'
 
 function todayLabel() {
   const d = new Date()
@@ -82,6 +82,8 @@ export default function Today() {
   const inventoryCount = s.inventory.size
   const readyShown = showAll ? rec.ready : rec.ready.slice(0, 5)
   const discoveryRecipe = rec.discovery ? recipeById.get(rec.discovery.recipeId) : null
+  const nearRecipe = rec.nearDiscovery ? recipeById.get(rec.nearDiscovery.recipeId) : null
+  const nearBuyId = rec.nearDiscovery?.missingCore.flatMap((m) => m.buy)[0]
 
   return (
     <main className="screen">
@@ -171,6 +173,34 @@ export default function Today() {
           </p>
         )}
       </section>
+
+      {nearRecipe && rec.nearDiscovery && nearBuyId && (
+        <section className="accent-card accent-card--warn">
+          <p className="accent-label">
+            <Icon name="cart" size={16} />
+            하나만 사면 새 요리
+          </p>
+          <p style={{ fontSize: 20, fontWeight: 700 }}>{nearRecipe.title}</p>
+          <p style={{ fontSize: 13, lineHeight: 1.5 }}>{nearRecipe.summary}</p>
+          <div style={{ display: 'flex', gap: 8, marginTop: 4, flexWrap: 'wrap', alignItems: 'center' }}>
+            <button
+              type="button"
+              className={`stock-chip ${s.shopping.has(nearBuyId) ? 'is-have' : 'is-none'}`}
+              onClick={() => addToShopping(nearBuyId, nearRecipe.id)}
+              aria-label={`${name(nearBuyId)} 장보기에 담기`}
+            >
+              {s.shopping.has(nearBuyId) ? <Icon name="check" size={14} /> : <Icon name="plus" size={14} />} {name(nearBuyId)}
+              {s.shopping.has(nearBuyId) ? ' 담김' : ' 사기'}
+            </button>
+            <Link to={`/recipe/${nearRecipe.id}`} className="btn btn--ghost" style={{ color: 'inherit' }}>
+              보러 가기
+            </Link>
+            <button className="btn btn--ghost" style={{ color: 'inherit' }} onClick={() => addNearSkip(rec.today, nearRecipe.id)}>
+              다른 것 보기
+            </button>
+          </div>
+        </section>
+      )}
 
       {rec.near.length > 0 && (
         <section className="section">

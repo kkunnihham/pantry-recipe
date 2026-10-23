@@ -19,6 +19,8 @@ export interface AppState {
   shopping: ReadonlyMap<string, ShoppingRow>
   /** 오늘 발견에서 "다른 것 보기"로 건너뛴 레시피 */
   discoverySkips: { date: string; ids: string[] }
+  /** "하나만 사면 새 요리"에서 건너뛴 레시피 */
+  nearSkips: { date: string; ids: string[] }
 }
 
 const DEFAULT_TOOLS: Tool[] = ['air_fryer', 'microwave', 'rice_cooker']
@@ -33,6 +35,7 @@ let state: AppState = {
   ratings: new Map(),
   shopping: new Map(),
   discoverySkips: { date: '', ids: [] },
+  nearSkips: { date: '', ids: [] },
 }
 
 const listeners = new Set<() => void>()
@@ -59,7 +62,7 @@ export function getState(): AppState {
 
 export async function loadState(): Promise<void> {
   const db = await getDB()
-  const [invRows, logRows, ratingRows, shopRows, tools, staplesDone, skips] = await Promise.all([
+  const [invRows, logRows, ratingRows, shopRows, tools, staplesDone, skips, nearSkips] = await Promise.all([
     db.getAll('inventory'),
     db.getAll('cookLog'),
     db.getAll('ratings'),
@@ -67,6 +70,7 @@ export async function loadState(): Promise<void> {
     kvGet<Tool[]>('ownedTools'),
     kvGet<boolean>('staplesDone'),
     kvGet<{ date: string; ids: string[] }>('discoverySkips'),
+    kvGet<{ date: string; ids: string[] }>('nearSkips'),
   ])
   const lastCooked = new Map<string, number>()
   const cookCount = new Map<string, number>()
@@ -84,6 +88,7 @@ export async function loadState(): Promise<void> {
     ratings: new Map(ratingRows.map((r) => [r.recipeId, r.rating])),
     shopping: new Map(shopRows.map((r) => [r.ingredientId, r])),
     discoverySkips: skips ?? { date: '', ids: [] },
+    nearSkips: nearSkips ?? { date: '', ids: [] },
   })
 }
 
@@ -130,6 +135,13 @@ export async function addDiscoverySkip(date: string, recipeId: string): Promise<
   const next = { date, ids: [...prev, recipeId] }
   emit({ ...state, discoverySkips: next })
   await kvSet('discoverySkips', next)
+}
+
+export async function addNearSkip(date: string, recipeId: string): Promise<void> {
+  const prev = state.nearSkips.date === date ? state.nearSkips.ids : []
+  const next = { date, ids: [...prev, recipeId] }
+  emit({ ...state, nearSkips: next })
+  await kvSet('nearSkips', next)
 }
 
 export async function logCook(recipeId: string, servings: number, photo?: Blob): Promise<void> {

@@ -839,3 +839,18 @@
   gap: 8px;
   min-width: 0;
 }
+
+/* 오늘: 하나만 사면 새 요리 */
+.accent-card--warn {
+  background: var(--warn-bg);
+  color: var(--warn-text);
+}
+
+.accent-card--warn .accent-label {
+  color: var(--warn-text);
+}
+
+.accent-card--warn .stock-chip.is-none {
+  border-color: var(--warn-text);
+  color: var(--warn-text);
+}

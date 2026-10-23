@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { ingredients, recipes, recipeById } from '../data/catalog'
 import type { Tool } from '../data/types'
 import { evaluateAll, evaluateRecipe, type StockState } from './recommend'
-import { dateKey, pickDiscovery } from './discovery'
+import { dateKey, pickDiscovery, pickNearDiscovery } from './discovery'
 
 const byName = new Map(ingredients.map((i) => [i.name, i.id]))
 function id(name: string): string {
@@ -173,5 +173,29 @@ describe('전형적인 냉장고', () => {
     const pick = pickDiscovery(r2.ready, { dateKey: dateKey(base.now), tierOf })
     // 발견층을 다 해봤으면 기본층의 안 해본 것으로 내려간다
     expect(pick === null || tierOf(pick.recipeId) === 'basic').toBe(true)
+  })
+})
+
+describe('하나만 사면 새 요리', () => {
+  const fridge = inv([...STAPLES, '달걀', '양파', '대파', '밥', '배추김치'])
+  const tierOf = (rid: string) => recipeById.get(rid)!.tier
+
+  it('구매 1개짜리 안 해본 레시피에서 하루 동안 고정된다', () => {
+    const r = evaluateAll(recipes, { ...base, inventory: fridge })
+    const a = pickNearDiscovery(r.near, { dateKey: '2026-10-23', tierOf })
+    const b = pickNearDiscovery(r.near, { dateKey: '2026-10-23', tierOf })
+    expect(a).not.toBeNull()
+    expect(a!.recipeId).toBe(b!.recipeId)
+    expect(a!.purchaseCount).toBe(1)
+    expect(a!.neverCooked).toBe(true)
+    const c = pickNearDiscovery(r.near, { dateKey: '2026-10-23', tierOf, skipIds: new Set([a!.recipeId]) })
+    expect(c === null || c.recipeId !== a!.recipeId).toBe(true)
+  })
+
+  it('구매 2개짜리는 고르지 않는다', () => {
+    const r = evaluateAll(recipes, { ...base, inventory: fridge })
+    const twos = r.near.filter((x) => x.purchaseCount === 2).map((x) => x.recipeId)
+    const pick = pickNearDiscovery(r.near, { dateKey: '2026-10-23', tierOf })
+    if (pick) expect(twos).not.toContain(pick.recipeId)
   })
 })
