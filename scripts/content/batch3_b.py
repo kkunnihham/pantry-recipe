@@ -110,7 +110,7 @@ BATCH3_B = [
         ],
     ),
     R(
-        title='밥솥 치킨라이스', tier='discovery', kind='rice', cuisine='southeast_asian', meal=['main'], method='steam',
+        title='밥솥 치킨라이스', servings=2, tier='discovery', kind='rice', cuisine='southeast_asian', meal=['main'], method='steam',
         minutes=50, difficulty='easy', tools=['rice_cooker'], aliases=['하이난 치킨라이스', '전기밥솥 닭고기 밥'],
         summary='쌀 위에 생강과 마늘로 밑간한 닭다리살을 올리고 밥솥 버튼만 눌러요. 닭 기름이 밥에 배어요.',
         groups=[
@@ -121,18 +121,18 @@ BATCH3_B = [
             G('간', 'major', ['소금 0.5작은술', '치킨스톡 1작은술'], rule='one_of', weight=3),
             G('맛술', 'support', ['맛술 1큰술']),
             G('참기름', 'support', ['참기름 1작은술']),
-            G('소스', 'optional', ['간장 1큰술', '굴소스 1작은술', '대파 15g', '청양고추 1개', '오이 0.5개']),
+            G('소스', 'optional', ['간장 1큰술', '굴소스 1작은술', '대파 15g', '청양고추 1개']),
         ],
         water=[('밥물', 200)],
         steps=[
             ('쌀은 씻어 20분 불려요. 닭다리살은 소금, 맛술을 뿌리고 간 생강 절반과 으깬 마늘로 버무려 10분 둬요.', 1200),
             ('밥솥에 불린 쌀을 넣고 물 200ml(평소 밥물보다 조금 적게)에 치킨스톡과 남은 생강을 넣어요. 닭을 껍질이 위로 가게 쌀 위에 올려요.', None),
             ('백미 취사로 밥을 지어요. 보통 30분쯤이에요.', 1800),
-            ('닭을 꺼내 썰고 밥은 참기름을 넣어 섞어요. 간장과 굴소스, 다진 대파, 고추를 섞은 소스를 곁들이고 오이를 썰어 올려요.', None),
+            ('닭을 꺼내 썰고 밥은 참기름을 넣어 섞어요. 간장과 굴소스, 다진 대파, 고추를 섞은 소스를 곁들여요.', None),
         ],
     ),
     R(
-        title='밥솥 콩나물밥', tier='discovery', kind='rice', cuisine='korean', meal=['main'], method='steam',
+        title='밥솥 콩나물밥', servings=2, tier='discovery', kind='rice', cuisine='korean', meal=['main'], method='steam',
         minutes=55, difficulty='very_easy', tools=['rice_cooker'], source='GRC-096', aliases=['콩나물밥'],
         summary='쌀 위에 콩나물과 돼지고기를 올려 밥을 짓고 양념장에 비벼요. 밥물만 평소보다 적게.',
         groups=[
@@ -153,7 +153,7 @@ BATCH3_B = [
         ],
     ),
     R(
-        title='소고기 토마토 스튜', tier='discovery', kind='soup', cuisine='western', meal=['main', 'soup'], method='boil',
+        title='소고기 토마토 스튜', servings=2, tier='discovery', kind='soup', cuisine='western', meal=['main', 'soup'], method='boil',
         minutes=60, difficulty='easy', aliases=['비프 스튜'],
         summary='소고기 국거리를 볶아 토마토와 감자, 당근과 함께 1시간 뭉근히 끓여요. 빵이나 밥 둘 다 어울려요.',
         groups=[
@@ -187,7 +187,7 @@ BATCH3_B = [
             G('베이컨', 'major', ['베이컨 2줄'], weight=3, subs={'베이컨': [('햄', 0.8, None), ('비엔나소시지', 0.8, None)]}),
             G('간', 'support', ['소금 0.5작은술', '후추 1꼬집'], rule='all_of'),
             G('설탕', 'support', ['설탕 0.5작은술'], weight=1),
-            G('추가', 'optional', ['건조 파슬리 1꼬집', '오이 0.25개', '치킨스톡 0.5작은술']),
+            G('추가', 'optional', ['건조 파슬리 1꼬집', '치킨스톡 0.5작은술']),
         ],
         steps=[
             ('감자는 껍질째 끓는 물에 소금을 넣고 15분 삶아요. 젓가락이 쑥 들어가면 됐어요. 뜨거울 때 껍질을 벗기고 1cm 두께로 썰어요.', 900),

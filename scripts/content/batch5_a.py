@@ -66,7 +66,7 @@ BATCH5_A = [
         ],
     ),
     R(
-        title='백숙', tier='basic', kind='soup', cuisine='korean', meal=['main', 'soup'], method='boil',
+        title='백숙', servings=3, tier='basic', kind='soup', cuisine='korean', meal=['main', 'soup'], method='boil',
         minutes=70, difficulty='easy', aliases=['닭백숙', '삼계탕 풍'],
         summary='통닭을 마늘, 대파와 푹 삶고 그 국물에 쌀을 넣어 죽까지 끓여요. 삼계탕 재료 없이 집에 있는 걸로 해요.',
         groups=[
@@ -164,7 +164,7 @@ BATCH5_A = [
         groups=[
             G('쫄면', 'core', ['쫄면 1봉'], subs={'쫄면': [('소면', 0.75, '비빔국수가 돼요'), ('라면', 0.75, '스프 없이 삶아요')]}),
             G('양념', 'core', ['고추장 1.5큰술', '식초 1.5큰술', '설탕 1큰술', '간장 1작은술'], rule='all_of', weight=8),
-            G('채소', 'major', ['양배추 60g', '오이 0.5개', '당근 20g', '상추 3장', '콩나물 50g'], rule='at_least', min_count=1, weight=4),
+            G('채소', 'major', ['양배추 60g', '당근 20g', '상추 3장', '콩나물 50g'], rule='at_least', min_count=1, weight=4),
             G('참기름', 'major', ['참기름 1큰술'], weight=3),
             G('마늘', 'support', ['마늘 0.5작은술'], weight=1),
             G('깨', 'support', ['깨 1작은술'], weight=1),

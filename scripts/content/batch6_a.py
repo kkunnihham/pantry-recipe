@@ -44,7 +44,7 @@ BATCH6_A = [
         ],
     ),
     R(
-        title='두부김치볼', tier='discovery', kind='snack', cuisine='korean', meal=['snack', 'side'], method='air_fry',
+        title='두부김치볼', servings=2, tier='discovery', kind='snack', cuisine='korean', meal=['snack', 'side'], method='air_fry',
         minutes=30, difficulty='easy', tools=['air_fryer'],
         summary='으깬 두부에 김치와 전분을 섞어 동그랗게 빚고 에어프라이어에 바삭하게 구워요. 겉바속촉 야식이에요.',
         groups=[
@@ -83,7 +83,7 @@ BATCH6_A = [
         ],
     ),
     R(
-        title='에어프라이어 감자튀김', tier='basic', kind='snack', cuisine='western', meal=['snack', 'side'], method='air_fry',
+        title='에어프라이어 감자튀김', servings=2, tier='basic', kind='snack', cuisine='western', meal=['snack', 'side'], method='air_fry',
         minutes=40, difficulty='very_easy', tools=['air_fryer'], aliases=['감자튀김', '프렌치프라이'],
         summary='생감자를 막대로 썰어 찬물에 담갔다가 기름을 조금 버무려 에어프라이어에 구워요. 냉동보다 맛있어요.',
         groups=[
@@ -157,7 +157,7 @@ BATCH6_A = [
         ],
     ),
     R(
-        title='고구마 맛탕', tier='basic', kind='snack', cuisine='korean', meal=['snack'], method='air_fry',
+        title='고구마 맛탕', servings=2, tier='basic', kind='snack', cuisine='korean', meal=['snack'], method='air_fry',
         minutes=35, difficulty='easy', tools=['air_fryer'],
         summary='고구마를 에어프라이어에 바삭하게 굽고 설탕 시럽에 버무려요. 기름에 튀기지 않아 간단해요.',
         groups=[

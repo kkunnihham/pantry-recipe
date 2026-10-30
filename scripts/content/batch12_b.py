@@ -47,7 +47,7 @@ BATCH12_B = [
         ],
     ),
     R(
-        title='유부초밥', tier='basic', kind='rice', cuisine='japanese', meal=['snack', 'main'], method='boil',
+        title='유부초밥', servings=2, tier='basic', kind='rice', cuisine='japanese', meal=['snack', 'main'], method='boil',
         minutes=25, difficulty='very_easy', aliases=['이나리즈시', '집 유부초밥'],
         summary='유부를 간장 설탕 물에 조려 단촛물 밥을 채워요. 시판 유부초밥 키트 없이 생유부로 만드는 법이에요.',
         groups=[

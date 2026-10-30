@@ -105,7 +105,7 @@ BATCH4_A = [
         ],
     ),
     R(
-        title='동그랑땡', tier='basic', kind='side', cuisine='korean', meal=['side', 'snack'], method='grill',
+        title='동그랑땡', servings=2, tier='basic', kind='side', cuisine='korean', meal=['side', 'snack'], method='grill',
         minutes=30, difficulty='normal', source='GRC-070',
         summary='다진 고기에 두부와 채소를 섞어 동글납작하게 빚고 밀가루, 달걀을 입혀 부쳐요. 명절 그 맛이에요.',
         groups=[
@@ -151,7 +151,7 @@ BATCH4_A = [
         groups=[
             G('밥', 'core', ['밥 200g']),
             G('고추장', 'core', ['고추장 1.5큰술'], weight=8),
-            G('채소', 'core', ['콩나물 60g', '시금치 50g', '애호박 50g', '당근 40g', '무 60g', '상추 3장', '오이 0.5개', '표고버섯 40g'], rule='at_least', min_count=2, weight=7),
+            G('채소', 'core', ['콩나물 60g', '시금치 50g', '애호박 50g', '당근 40g', '무 60g', '상추 3장', '표고버섯 40g'], rule='at_least', min_count=2, weight=7),
             G('달걀', 'major', ['달걀 1개']),
             G('참기름', 'major', ['참기름 1큰술'], weight=3),
             G('고기', 'major', ['소고기 (불고기·볶음용) 60g', '다진 소고기 60g', '다진 돼지고기 60g'], rule='optional', weight=3),
@@ -161,7 +161,7 @@ BATCH4_A = [
             G('추가', 'optional', ['김 1장', '깨 1작은술', '설탕 0.5작은술', '간장 1작은술']),
         ],
         steps=[
-            ('콩나물과 시금치는 각각 데쳐 물기를 짜고 소금, 참기름 조금, 마늘로 무쳐요. 애호박, 당근, 무, 버섯은 채 썰어 소금 한 꼬집에 1분씩 볶아요. 상추와 오이는 그냥 채 썰어요.', 600),
+            ('콩나물과 시금치는 각각 데쳐 물기를 짜고 소금, 참기름 조금, 마늘로 무쳐요. 애호박, 당근, 무, 버섯은 채 썰어 소금 한 꼬집에 1분씩 볶아요. 상추는 그냥 채 썰어요.', 600),
             ('고기를 넣는다면 간장 1작은술, 설탕, 마늘에 버무려 2분 볶아요. 달걀은 반숙으로 부쳐요.', 180),
             ('고추장에 참기름 절반, 설탕 조금, 깨를 섞어 비빔 고추장을 만들어요.', None),
             ('큰 그릇에 밥을 담고 나물과 고기를 색 맞춰 둘러 올려요. 달걀을 가운데 올리고 고추장과 남은 참기름, 김가루를 올려 비벼요.', None),
@@ -260,7 +260,7 @@ BATCH4_A = [
         ],
     ),
     R(
-        title='수제비', tier='basic', kind='noodle', cuisine='korean', meal=['main'], method='boil',
+        title='수제비', servings=2, tier='basic', kind='noodle', cuisine='korean', meal=['main'], method='boil',
         minutes=55, difficulty='normal', source='GRC-173',
         summary='밀가루 반죽을 손으로 얇게 떼어 멸치 육수에 넣어 끓여요. 감자와 애호박이 들어가면 제맛이에요.',
         groups=[

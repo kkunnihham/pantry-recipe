@@ -40,7 +40,7 @@ BATCH8_B = [
         ],
     ),
     R(
-        title='군고구마', tier='basic', kind='snack', cuisine='korean', meal=['snack'], method='air_fry',
+        title='군고구마', servings=2, tier='basic', kind='snack', cuisine='korean', meal=['snack'], method='air_fry',
         minutes=45, difficulty='very_easy', tools=['air_fryer'],
         summary='고구마를 통째로 에어프라이어에 천천히 구워요. 낮은 온도로 오래 구워야 꿀고구마가 돼요.',
         groups=[
@@ -112,7 +112,7 @@ BATCH8_B = [
         ],
     ),
     R(
-        title='감자 샐러드', tier='basic', kind='salad', cuisine='western', meal=['side', 'snack'], method='boil',
+        title='감자 샐러드', servings=3, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='salad', cuisine='western', meal=['side', 'snack'], method='boil',
         minutes=45, difficulty='very_easy', aliases=['마요 감자 샐러드', '감자 사라다'],
         summary='삶아 으깬 감자에 마요네즈와 삶은 달걀, 당근을 섞어요. 빵에 발라 먹어도 좋아요.',
         groups=[

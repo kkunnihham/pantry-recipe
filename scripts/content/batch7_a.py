@@ -26,14 +26,14 @@ BATCH7_A = [
         ],
     ),
     R(
-        title='탕수육', tier='discovery', kind='fried', cuisine='chinese', meal=['main', 'snack'], method='fry',
+        title='탕수육', servings=2, tier='discovery', kind='fried', cuisine='chinese', meal=['main', 'snack'], method='fry',
         minutes=45, difficulty='normal', source='GRC-162',
         summary='돼지고기에 전분 반죽을 입혀 두 번 튀기고 케첩 소스를 끼얹어요. 부먹이든 찍먹이든 집에서 돼요.',
         groups=[
             G('돼지고기', 'core', ['돼지고기 (볶음·찌개용) 250g'], subs={'돼지고기 (볶음·찌개용)': [('닭다리살', 0.9, '탕수 치킨이 돼요'), ('두부', 0.75, '물기를 빼고 큼직하게')]}),
             G('튀김옷', 'core', ['전분 80g', '달걀 1개'], rule='all_of', weight=8, subs={'전분': [('튀김가루', 0.85, None)]}),
             G('소스', 'core', ['토마토케첩 3큰술', '설탕 3큰술', '식초 3큰술'], rule='all_of', weight=8),
-            G('식용유', 'major', ['식용유 500ml']),
+            G('식용유', 'major', ['식용유 150ml']),
             G('채소', 'major', ['양파 50g', '당근 30g', '파프리카 40g', '양배추 40g', '사과 0.25개'], rule='at_least', min_count=1, weight=3),
             G('간장', 'support', ['간장 1큰술']),
             G('밑간', 'support', ['소금 1꼬집', '후추 1꼬집', '맛술 1큰술'], rule='all_of'),
@@ -44,7 +44,7 @@ BATCH7_A = [
         steps=[
             ('돼지고기는 1cm 두께 막대로 썰어 소금, 후추, 맛술, 생강에 10분 재워요. 전분 80g에 물 60ml를 부어 30분 두면 바닥에 가라앉아요. 윗물을 따라 버리고 달걀을 섞으면 쫄깃한 탕수육 반죽이에요.', 1800),
             ('채소는 한입 크기로 썰어요. 소스 재료인 케첩, 설탕, 식초, 간장, 물 150ml를 섞고 전분 1큰술을 물 2큰술에 개어 둬요.', None),
-            ('냄비에 기름을 3cm 깊이로 붓고 170도로 달궈요. 고기를 반죽에 넣어 한 조각씩 꺼내 넣고 3분 튀겨 건져요. 2분 쉬었다가 기름을 센불로 올려 1분 더 튀기면 바삭해요.', 360),
+            ('팬에 식용유를 1cm 깊이로 붓고 중불로 달궈요. 고기를 반죽에 넣어 한 조각씩 꺼내 넣고 3분 튀겨 건져요. 2분 쉬었다가 기름을 센불로 올려 1분 더 튀기면 바삭해요.', 360),
             ('팬에 소스를 붓고 채소를 넣어 끓여요. 끓어오르면 전분물을 저으며 부어 걸쭉하게 만들어요. 튀긴 고기에 끼얹거나 따로 찍어 먹어요.', 180),
         ],
     ),
@@ -94,7 +94,7 @@ BATCH7_A = [
         ],
     ),
     R(
-        title='대만 지파이', tier='discovery', kind='fried', cuisine='chinese', meal=['snack', 'main'], method='fry',
+        title='대만 지파이', servings=2, tier='discovery', kind='fried', cuisine='chinese', meal=['snack', 'main'], method='fry',
         minutes=40, difficulty='normal', aliases=['대만식 닭튀김', '지파이'],
         summary='닭가슴살을 얇고 넓게 펴서 전분을 묻혀 튀기고 소금 후추 가루를 뿌려요. 대만 야시장 그 치킨이에요.',
         groups=[
@@ -102,14 +102,14 @@ BATCH7_A = [
             G('전분', 'core', ['전분 5큰술'], weight=8, subs={'전분': [('튀김가루', 0.85, None)]}),
             G('재움 양념', 'core', ['간장 1큰술', '마늘 1작은술', '설탕 1작은술', '맛술 1큰술'], rule='all_of', weight=6),
             G('소금후추 가루', 'core', ['소금 0.5작은술', '후추 0.5작은술'], rule='all_of', weight=5),
-            G('식용유', 'major', ['식용유 500ml']),
+            G('식용유', 'major', ['식용유 150ml']),
             G('향신료', 'optional', ['커민가루 0.5작은술', '파프리카가루 0.5작은술', '계피가루 1꼬집', '고춧가루 0.5작은술', '생강 3g']),
         ],
         steps=[
             ('닭가슴살을 옆으로 반 갈라 펼치고 비닐을 덮어 병으로 두드려 1cm 두께 넓은 한 장으로 펴요. 간장, 마늘, 설탕, 맛술, 생강에 20분 재워요.', 1200),
             ('소금, 후추, 커민, 파프리카가루, 계피를 섞어 뿌릴 가루를 만들어요.', None),
             ('재운 닭의 물기를 살짝 털고 전분을 두껍게 묻혀 5분 두어 전분이 눅눅하게 달라붙게 해요. 이러면 벗겨지지 않아요.', 300),
-            ('넓은 팬에 기름을 2cm 깊이로 붓고 170도로 달궈요. 닭을 넣고 한 면 4분씩 튀겨 꺼내 2분 쉬게 한 뒤 센불에서 1분 더 튀겨요. 가루를 뿌리고 가위로 잘라 먹어요.', 660),
+            ('넓은 팬에 식용유를 1cm 깊이로 붓고 중불로 달궈요. 닭을 넣고 한 면 4분씩 튀겨 꺼내 2분 쉬게 한 뒤 센불에서 1분 더 튀겨요. 가루를 뿌리고 가위로 잘라 먹어요.', 660),
         ],
     ),
     R(
@@ -198,7 +198,7 @@ BATCH7_A = [
         ],
     ),
     R(
-        title='스키야키', tier='discovery', kind='soup', cuisine='japanese', meal=['main'], method='boil',
+        title='스키야키', servings=2, tier='discovery', kind='soup', cuisine='japanese', meal=['main'], method='boil',
         minutes=30, difficulty='easy', aliases=['일본식 소고기 전골'],
         summary='얇은 소고기와 두부, 배추, 버섯을 달콤한 간장 국물에 끓이며 날달걀에 찍어 먹어요. 집에서 하는 일본 전골이에요.',
         groups=[
@@ -243,7 +243,7 @@ BATCH7_A = [
         ],
     ),
     R(
-        title='밀푀유나베', tier='discovery', kind='soup', cuisine='japanese', meal=['main'], method='boil',
+        title='밀푀유나베', servings=2, tier='discovery', kind='soup', cuisine='japanese', meal=['main'], method='boil',
         minutes=30, difficulty='easy',
         summary='배추와 깻잎, 대패삼겹살을 겹겹이 쌓아 냄비에 세워 넣고 육수를 부어 끓여요. 썰어 담기만 하면 되는데 근사해요.',
         groups=[

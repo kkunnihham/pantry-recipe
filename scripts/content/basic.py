@@ -95,7 +95,7 @@ BASIC = [
         ],
     ),
     R(
-        title='오이냉국', tier='basic', kind='soup', cuisine='korean', meal=['side', 'soup'], method='no_cook',
+        title='오이냉국', hidden=True, tier='basic', kind='soup', cuisine='korean', meal=['side', 'soup'], method='no_cook',
         minutes=20, difficulty='very_easy', source='GRC-263',
         summary='얇게 썬 오이를 새콤달콤한 냉국물에 넣어 차갑게 먹어요. 불 쓸 일이 없어요.',
         groups=[

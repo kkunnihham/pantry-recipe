@@ -36,12 +36,12 @@ BATCH10_A = [
         steps=[
             ('냄비에 물 450ml를 끓여 가쓰오부시를 넣고 불을 끈 채 2분 두었다가 건져요. 코인육수라면 그냥 풀어요. 유부는 끓는 물을 끼얹어 기름을 빼고 가늘게 썰어요.', 120),
             ('육수를 약불로 다시 올리고 유부, 미역, 두부를 넣어 2분 끓여요.', 120),
-            ('된장을 풀고 끓어오르기 직전에 불을 꺼요. 된장은 팔팔 끓이면 향이 날아가요. 쪽파를 송송 썰어 올려요.', None),
+            ('된장을 풀고 끓어오르기 직전에 불을 꺼요. 된장은 팔팔 끓이면 향이 날아가요. 대파(또는 쪽파)를 송송 썰어 올려요.', None),
         ],
     ),
     R(
         title='김치 달걀국', tier='basic', kind='soup', cuisine='korean', meal=['breakfast', 'side'], method='boil',
-        minutes=10, difficulty='very_easy', aliases=['김칫국', '김치 계란국'],
+        minutes=10, difficulty='very_easy', aliases=['김치 계란국'],
         summary='김치를 송송 썰어 끓이고 달걀을 풀어 넣어요. 칼칼하고 시원해서 아침 해장국으로도 돼요.',
         groups=[
             G('김치', 'core', ['배추김치 80g']),
@@ -61,7 +61,7 @@ BATCH10_A = [
     ),
     R(
         title='어묵 무국', tier='basic', kind='soup', cuisine='korean', meal=['breakfast', 'side'], method='boil',
-        minutes=15, difficulty='very_easy', aliases=['어묵국', '오뎅국'],
+        minutes=15, difficulty='very_easy', aliases=['오뎅국'],
         summary='무를 얇게 썰어 어묵과 함께 맑게 끓여요. 어묵탕보다 가볍고 아침에 어울려요.',
         groups=[
             G('어묵', 'core', ['어묵 80g']),

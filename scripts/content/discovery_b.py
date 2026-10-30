@@ -60,7 +60,7 @@ DISCOVERY_B = [
         ],
     ),
     R(
-        title='떠먹는 치즈감자', tier='discovery', kind='snack', cuisine='other', meal=['snack'], method='microwave',
+        title='떠먹는 치즈감자', tier='discovery', kind='snack', cuisine='western', meal=['snack'], method='microwave',
         minutes=15, difficulty='very_easy', source='GRC-293', tools=['microwave'],
         summary='전자레인지로 익힌 감자를 으깨 마요네즈와 섞고 치즈를 올려 다시 녹여요. 냄비도 팬도 안 써요.',
         groups=[
@@ -86,7 +86,7 @@ DISCOVERY_B = [
             G('전분', 'core', ['전분 4큰술'], weight=7, subs={'전분': [('튀김가루', 0.85, None), ('밀가루', 0.75, '덜 바삭해요')]}),
             G('소스', 'core', ['간장 1.5큰술', '식초 1큰술', '설탕 1큰술'], rule='all_of', weight=7),
             G('대파', 'major', ['대파 45g'], weight=5),
-            G('식용유', 'support', ['식용유 500ml']),
+            G('식용유', 'support', ['식용유 150ml']),
             G('밑간', 'support', ['소금 1꼬집', '후추 1꼬집'], rule='all_of', weight=1),
             G('소스 추가', 'optional', ['마늘 1작은술', '청양고추 1개', '양파 20g']),
             G('곁들임', 'optional', ['상추 3장']),
@@ -96,7 +96,7 @@ DISCOVERY_B = [
             ('닭다리살을 한 장으로 펴고 소금, 후추를 뿌려요. 대파는 잘게 다지고, 마늘·청양고추·양파를 넣는다면 같이 다져요.', None),
             ('그릇에 간장, 식초, 설탕, 물 1큰술을 섞어 설탕을 녹이고 다진 대파와 채소를 넣어 소스를 만들어요.', None),
             ('닭의 물기를 키친타월로 닦고 전분을 고르게 묻혀요. 5분 두면 전분이 달라붙어 튀길 때 벗겨지지 않아요.', 300),
-            ('냄비에 기름을 2cm 깊이로 붓고 170도로 달궈요. 닭을 넣고 한 면 3분, 뒤집어 3분 튀겨요. 꺼내서 2분 쉬었다가 1분 더 튀겨요.', 540),
+            ('팬에 식용유를 1cm 깊이로 붓고 중불로 달궈요. 닭을 넣고 한 면 3분, 뒤집어 3분 튀겨요. 꺼내서 2분 쉬었다가 1분 더 튀겨요.', 540),
             ('닭을 한입 크기로 썰어 상추를 깐 접시에 담고 소스를 끼얹어요.', None),
         ],
     ),

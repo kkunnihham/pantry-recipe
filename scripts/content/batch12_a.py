@@ -22,7 +22,7 @@ BATCH12_A = [
         ],
     ),
     R(
-        title='감자 고로케', tier='discovery', kind='fried', cuisine='japanese', meal=['snack', 'main'], method='fry',
+        title='감자 고로케', servings=2, tier='discovery', kind='fried', cuisine='japanese', meal=['snack', 'main'], method='fry',
         minutes=45, difficulty='normal', aliases=['크로켓', '감자 크로켓', '고로케'],
         summary='으깬 감자에 볶은 다진 고기와 양파를 섞어 빵가루를 입히고 팬에 튀겨요. 겉은 바삭, 속은 포근한 분식집 고로케예요.',
         groups=[
@@ -129,7 +129,7 @@ BATCH12_A = [
         ],
     ),
     R(
-        title='꿔바로우', tier='discovery', kind='fried', cuisine='chinese', meal=['main', 'snack'], method='fry',
+        title='꿔바로우', servings=2, tier='discovery', kind='fried', cuisine='chinese', meal=['main', 'snack'], method='fry',
         minutes=45, difficulty='normal', aliases=['찹쌀 탕수육', '꿔바로우 탕수육'],
         summary='돼지고기를 불린 전분 반죽에 넓적하게 튀겨 새콤달콤한 소스에 버무려요. 탕수육보다 쫀득하고 납작해요.',
         groups=[

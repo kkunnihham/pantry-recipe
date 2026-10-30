@@ -25,7 +25,7 @@ BATCH13_B = [
         ],
     ),
     R(
-        title='또띠아 라자냐', tier='discovery', kind='bread', cuisine='western', meal=['main'], method='boil',
+        title='또띠아 라자냐', servings=2, tier='discovery', kind='bread', cuisine='western', meal=['main'], method='boil',
         minutes=40, difficulty='easy', aliases=['라자냐', '또띠아로 만드는 라자냐', '팬 라자냐'],
         summary='라자냐 면 대신 또띠아를 켜켜이 깔고 고기 토마토소스와 치즈를 쌓아 팬에서 익혀요. 오븐 없이 되는 라자냐예요.',
         groups=[
@@ -92,7 +92,7 @@ BATCH13_B = [
         ],
     ),
     R(
-        title='프렌치 어니언 수프', tier='discovery', kind='soup', cuisine='western', meal=['main', 'snack'], method='boil',
+        title='프렌치 어니언 수프', tier='discovery', kind='soup', cuisine='western', meal=['main'], method='boil',
         minutes=50, difficulty='easy', aliases=['어니언 수프', '양파 수프', '프랑스식 양파 수프'],
         summary='양파를 갈색이 될 때까지 오래 볶아 육수를 붓고 치즈 얹은 빵을 올려요. 양파 둘로 되는 깊은 맛이에요.',
         groups=[
@@ -135,7 +135,7 @@ BATCH13_B = [
         ],
     ),
     R(
-        title='감자 뇨끼', tier='discovery', kind='noodle', cuisine='western', meal=['main'], method='boil',
+        title='감자 뇨끼', servings=2, tier='discovery', kind='noodle', cuisine='western', meal=['main'], method='boil',
         minutes=50, difficulty='normal', aliases=['뇨키', '수제 뇨끼', '감자 파스타'],
         summary='삶아 으깬 감자에 밀가루와 달걀을 섞어 조각내 삶아요. 버터 세이지 대신 버터 마늘로 버무려요. 쫀득한 감자 파스타예요.',
         groups=[
@@ -156,7 +156,7 @@ BATCH13_B = [
         ],
     ),
     R(
-        title='필리 치즈스테이크 샌드위치', tier='discovery', kind='bread', cuisine='western', meal=['main', 'snack'], method='stirfry',
+        title='필리 치즈스테이크 샌드위치', servings=2, tier='discovery', kind='bread', cuisine='western', meal=['main', 'snack'], method='stirfry',
         minutes=20, difficulty='very_easy', aliases=['치즈스테이크 샌드위치', '필리 샌드위치'],
         summary='얇은 소고기와 양파를 볶아 치즈를 녹이고 빵에 끼워요. 불고기용 고기로 되는 미국식 샌드위치예요.',
         groups=[

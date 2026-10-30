@@ -134,6 +134,8 @@ export interface Recipe {
   baseServings: number
   /** 있으면 인분 환산을 끄고 이 문구로 표시한다 (예: '한 번 담그는 양'). */
   fixedYield?: string
+  /** 목록·추천에서 숨김. ID는 유지한다 (기록 호환). */
+  hidden?: boolean
   tools: Tool[]
   groups: ReqGroup[]
   /** 레시피에 명시된 물. 재고와 무관. */

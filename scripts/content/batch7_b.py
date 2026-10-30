@@ -20,7 +20,7 @@ BATCH7_B = [
         ],
     ),
     R(
-        title='츠쿠네', tier='discovery', kind='grill', cuisine='japanese', meal=['main', 'snack'], method='grill',
+        title='츠쿠네', servings=2, tier='discovery', kind='grill', cuisine='japanese', meal=['main', 'snack'], method='grill',
         minutes=30, difficulty='easy', aliases=['닭고기 완자 꼬치', '야키토리 츠쿠네'],
         summary='다진 닭고기 완자를 팬에 굽고 간장 설탕 소스를 입혀요. 노른자에 찍어 먹는 이자카야 메뉴인데 밥반찬으로 좋아요.',
         groups=[
@@ -123,7 +123,7 @@ BATCH7_B = [
         ],
     ),
     R(
-        title='비스테크 타갈로그', tier='discovery', kind='stirfry', cuisine='southeast_asian', meal=['main'], method='stirfry',
+        title='비스테크 타갈로그', servings=2, tier='discovery', kind='stirfry', cuisine='southeast_asian', meal=['main'], method='stirfry',
         minutes=35, difficulty='easy', aliases=['필리핀식 소고기 양파 볶음', '비스텍'],
         summary='얇은 소고기를 간장과 레몬즙에 재워 볶고 양파링을 수북이 올려요. 필리핀 집밥의 대표예요.',
         groups=[

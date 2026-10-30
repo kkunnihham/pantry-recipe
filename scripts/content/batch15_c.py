@@ -122,7 +122,7 @@ BATCH15_C = [
         ],
     ),
     R(
-        title='콘치즈 고로케', tier='discovery', kind='fried', cuisine='korean', meal=['snack'], method='fry',
+        title='콘치즈 고로케', servings=2, tier='discovery', kind='fried', cuisine='korean', meal=['snack'], method='fry',
         minutes=30, difficulty='easy', aliases=['옥수수 치즈 고로케', '콘치즈 크로켓'],
         summary='으깬 감자에 옥수수와 치즈를 섞어 빵가루를 입혀 튀겨요. 콘치즈가 속에 든 고로케예요.',
         groups=[
@@ -164,7 +164,7 @@ BATCH15_C = [
         ],
     ),
     R(
-        title='아란치니', tier='discovery', kind='fried', cuisine='western', meal=['snack', 'main'], method='fry',
+        title='아란치니', servings=2, tier='discovery', kind='fried', cuisine='western', meal=['snack', 'main'], method='fry',
         minutes=30, difficulty='easy', aliases=['리조또 튀김', '치즈 주먹밥 튀김', '이탈리아식 밥 튀김'],
         summary='남은 리조또나 밥에 치즈를 넣고 동글게 뭉쳐 빵가루를 입혀 튀겨요. 찬밥 처리 최고의 방법이에요.',
         groups=[
@@ -185,7 +185,7 @@ BATCH15_C = [
         ],
     ),
     R(
-        title='허니버터 고구마', tier='basic', kind='snack', cuisine='korean', meal=['snack'], method='air_fry',
+        title='허니버터 고구마', servings=2, tier='basic', kind='snack', cuisine='korean', meal=['snack'], method='air_fry',
         minutes=25, difficulty='very_easy', tools=['air_fryer'], aliases=['에어프라이어 허니버터 고구마', '꿀버터 고구마'],
         summary='고구마를 깍둑썰어 에어프라이어에 굽고 버터와 꿀을 버무려요. 군고구마보다 빨리 되는 간식이에요.',
         groups=[
@@ -202,7 +202,7 @@ BATCH15_C = [
         ],
     ),
     R(
-        title='아코디언 꿀고구마', tier='discovery', kind='snack', cuisine='korean', meal=['snack'], method='air_fry',
+        title='아코디언 꿀고구마', servings=2, tier='discovery', kind='snack', cuisine='korean', meal=['snack'], method='air_fry',
         minutes=35, difficulty='very_easy', tools=['air_fryer'], aliases=['아코디언 고구마', '칼집 고구마 구이'],
         summary='고구마에 칼집을 촘촘히 내고 버터와 꿀을 발라 에어프라이어에 구워요. 칼집 사이가 바삭하고 속은 촉촉해요.',
         groups=[

@@ -44,7 +44,7 @@ BATCH3_A = [
         ],
     ),
     R(
-        title='두부김치', tier='basic', kind='side', cuisine='korean', meal=['side', 'snack'], method='stirfry',
+        title='두부김치', servings=2, tier='basic', kind='side', cuisine='korean', meal=['side', 'snack'], method='stirfry',
         minutes=20, difficulty='very_easy',
         summary='김치와 돼지고기를 볶고 데친 두부를 곁들여요. 술안주로도 밥반찬으로도 좋아요.',
         groups=[
@@ -65,7 +65,7 @@ BATCH3_A = [
         ],
     ),
     R(
-        title='잡채', tier='basic', kind='side', cuisine='korean', meal=['side', 'main'], method='stirfry',
+        title='잡채', servings=3, yield_note='한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side', 'main'], method='stirfry',
         minutes=50, difficulty='normal', source='GRC-036',
         summary='당면을 삶아 간장 양념에 버무리고 따로 볶은 채소, 고기와 섞어요. 채소를 따로 볶는 게 귀찮지만 그래서 맛있어요.',
         groups=[
@@ -88,7 +88,7 @@ BATCH3_A = [
         ],
     ),
     R(
-        title='오이무침', tier='basic', kind='side', cuisine='korean', meal=['side'], method='no_cook',
+        title='오이무침', hidden=True, tier='basic', kind='side', cuisine='korean', meal=['side'], method='no_cook',
         minutes=10, difficulty='very_easy', source='GRC-083',
         summary='오이를 썰어 고춧가루, 식초, 설탕에 무쳐요. 아삭하고 새콤해서 여름 반찬으로 딱이에요.',
         groups=[
@@ -169,12 +169,12 @@ BATCH3_A = [
             G('마요네즈', 'core', ['마요네즈 2큰술'], weight=8),
             G('식빵', 'core', ['식빵 2장'], weight=8),
             G('간', 'support', ['소금 2꼬집', '설탕 0.5작은술', '후추 1꼬집'], rule='all_of'),
-            G('추가', 'optional', ['머스타드 1작은술', '양파 20g', '오이 0.25개', '상추 2장', '버터 5g']),
+            G('추가', 'optional', ['머스타드 1작은술', '양파 20g', '상추 2장', '버터 5g']),
         ],
         water=[('삶을 물', 600)],
         steps=[
             ('냄비에 물을 끓여 달걀을 넣고 10분 삶아요. 찬물에 5분 담가 식히고 껍질을 벗겨요.', 900),
-            ('달걀을 포크로 으깨요. 흰자는 조금 굵게 남기면 식감이 좋아요. 마요네즈, 소금, 설탕, 후추, 머스타드를 넣고 섞어요. 양파나 오이를 넣는다면 잘게 다져 물기를 짜서 넣어요.', None),
+            ('달걀을 포크로 으깨요. 흰자는 조금 굵게 남기면 식감이 좋아요. 마요네즈, 소금, 설탕, 후추, 머스타드를 넣고 섞어요. 양파를 넣는다면 잘게 다져 물기를 짜서 넣어요.', None),
             ('식빵에 버터를 얇게 바르고 달걀 샐러드를 두툼하게 올려 덮어요. 상추를 넣어도 좋아요. 랩으로 싸서 5분 두면 썰기 쉬워요. 반으로 잘라요.', 300),
         ],
     ),
@@ -223,7 +223,7 @@ BATCH3_A = [
         ],
     ),
     R(
-        title='돼지고기 김치찜', tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='돼지고기 김치찜', servings=2, tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=50, difficulty='easy', source='GRC-024',
         summary='묵은지와 돼지고기를 통째로 넣고 물을 자작하게 부어 푹 끓여요. 오래 끓일수록 맛있고 손은 안 가요.',
         groups=[

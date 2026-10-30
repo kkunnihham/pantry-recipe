@@ -95,7 +95,7 @@ BATCH6_B = [
         ],
     ),
     R(
-        title='버섯솥밥', tier='discovery', kind='rice', cuisine='korean', meal=['main'], method='steam',
+        title='버섯솥밥', servings=2, tier='discovery', kind='rice', cuisine='korean', meal=['main'], method='steam',
         minutes=50, difficulty='very_easy', tools=['rice_cooker'], aliases=['밥솥 버섯밥'],
         summary='쌀 위에 여러 버섯을 올려 밥솥으로 짓고 양념장에 비벼요. 버섯 향이 밥에 다 배어요.',
         groups=[
@@ -116,7 +116,7 @@ BATCH6_B = [
         ],
     ),
     R(
-        title='무밥', tier='discovery', kind='rice', cuisine='korean', meal=['main'], method='steam',
+        title='무밥', servings=2, tier='discovery', kind='rice', cuisine='korean', meal=['main'], method='steam',
         minutes=50, difficulty='very_easy', tools=['rice_cooker'], aliases=['밥솥 무밥'],
         summary='채 썬 무를 쌀 위에 올려 밥을 지어요. 무가 달큰해져서 양념장만으로 한 그릇이 돼요.',
         groups=[
@@ -137,7 +137,7 @@ BATCH6_B = [
         ],
     ),
     R(
-        title='감자밥', tier='basic', kind='rice', cuisine='korean', meal=['main'], method='steam',
+        title='감자밥', servings=2, tier='basic', kind='rice', cuisine='korean', meal=['main'], method='steam',
         minutes=55, difficulty='very_easy', tools=['rice_cooker'],
         summary='감자를 큼직하게 썰어 쌀과 함께 밥을 지어요. 감자가 포슬포슬하게 으깨져 버터나 양념장과 잘 맞아요.',
         groups=[
@@ -156,7 +156,7 @@ BATCH6_B = [
         ],
     ),
     R(
-        title='광둥식 닭고기 밥', tier='discovery', kind='rice', cuisine='chinese', meal=['main'], method='steam',
+        title='광둥식 닭고기 밥', servings=2, tier='discovery', kind='rice', cuisine='chinese', meal=['main'], method='steam',
         minutes=55, difficulty='easy', tools=['rice_cooker'], aliases=['보자이판', '煲仔飯'],
         summary='간장, 굴소스, 생강에 재운 닭다리살을 쌀 위에 올려 밥솥으로 짓고 파기름 간장을 둘러요. 홍콩 솥밥이에요.',
         groups=[
@@ -179,7 +179,7 @@ BATCH6_B = [
         ],
     ),
     R(
-        title='밥솥 김치밥', tier='basic', kind='rice', cuisine='korean', meal=['main'], method='steam',
+        title='밥솥 김치밥', servings=2, tier='basic', kind='rice', cuisine='korean', meal=['main'], method='steam',
         minutes=55, difficulty='very_easy', tools=['rice_cooker'], aliases=['김치 솥밥', '김치 콩나물밥'],
         summary='신김치와 돼지고기를 쌀 위에 올려 밥솥으로 짓고 참기름 양념장에 비벼요. 김치볶음밥보다 담백해요.',
         groups=[
@@ -201,7 +201,7 @@ BATCH6_B = [
         ],
     ),
     R(
-        title='밥솥 삼겹살 간장밥', tier='discovery', kind='rice', cuisine='japanese', meal=['main'], method='steam',
+        title='밥솥 삼겹살 간장밥', servings=2, tier='discovery', kind='rice', cuisine='japanese', meal=['main'], method='steam',
         minutes=50, difficulty='very_easy', tools=['rice_cooker'], aliases=['삼겹살 솥밥', '부타동 솥밥'],
         summary='삼겹살을 간장, 설탕, 생강에 재워 쌀 위에 올려 밥솥으로 짓는 한 솥 요리예요. 기름이 밥에 배어 고소해요.',
         groups=[
@@ -223,7 +223,7 @@ BATCH6_B = [
         ],
     ),
     R(
-        title='옥수수 버터밥', tier='discovery', kind='rice', cuisine='japanese', meal=['main', 'side'], method='steam',
+        title='옥수수 버터밥', servings=2, tier='discovery', kind='rice', cuisine='japanese', meal=['main', 'side'], method='steam',
         minutes=55, difficulty='very_easy', tools=['rice_cooker'], aliases=['옥수수 솥밥'],
         summary='옥수수 통조림을 쌀 위에 올려 밥을 짓고 버터와 간장으로 마무리해요. 달고 고소해서 아이도 좋아할 맛이에요.',
         groups=[

@@ -64,7 +64,7 @@ BATCH2_A = [
         ],
     ),
     R(
-        title='감자전', tier='basic', kind='side', cuisine='korean', meal=['snack', 'side'], method='grill',
+        title='감자전', servings=2, tier='basic', kind='side', cuisine='korean', meal=['snack', 'side'], method='grill',
         minutes=25, difficulty='normal', source='GRC-069',
         summary='감자를 갈아 물기를 짜고 가라앉은 전분만 다시 섞어 부쳐요. 밀가루 없이 쫀득해요.',
         groups=[
@@ -175,22 +175,22 @@ BATCH2_A = [
     R(
         title='비빔국수', tier='basic', kind='noodle', cuisine='korean', meal=['main'], method='boil',
         minutes=15, difficulty='very_easy', source='GRC-177',
-        summary='삶은 소면을 고추장 양념에 비벼요. 김치와 오이를 넣으면 새콤하게 입맛이 돌아요.',
+        summary='삶은 소면을 고추장 양념에 비벼요. 김치와 양배추를 넣으면 새콤하게 입맛이 돌아요.',
         groups=[
             G('소면', 'core', ['소면 100g']),
             G('양념', 'core', ['고추장 1큰술', '식초 1큰술', '설탕 1큰술', '간장 1작은술'], rule='all_of', weight=8),
             G('참기름', 'major', ['참기름 1작은술'], weight=3),
             G('김치', 'major', ['배추김치 50g'], weight=3),
-            G('오이', 'major', ['오이 0.5개'], weight=3, subs={'오이': [('양배추', 0.8, '채 썰어요'), ('상추', 0.8, None)]}),
+            G('양배추', 'major', ['양배추 60g'], weight=3, subs={'양배추': [('상추', 0.8, None)]}),
             G('마늘', 'support', ['마늘 0.5작은술'], weight=1),
             G('깨', 'support', ['깨 1작은술'], weight=1),
             G('고명', 'optional', ['달걀 1개', '김 0.5장', '고춧가루 1작은술', '올리고당 1작은술']),
         ],
         steps=[
-            ('고추장, 식초, 설탕, 간장, 마늘, 참기름, 고춧가루를 섞어 양념장을 만들어요. 김치는 잘게 썰고 오이는 채 썰어요. 달걀은 삶아 반으로 잘라요.', 600),
+            ('고추장, 식초, 설탕, 간장, 마늘, 참기름, 고춧가루를 섞어 양념장을 만들어요. 김치는 잘게 썰고 양배추는 채 썰어요. 달걀은 삶아 반으로 잘라요.', 600),
             ('냄비에 물을 넉넉히 끓이고 소면을 펼쳐 넣어요. 끓어오르면 찬물 반 컵을 붓고, 다시 끓으면 한 번 더 부은 뒤 1분 더 삶아요.', 210),
             ('소면을 찬물에 바락바락 헹궈 물기를 꼭 짜요. 전분을 빼야 양념이 잘 배요.', None),
-            ('볼에 면과 양념장, 김치, 오이를 넣고 버무려요. 깨를 뿌리고 달걀과 김을 올려요.', None),
+            ('볼에 면과 양념장, 김치, 양배추를 넣고 버무려요. 깨를 뿌리고 달걀과 김을 올려요.', None),
         ],
     ),
     R(
@@ -217,7 +217,7 @@ BATCH2_A = [
         minutes=12, difficulty='very_easy', source='GRC-087',
         summary='애호박을 반달로 썰어 새우젓이나 소금으로 간해 볶아요. 호박 단맛이 나요.',
         groups=[
-            G('애호박', 'core', ['애호박 1개'], subs={'애호박': [('가지', 0.75, '가지볶음이 돼요')]}),
+            G('애호박', 'core', ['애호박 1개']),
             G('식용유', 'major', ['식용유 1.5큰술']),
             G('간', 'major', ['새우젓 1작은술', '소금 0.5작은술', '국간장 1작은술'], rule='one_of', weight=4),
             G('마늘', 'support', ['마늘 1작은술']),

@@ -1,6 +1,6 @@
 {
   "version": "batch15-441",
-  "generatedAt": "2026-10-30T17:17:11+00:00",
+  "generatedAt": "2026-10-30T17:25:34+00:00",
   "ingredients": [
     {
       "id": "I001",
@@ -2391,6 +2391,7 @@
       "minutes": 20,
       "difficulty": "very_easy",
       "baseServings": 1,
+      "hidden": true,
       "tools": [],
       "groups": [
         {
@@ -4032,7 +4033,7 @@
           "weight": 2,
           "items": [
             {
-              "amount": 450,
+              "amount": 150,
               "unit": "ml",
               "substitutions": [],
               "ingredientId": "I122"
@@ -4098,7 +4099,7 @@
           "timerSeconds": 60
         },
         {
-          "text": "닭에 밀가루를 얇게 묻히고 달걀물에 담갔다 꺼내요. 냄비에 기름을 2cm 깊이로 붓고 170도로 달궈요. 밀가루 반죽을 떨어뜨렸을 때 바로 떠오르면 됐어요.",
+          "text": "닭에 밀가루를 얇게 묻히고 달걀물에 담갔다 꺼내요. 팬에 식용유를 1cm 깊이로 붓고 중불로 달궈요. 밀가루 반죽을 떨어뜨렸을 때 바로 떠오르면 됐어요.",
           "timerSeconds": null
         },
         {
@@ -5802,7 +5803,7 @@
       "summary": "전자레인지로 익힌 감자를 으깨 마요네즈와 섞고 치즈를 올려 다시 녹여요. 냄비도 팬도 안 써요.",
       "tier": "discovery",
       "kind": "snack",
-      "cuisine": "other",
+      "cuisine": "western",
       "meal": [
         "snack"
       ],
@@ -6073,7 +6074,7 @@
           "weight": 2,
           "items": [
             {
-              "amount": 500,
+              "amount": 150,
               "unit": "ml",
               "substitutions": [],
               "ingredientId": "I122"
@@ -6167,7 +6168,7 @@
           "timerSeconds": 300
         },
         {
-          "text": "냄비에 기름을 2cm 깊이로 붓고 170도로 달궈요. 닭을 넣고 한 면 3분, 뒤집어 3분 튀겨요. 꺼내서 2분 쉬었다가 1분 더 튀겨요.",
+          "text": "팬에 식용유를 1cm 깊이로 붓고 중불로 달궈요. 닭을 넣고 한 면 3분, 뒤집어 3분 튀겨요. 꺼내서 2분 쉬었다가 1분 더 튀겨요.",
           "timerSeconds": 540
         },
         {
@@ -9791,7 +9792,7 @@
           "weight": 2,
           "items": [
             {
-              "amount": 500,
+              "amount": 150,
               "unit": "ml",
               "substitutions": [],
               "ingredientId": "I122"
@@ -9853,7 +9854,7 @@
           "timerSeconds": 300
         },
         {
-          "text": "냄비에 기름을 3cm 깊이로 붓고 170도로 달궈요. 전분 반죽을 떨어뜨렸을 때 바로 떠오르면 됐어요. 닭을 한 번에 너무 많이 넣지 말고 3분 튀겨 건져요.",
+          "text": "팬에 식용유를 1cm 깊이로 붓고 중불로 달궈요. 전분 반죽을 떨어뜨렸을 때 바로 떠오르면 됐어요. 닭을 한 번에 너무 많이 넣지 말고 3분 튀겨 건져요.",
           "timerSeconds": 180
         },
         {
@@ -12619,7 +12620,7 @@
       "method": "grill",
       "minutes": 25,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -13640,7 +13641,7 @@
       "id": "R064",
       "title": "비빔국수",
       "aliases": [],
-      "summary": "삶은 소면을 고추장 양념에 비벼요. 김치와 오이를 넣으면 새콤하게 입맛이 돌아요.",
+      "summary": "삶은 소면을 고추장 양념에 비벼요. 김치와 양배추를 넣으면 새콤하게 입맛이 돌아요.",
       "tier": "basic",
       "kind": "noodle",
       "cuisine": "korean",
@@ -13737,23 +13738,16 @@
         },
         {
           "id": "g5",
-          "name": "오이",
+          "name": "양배추",
           "role": "major",
           "isCoreGate": false,
           "matchRule": "one_of",
           "weight": 3,
           "items": [
             {
-              "amount": 0.5,
-              "unit": "개",
+              "amount": 60,
+              "unit": "g",
               "substitutions": [
-                {
-                  "fit": 0.8,
-                  "note": "채 썰어요",
-                  "ingredientIds": [
-                    "I009"
-                  ]
-                },
                 {
                   "fit": 0.8,
                   "ingredientIds": [
@@ -13761,7 +13755,7 @@
                   ]
                 }
               ],
-              "ingredientId": "I010"
+              "ingredientId": "I009"
             }
           ]
         },
@@ -13834,7 +13828,7 @@
       ],
       "steps": [
         {
-          "text": "고추장, 식초, 설탕, 간장, 마늘, 참기름, 고춧가루를 섞어 양념장을 만들어요. 김치는 잘게 썰고 오이는 채 썰어요. 달걀은 삶아 반으로 잘라요.",
+          "text": "고추장, 식초, 설탕, 간장, 마늘, 참기름, 고춧가루를 섞어 양념장을 만들어요. 김치는 잘게 썰고 양배추는 채 썰어요. 달걀은 삶아 반으로 잘라요.",
           "timerSeconds": 600
         },
         {
@@ -13846,7 +13840,7 @@
           "timerSeconds": null
         },
         {
-          "text": "볼에 면과 양념장, 김치, 오이를 넣고 버무려요. 깨를 뿌리고 달걀과 김을 올려요.",
+          "text": "볼에 면과 양념장, 김치, 양배추를 넣고 버무려요. 깨를 뿌리고 달걀과 김을 올려요.",
           "timerSeconds": null
         }
       ],
@@ -14032,15 +14026,7 @@
             {
               "amount": 1,
               "unit": "개",
-              "substitutions": [
-                {
-                  "fit": 0.75,
-                  "note": "가지볶음이 돼요",
-                  "ingredientIds": [
-                    "I012"
-                  ]
-                }
-              ],
+              "substitutions": [],
               "ingredientId": "I011"
             }
           ]
@@ -15306,7 +15292,7 @@
           "weight": 4,
           "items": [
             {
-              "amount": 500,
+              "amount": 150,
               "unit": "ml",
               "substitutions": [],
               "ingredientId": "I122"
@@ -15399,7 +15385,7 @@
           "timerSeconds": 300
         },
         {
-          "text": "냄비에 기름을 2cm 깊이로 붓고 170도로 달궈요. 빵가루를 떨어뜨렸을 때 바로 떠오르면 됐어요. 고기를 넣고 한 면 3분, 뒤집어 3분 튀겨요.",
+          "text": "팬에 식용유를 1cm 깊이로 붓고 중불로 달궈요. 빵가루를 떨어뜨렸을 때 바로 떠오르면 됐어요. 고기를 넣고 한 면 3분, 뒤집어 3분 튀겨요.",
           "timerSeconds": 360
         },
         {
@@ -15476,12 +15462,6 @@
               "unit": "장",
               "substitutions": [],
               "ingredientId": "I016"
-            },
-            {
-              "amount": 0.5,
-              "unit": "개",
-              "substitutions": [],
-              "ingredientId": "I010"
             },
             {
               "amount": 1,
@@ -15879,6 +15859,7 @@
       "minutes": 20,
       "difficulty": "easy",
       "baseServings": 1,
+      "hidden": true,
       "tools": [],
       "groups": [
         {
@@ -17545,7 +17526,7 @@
       "method": "stirfry",
       "minutes": 20,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -17745,7 +17726,8 @@
       "method": "stirfry",
       "minutes": 50,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -17994,6 +17976,7 @@
       "minutes": 10,
       "difficulty": "very_easy",
       "baseServings": 1,
+      "hidden": true,
       "tools": [],
       "groups": [
         {
@@ -18773,12 +18756,6 @@
               "ingredientId": "I004"
             },
             {
-              "amount": 0.25,
-              "unit": "개",
-              "substitutions": [],
-              "ingredientId": "I010"
-            },
-            {
               "amount": 2,
               "unit": "장",
               "substitutions": [],
@@ -18805,7 +18782,7 @@
           "timerSeconds": 900
         },
         {
-          "text": "달걀을 포크로 으깨요. 흰자는 조금 굵게 남기면 식감이 좋아요. 마요네즈, 소금, 설탕, 후추, 머스타드를 넣고 섞어요. 양파나 오이를 넣는다면 잘게 다져 물기를 짜서 넣어요.",
+          "text": "달걀을 포크로 으깨요. 흰자는 조금 굵게 남기면 식감이 좋아요. 마요네즈, 소금, 설탕, 후추, 머스타드를 넣고 섞어요. 양파를 넣는다면 잘게 다져 물기를 짜서 넣어요.",
           "timerSeconds": null
         },
         {
@@ -19308,7 +19285,7 @@
       "method": "boil",
       "minutes": 50,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -20677,7 +20654,7 @@
       "method": "steam",
       "minutes": 50,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "rice_cooker"
       ],
@@ -20854,12 +20831,6 @@
               "unit": "개",
               "substitutions": [],
               "ingredientId": "I018"
-            },
-            {
-              "amount": 0.5,
-              "unit": "개",
-              "substitutions": [],
-              "ingredientId": "I010"
             }
           ]
         }
@@ -20884,7 +20855,7 @@
           "timerSeconds": 1800
         },
         {
-          "text": "닭을 꺼내 썰고 밥은 참기름을 넣어 섞어요. 간장과 굴소스, 다진 대파, 고추를 섞은 소스를 곁들이고 오이를 썰어 올려요.",
+          "text": "닭을 꺼내 썰고 밥은 참기름을 넣어 섞어요. 간장과 굴소스, 다진 대파, 고추를 섞은 소스를 곁들여요.",
           "timerSeconds": null
         }
       ],
@@ -20906,7 +20877,7 @@
       "method": "steam",
       "minutes": 55,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "rice_cooker"
       ],
@@ -21123,7 +21094,7 @@
       "method": "boil",
       "minutes": 60,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -21556,12 +21527,6 @@
               "unit": "꼬집",
               "substitutions": [],
               "ingredientId": "I149"
-            },
-            {
-              "amount": 0.25,
-              "unit": "개",
-              "substitutions": [],
-              "ingredientId": "I010"
             },
             {
               "amount": 0.5,
@@ -23404,7 +23369,7 @@
       "method": "grill",
       "minutes": 30,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -23889,12 +23854,6 @@
               "ingredientId": "I016"
             },
             {
-              "amount": 0.5,
-              "unit": "개",
-              "substitutions": [],
-              "ingredientId": "I010"
-            },
-            {
               "amount": 40,
               "unit": "g",
               "substitutions": [],
@@ -24048,7 +24007,7 @@
       ],
       "steps": [
         {
-          "text": "콩나물과 시금치는 각각 데쳐 물기를 짜고 소금, 참기름 조금, 마늘로 무쳐요. 애호박, 당근, 무, 버섯은 채 썰어 소금 한 꼬집에 1분씩 볶아요. 상추와 오이는 그냥 채 썰어요.",
+          "text": "콩나물과 시금치는 각각 데쳐 물기를 짜고 소금, 참기름 조금, 마늘로 무쳐요. 애호박, 당근, 무, 버섯은 채 썰어 소금 한 꼬집에 1분씩 볶아요. 상추는 그냥 채 썰어요.",
           "timerSeconds": 600
         },
         {
@@ -25059,7 +25018,7 @@
       "method": "boil",
       "minutes": 55,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -25852,12 +25811,6 @@
               "unit": "g",
               "substitutions": [],
               "ingredientId": "I001"
-            },
-            {
-              "amount": 1,
-              "unit": "개",
-              "substitutions": [],
-              "ingredientId": "I012"
             },
             {
               "amount": 50,
@@ -28929,7 +28882,7 @@
       "method": "boil",
       "minutes": 70,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 3,
       "tools": [],
       "groups": [
         {
@@ -29965,12 +29918,6 @@
               "unit": "g",
               "substitutions": [],
               "ingredientId": "I009"
-            },
-            {
-              "amount": 0.5,
-              "unit": "개",
-              "substitutions": [],
-              "ingredientId": "I010"
             },
             {
               "amount": 20,
@@ -32664,14 +32611,7 @@
             {
               "amount": 80,
               "unit": "g",
-              "substitutions": [
-                {
-                  "fit": 0.85,
-                  "ingredientIds": [
-                    "I010"
-                  ]
-                }
-              ],
+              "substitutions": [],
               "ingredientId": "I030"
             },
             {
@@ -32765,22 +32705,6 @@
         },
         {
           "id": "g7",
-          "name": "오이",
-          "role": "support",
-          "isCoreGate": false,
-          "matchRule": "one_of",
-          "weight": 2,
-          "items": [
-            {
-              "amount": 0.5,
-              "unit": "개",
-              "substitutions": [],
-              "ingredientId": "I010"
-            }
-          ]
-        },
-        {
-          "id": "g8",
           "name": "식용유",
           "role": "support",
           "isCoreGate": false,
@@ -32796,7 +32720,7 @@
           ]
         },
         {
-          "id": "g9",
+          "id": "g8",
           "name": "추가",
           "role": "optional",
           "isCoreGate": false,
@@ -32852,11 +32776,11 @@
           "timerSeconds": 240
         },
         {
-          "text": "바게트를 반 갈라 안쪽에 버터를 바르고 마른 팬이나 토스터에 2분 구워요. 오이는 길게 얇게 썰고 고추는 송송 썰어요.",
+          "text": "바게트를 반 갈라 안쪽에 버터를 바르고 마른 팬이나 토스터에 2분 구워요. 고추는 송송 썰어요.",
           "timerSeconds": 120
         },
         {
-          "text": "빵 안쪽에 마요네즈를 바르고 돼지고기, 물기 뺀 피클, 오이, 고수, 고추를 끼워요. 핫소스를 뿌려요.",
+          "text": "빵 안쪽에 마요네즈를 바르고 돼지고기, 물기 뺀 피클, 고수, 고추를 끼워요. 핫소스를 뿌려요.",
           "timerSeconds": null
         }
       ],
@@ -33005,12 +32929,6 @@
           "matchRule": "at_least",
           "weight": 4,
           "items": [
-            {
-              "amount": 0.5,
-              "unit": "개",
-              "substitutions": [],
-              "ingredientId": "I010"
-            },
             {
               "amount": 4,
               "unit": "장",
@@ -34249,12 +34167,6 @@
               "ingredientId": "I120"
             },
             {
-              "amount": 0.5,
-              "unit": "개",
-              "substitutions": [],
-              "ingredientId": "I010"
-            },
-            {
               "amount": 40,
               "unit": "g",
               "substitutions": [],
@@ -34301,7 +34213,7 @@
           "timerSeconds": 600
         },
         {
-          "text": "땅콩 소스를 찍거나 끼얹어 먹어요. 오이와 양파를 얇게 썰어 곁들이고 땅콩과 고수를 뿌려요. 밥과 함께 내요.",
+          "text": "땅콩 소스를 찍거나 끼얹어 먹어요. 양파를 얇게 썰어 곁들이고 땅콩과 고수를 뿌려요. 밥과 함께 내요.",
           "timerSeconds": null
         }
       ],
@@ -35294,7 +35206,7 @@
       "method": "air_fry",
       "minutes": 30,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "air_fryer"
       ],
@@ -35686,7 +35598,7 @@
       "method": "air_fry",
       "minutes": 40,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "air_fryer"
       ],
@@ -36391,7 +36303,7 @@
       "method": "air_fry",
       "minutes": 35,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "air_fryer"
       ],
@@ -38188,7 +38100,7 @@
       "method": "steam",
       "minutes": 50,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "rice_cooker"
       ],
@@ -38428,7 +38340,7 @@
       "method": "steam",
       "minutes": 50,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "rice_cooker"
       ],
@@ -38622,7 +38534,7 @@
       "method": "steam",
       "minutes": 55,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "rice_cooker"
       ],
@@ -38788,7 +38700,7 @@
       "method": "steam",
       "minutes": 55,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "rice_cooker"
       ],
@@ -39052,7 +38964,7 @@
       "method": "steam",
       "minutes": 55,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "rice_cooker"
       ],
@@ -39289,7 +39201,7 @@
       "method": "steam",
       "minutes": 50,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "rice_cooker"
       ],
@@ -39516,7 +39428,7 @@
       "method": "steam",
       "minutes": 55,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "rice_cooker"
       ],
@@ -39942,7 +39854,7 @@
       "method": "fry",
       "minutes": 45,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -40042,7 +39954,7 @@
           "weight": 4,
           "items": [
             {
-              "amount": 500,
+              "amount": 150,
               "unit": "ml",
               "substitutions": [],
               "ingredientId": "I122"
@@ -40193,7 +40105,7 @@
           "timerSeconds": null
         },
         {
-          "text": "냄비에 기름을 3cm 깊이로 붓고 170도로 달궈요. 고기를 반죽에 넣어 한 조각씩 꺼내 넣고 3분 튀겨 건져요. 2분 쉬었다가 기름을 센불로 올려 1분 더 튀기면 바삭해요.",
+          "text": "팬에 식용유를 1cm 깊이로 붓고 중불로 달궈요. 고기를 반죽에 넣어 한 조각씩 꺼내 넣고 3분 튀겨 건져요. 2분 쉬었다가 기름을 센불로 올려 1분 더 튀기면 바삭해요.",
           "timerSeconds": 360
         },
         {
@@ -40682,7 +40594,7 @@
       "method": "fry",
       "minutes": 40,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -40797,7 +40709,7 @@
           "weight": 4,
           "items": [
             {
-              "amount": 500,
+              "amount": 150,
               "unit": "ml",
               "substitutions": [],
               "ingredientId": "I122"
@@ -40859,7 +40771,7 @@
           "timerSeconds": 300
         },
         {
-          "text": "넓은 팬에 기름을 2cm 깊이로 붓고 170도로 달궈요. 닭을 넣고 한 면 4분씩 튀겨 꺼내 2분 쉬게 한 뒤 센불에서 1분 더 튀겨요. 가루를 뿌리고 가위로 잘라 먹어요.",
+          "text": "넓은 팬에 식용유를 1cm 깊이로 붓고 중불로 달궈요. 닭을 넣고 한 면 4분씩 튀겨 꺼내 2분 쉬게 한 뒤 센불에서 1분 더 튀겨요. 가루를 뿌리고 가위로 잘라 먹어요.",
           "timerSeconds": 660
         }
       ],
@@ -41768,7 +41680,7 @@
       "method": "boil",
       "minutes": 30,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -42269,7 +42181,7 @@
       "method": "boil",
       "minutes": 30,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -42978,7 +42890,7 @@
       "method": "grill",
       "minutes": 30,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -44144,7 +44056,7 @@
       "method": "stirfry",
       "minutes": 35,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -46422,7 +46334,7 @@
       "method": "grill",
       "minutes": 20,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -47130,7 +47042,7 @@
           "weight": 4,
           "items": [
             {
-              "amount": 400,
+              "amount": 250,
               "unit": "ml",
               "substitutions": [],
               "ingredientId": "I122"
@@ -47198,7 +47110,7 @@
           "timerSeconds": null
         },
         {
-          "text": "냄비에 기름을 5cm 깊이로 붓고 170도로 달궈요. 반죽을 떨어뜨렸을 때 바로 떠오르면 됐어요. 핫도그를 넣고 굴려가며 3분 튀겨요.",
+          "text": "작은 팬에 식용유를 1.5cm 깊이로 붓고 중불로 달궈요. 반죽을 떨어뜨렸을 때 바로 떠오르면 됐어요. 핫도그를 넣고 굴려가며 4분 튀겨요. 깊지 않아도 굴리면 고루 익어요.",
           "timerSeconds": 180
         },
         {
@@ -48242,7 +48154,7 @@
       "method": "air_fry",
       "minutes": 45,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "air_fryer"
       ],
@@ -49054,7 +48966,8 @@
       "method": "boil",
       "minutes": 45,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -55660,7 +55573,7 @@
           "timerSeconds": 120
         },
         {
-          "text": "된장을 풀고 끓어오르기 직전에 불을 꺼요. 된장은 팔팔 끓이면 향이 날아가요. 쪽파를 송송 썰어 올려요.",
+          "text": "된장을 풀고 끓어오르기 직전에 불을 꺼요. 된장은 팔팔 끓이면 향이 날아가요. 대파(또는 쪽파)를 송송 썰어 올려요.",
           "timerSeconds": null
         }
       ],
@@ -55670,7 +55583,6 @@
       "id": "R260",
       "title": "김치 달걀국",
       "aliases": [
-        "김칫국",
         "김치 계란국"
       ],
       "summary": "김치를 송송 썰어 끓이고 달걀을 풀어 넣어요. 칼칼하고 시원해서 아침 해장국으로도 돼요.",
@@ -55879,7 +55791,6 @@
       "id": "R261",
       "title": "어묵 무국",
       "aliases": [
-        "어묵국",
         "오뎅국"
       ],
       "summary": "무를 얇게 썰어 어묵과 함께 맑게 끓여요. 어묵탕보다 가볍고 아침에 어울려요.",
@@ -66769,7 +66680,7 @@
       "method": "fry",
       "minutes": 45,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -67969,7 +67880,7 @@
       "method": "fry",
       "minutes": 45,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -69102,7 +69013,7 @@
       "method": "boil",
       "minutes": 25,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -75295,7 +75206,7 @@
       "method": "boil",
       "minutes": 40,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -76074,8 +75985,7 @@
       "kind": "soup",
       "cuisine": "western",
       "meal": [
-        "main",
-        "snack"
+        "main"
       ],
       "method": "boil",
       "minutes": 50,
@@ -76611,7 +76521,7 @@
       "method": "boil",
       "minutes": 50,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -76820,7 +76730,7 @@
       "method": "stirfry",
       "minutes": 20,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -78426,12 +78336,6 @@
               "ingredientId": "I008"
             },
             {
-              "amount": 1,
-              "unit": "큰술",
-              "substitutions": [],
-              "ingredientId": "I117"
-            },
-            {
               "amount": 0.5,
               "unit": "작은술",
               "substitutions": [],
@@ -78502,7 +78406,7 @@
           "timerSeconds": 3600
         },
         {
-          "text": "냄비에 등뼈와 물 2L, 생강, 대파 푸른 부분, 된장 1큰술, 맛술을 넣고 끓여요. 끓으면 거품을 걷고 뚜껑을 덮어 중약불에서 60분 삶아요.",
+          "text": "냄비에 등뼈와 물 2L, 생강, 대파 푸른 부분, 된장 절반, 맛술을 넣고 끓여요. 끓으면 거품을 걷고 뚜껑을 덮어 중약불에서 60분 삶아요.",
           "timerSeconds": 3600
         },
         {
@@ -90812,7 +90716,7 @@
       "method": "fry",
       "minutes": 30,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -91241,7 +91145,7 @@
       "method": "fry",
       "minutes": 30,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -91478,7 +91382,7 @@
       "method": "air_fry",
       "minutes": 25,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "air_fryer"
       ],
@@ -91634,7 +91538,7 @@
       "method": "air_fry",
       "minutes": 35,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "air_fryer"
       ],
@@ -96232,7 +96136,7 @@
       "method": "boil",
       "minutes": 30,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
