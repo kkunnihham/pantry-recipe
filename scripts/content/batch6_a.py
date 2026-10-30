@@ -3,7 +3,7 @@ from dsl import R, G
 
 BATCH6_A = [
     R(
-        title='에어프라이어 닭봉구이', tier='basic', kind='grill', cuisine='korean', meal=['main', 'snack'], method='air_fry',
+        title='에어프라이어 닭봉구이', servings=2, tier='basic', kind='grill', cuisine='korean', meal=['main', 'snack'], method='air_fry',
         minutes=45, difficulty='very_easy', tools=['air_fryer'], aliases=['닭날개 구이'],
         summary='닭봉에 소금, 후추, 마늘만 뿌려 에어프라이어에 돌려요. 껍질이 치킨처럼 바삭해져요.',
         groups=[
@@ -122,7 +122,7 @@ BATCH6_A = [
         ],
     ),
     R(
-        title='간장마늘 닭다리 구이', tier='basic', kind='grill', cuisine='korean', meal=['main'], method='air_fry',
+        title='간장마늘 닭다리 구이', servings=2, tier='basic', kind='grill', cuisine='korean', meal=['main'], method='air_fry',
         minutes=55, difficulty='very_easy', tools=['air_fryer'],
         summary='닭다리를 간장, 마늘, 꿀에 재워 에어프라이어에 구워요. 양념이 눌어 윤기가 나요.',
         groups=[

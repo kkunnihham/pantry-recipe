@@ -99,7 +99,7 @@ export default function RecipeDetail() {
   const recipe = id ? recipeById.get(id) : undefined
   const s = useAppState()
   const recs = useRecommendations()
-  const [servings, setServings] = useState(1)
+  const [servings, setServings] = useState(() => Math.min(3, recipe?.baseServings ?? 1))
 
   if (!recipe) {
     return (
@@ -119,6 +119,9 @@ export default function RecipeDetail() {
   )
   const cooked = s.cookCount.get(recipe.id) ?? 0
   const rating = s.ratings.get(recipe.id)
+  const fixed = !!recipe.fixedYield
+  const shownServings = fixed ? recipe.baseServings : servings
+  const factor = fixed ? 1 : servings / recipe.baseServings
 
   return (
     <main className="screen detail">
@@ -159,15 +162,21 @@ export default function RecipeDetail() {
       <section className="section">
         <div className="section-head">
           <h2 className="section-title">재료</h2>
-          <div className="stepper" role="group" aria-label="인분">
-            <button aria-label="인분 줄이기" onClick={() => setServings((v) => Math.max(1, v - 1))} disabled={servings <= 1}>
-              −
-            </button>
-            <span>{servings}인분</span>
-            <button aria-label="인분 늘리기" onClick={() => setServings((v) => Math.min(3, v + 1))} disabled={servings >= 3}>
-              +
-            </button>
-          </div>
+          {fixed ? (
+            <span className="meta">
+              {recipe.fixedYield} · 약 {recipe.baseServings}인분
+            </span>
+          ) : (
+            <div className="stepper" role="group" aria-label="인분">
+              <button aria-label="인분 줄이기" onClick={() => setServings((v) => Math.max(1, v - 1))} disabled={servings <= 1}>
+                −
+              </button>
+              <span>{servings}인분</span>
+              <button aria-label="인분 늘리기" onClick={() => setServings((v) => Math.min(3, v + 1))} disabled={servings >= 3}>
+                +
+              </button>
+            </div>
+          )}
         </div>
         <div className="card" style={{ padding: '6px 16px' }}>
           {groupsByRole.map(({ role, groups }) => (
@@ -175,7 +184,7 @@ export default function RecipeDetail() {
               <p className="role-label">{ROLE_LABEL[role]}</p>
               <ul className="ing-list">
                 {groups.map((g) => (
-                  <GroupRow key={g.id} group={g} servings={servings} inventory={s.inventory} rec={rec} />
+                  <GroupRow key={g.id} group={g} servings={factor} inventory={s.inventory} rec={rec} />
                 ))}
               </ul>
             </div>
@@ -188,7 +197,7 @@ export default function RecipeDetail() {
                   <li key={w.name} className="ing-row">
                     <div className="ing-main">
                       <span className="ing-names">
-                        <span className="ing-name">{w.name}</span> <span className="ing-amount">{formatNumber(w.amountMl * servings)}ml</span>
+                        <span className="ing-name">{w.name}</span> <span className="ing-amount">{formatNumber(w.amountMl * factor)}ml</span>
                       </span>
                     </div>
                   </li>
@@ -227,7 +236,7 @@ export default function RecipeDetail() {
       </section>
 
       <div className="sticky-cta">
-        <Link to={`/cook/${recipe.id}?servings=${servings}`} className="btn btn--primary" style={{ width: '100%' }}>
+        <Link to={`/cook/${recipe.id}?servings=${shownServings}`} className="btn btn--primary" style={{ width: '100%' }}>
           조리 시작
         </Link>
       </div>

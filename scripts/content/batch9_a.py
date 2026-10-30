@@ -3,7 +3,7 @@ from dsl import R, G
 
 BATCH9_A = [
     R(
-        title='시금치나물', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='시금치나물', servings=3, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=10, difficulty='very_easy', source='GRC-085',
         summary='시금치를 살짝 데쳐 국간장과 참기름, 마늘에 무쳐요. 비빔밥에도 김밥에도 들어가는 기본 나물이에요.',
         groups=[
@@ -21,7 +21,7 @@ BATCH9_A = [
         ],
     ),
     R(
-        title='숙주나물무침', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='숙주나물무침', servings=3, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=10, difficulty='very_easy',
         summary='숙주를 짧게 데쳐 소금과 참기름에 무쳐요. 콩나물보다 부드럽고 빨리 익어요.',
         groups=[
@@ -39,7 +39,7 @@ BATCH9_A = [
         ],
     ),
     R(
-        title='마늘종볶음', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
+        title='마늘종볶음', servings=3, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
         minutes=12, difficulty='very_easy', source='GRC-1540',
         summary='마늘종을 간장과 올리고당에 볶아요. 아삭하게 볶아야 하니 오래 두지 마요.',
         groups=[
@@ -57,7 +57,7 @@ BATCH9_A = [
         ],
     ),
     R(
-        title='김무침', tier='basic', kind='side', cuisine='korean', meal=['side'], method='no_cook',
+        title='김무침', servings=2, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='no_cook',
         minutes=8, difficulty='very_easy', aliases=['김 양념 무침'],
         summary='김을 구워 부수고 간장, 참기름, 깨에 무쳐요. 눅눅해진 김을 살리는 반찬이에요.',
         groups=[
@@ -75,7 +75,7 @@ BATCH9_A = [
         ],
     ),
     R(
-        title='깻잎찜', tier='basic', kind='side', cuisine='korean', meal=['side'], method='steam',
+        title='깻잎찜', servings=3, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='steam',
         minutes=15, difficulty='very_easy', aliases=['깻잎 양념 찜'],
         summary='깻잎 사이사이에 간장 양념을 발라 전자레인지나 팬에서 쪄요. 밥 한 공기가 금방 사라져요.',
         groups=[
@@ -94,7 +94,7 @@ BATCH9_A = [
         ],
     ),
     R(
-        title='무나물', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
+        title='무나물', servings=3, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
         minutes=15, difficulty='very_easy', source='GRC-1521',
         summary='채 썬 무를 들기름에 볶아 물을 조금 붓고 부드럽게 익혀요. 무 단맛이 나는 흰 나물이에요.',
         groups=[
@@ -115,7 +115,7 @@ BATCH9_A = [
         ],
     ),
     R(
-        title='버섯볶음', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
+        title='버섯볶음', servings=2, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
         minutes=12, difficulty='very_easy',
         summary='버섯을 기름 없이 먼저 볶아 물기를 날린 뒤 간장과 참기름으로 간해요. 어떤 버섯이든 돼요.',
         groups=[
@@ -136,7 +136,7 @@ BATCH9_A = [
         ],
     ),
     R(
-        title='단무지무침', tier='basic', kind='side', cuisine='korean', meal=['side'], method='no_cook',
+        title='단무지무침', servings=2, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='no_cook',
         minutes=5, difficulty='very_easy', source='GRC-1522',
         summary='단무지를 채 썰어 고춧가루와 참기름에 무쳐요. 중국집 단무지가 아삭한 반찬이 돼요.',
         groups=[
@@ -205,7 +205,7 @@ BATCH9_A = [
         ],
     ),
     R(
-        title='스팸 감자조림', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='스팸 감자조림', servings=3, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=25, difficulty='very_easy', source='GRC-084',
         summary='스팸과 감자를 간장 양념에 자작하게 조려요. 짭짤 달콤해서 밥도둑이에요.',
         groups=[
@@ -227,7 +227,7 @@ BATCH9_A = [
         ],
     ),
     R(
-        title='김자반볶음', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
+        title='김자반볶음', servings=4, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
         minutes=10, difficulty='very_easy', source='GRC-1525', aliases=['김 가루 볶음', '김자반'],
         summary='김을 부숴 기름에 볶고 설탕, 소금, 깨로 간해요. 밥에 뿌려 먹는 그 김자반이에요.',
         groups=[

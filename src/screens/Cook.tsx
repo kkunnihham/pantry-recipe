@@ -129,7 +129,9 @@ export default function Cook() {
   const navigate = useNavigate()
   const s = useAppState()
   const recipe = id ? recipeById.get(id) : undefined
-  const servings = Math.min(3, Math.max(1, Number(params.get('servings') ?? 1) || 1))
+  const base = recipe?.baseServings ?? 1
+  const servings = recipe?.fixedYield ? base : Math.min(6, Math.max(1, Number(params.get('servings') ?? base) || base))
+  const factor = servings / base
   const [step, setStep] = useState(0)
   const [finishing, setFinishing] = useState(false)
   const [usage, setUsage] = useState<Record<string, Usage>>({})
@@ -254,7 +256,7 @@ export default function Cook() {
         <div style={{ textAlign: 'right' }}>
           <p className="eyebrow">{recipe.title}</p>
           <p className="meta">
-            {servings}인분 · {step + 1} / {recipe.steps.length}
+            {recipe.fixedYield ?? `${servings}인분`} · {step + 1} / {recipe.steps.length}
           </p>
         </div>
       </header>
@@ -267,7 +269,7 @@ export default function Cook() {
 
       <div className="cook-ingredients">
         <button type="button" className="cook-ingredients-toggle" aria-expanded={showIngredients} onClick={() => setShowIngredients((v) => !v)}>
-          <span>재료 {servings}인분 기준</span>
+          <span>재료 {recipe.fixedYield ?? `${servings}인분 기준`}</span>
           <Icon name="chevron" size={16} style={{ transform: showIngredients ? 'rotate(90deg)' : 'none', transition: 'transform 0.15s' }} />
         </button>
         {showIngredients && (
@@ -276,19 +278,19 @@ export default function Cook() {
               g.items.map((it) => (
                 <li key={`${g.id}-${it.ingredientId}`}>
                   <span>{ingredientById.get(it.ingredientId)?.name ?? it.ingredientId}</span>
-                  <span className="meta">{scaleAmount(it.amount, it.unit, servings)}</span>
+                  <span className="meta">{scaleAmount(it.amount, it.unit, factor)}</span>
                 </li>
               )),
             )}
             {recipe.water?.map((w) => (
               <li key={w.name}>
                 <span>{w.name}</span>
-                <span className="meta">{formatNumber(w.amountMl * servings)}ml</span>
+                <span className="meta">{formatNumber(w.amountMl * factor)}ml</span>
               </li>
             ))}
           </ul>
         )}
-        {servings > 1 && <p className="meta">단계 문장의 숫자는 1인분 기준이에요. 위 목록대로 늘려요.</p>}
+        {servings !== base && <p className="meta">단계 문장의 숫자는 {base}인분 기준이에요. 위 목록대로 맞춰요.</p>}
       </div>
 
       <div className="cook-step" key={step}>

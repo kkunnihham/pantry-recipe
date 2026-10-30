@@ -56,8 +56,8 @@ def main() -> int:
             errors.append(f"{p}: tools={r['tools']}")
         if 'oven' in r['tools']:
             errors.append(f'{p}: 오븐 레시피는 제외하기로 했음')
-        if r['baseServings'] != 1:
-            errors.append(f'{p}: baseServings는 1')
+        if not isinstance(r['baseServings'], int) or not 1 <= r['baseServings'] <= 6:
+            errors.append(f'{p}: baseServings는 1~6')
         if r['contentStatus'] == 'reviewed' and not r['steps']:
             errors.append(f'{p}: reviewed인데 단계가 없음')
         if r['contentStatus'] == 'reviewed' and not any(g['isCoreGate'] for g in r['groups']):

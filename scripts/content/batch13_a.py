@@ -90,7 +90,7 @@ BATCH13_A = [
         ],
     ),
     R(
-        title='부타 카쿠니', tier='discovery', kind='soup', cuisine='japanese', meal=['main'], method='boil',
+        title='부타 카쿠니', servings=3, tier='discovery', kind='soup', cuisine='japanese', meal=['main'], method='boil',
         minutes=90, difficulty='easy', aliases=['삼겹살 간장조림', '일본식 삼겹 조림', '카쿠니'],
         summary='통삼겹을 큼직하게 썰어 간장, 설탕, 생강에 오래 조려요. 젓가락으로 갈라지는 주말 요리예요.',
         groups=[

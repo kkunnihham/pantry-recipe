@@ -3,7 +3,7 @@ from dsl import R, G
 
 BATCH15_C = [
     R(
-        title='두부강정', tier='basic', kind='fried', cuisine='korean', meal=['side', 'snack'], method='fry',
+        title='두부강정', servings=2, tier='basic', kind='fried', cuisine='korean', meal=['side', 'snack'], method='fry',
         minutes=25, difficulty='very_easy', aliases=['두부 간장강정', '바삭 두부강정'],
         summary='두부를 전분에 묻혀 바삭하게 굽고 달콤한 간장 소스에 버무려요. 고기 없는 강정이에요.',
         groups=[
@@ -23,7 +23,7 @@ BATCH15_C = [
         ],
     ),
     R(
-        title='두부탕수', tier='discovery', kind='fried', cuisine='chinese', meal=['main', 'snack'], method='fry',
+        title='두부탕수', servings=2, tier='discovery', kind='fried', cuisine='chinese', meal=['main', 'snack'], method='fry',
         minutes=30, difficulty='easy', aliases=['탕수 두부', '두부 탕수육'],
         summary='두부를 전분 옷에 튀기고 새콤달콤한 탕수 소스를 부어요. 탕수육의 두부 버전이에요.',
         groups=[
@@ -44,7 +44,7 @@ BATCH15_C = [
         ],
     ),
     R(
-        title='깐풍두부', tier='discovery', kind='fried', cuisine='chinese', meal=['main', 'side'], method='fry',
+        title='깐풍두부', servings=2, tier='discovery', kind='fried', cuisine='chinese', meal=['main', 'side'], method='fry',
         minutes=25, difficulty='easy', aliases=['깐풍 두부', '매콤 두부 깐풍'],
         summary='두부를 바삭하게 튀겨 마늘, 고추, 간장 소스에 재빨리 볶아요. 깐풍기의 두부 버전이에요.',
         groups=[
@@ -144,7 +144,7 @@ BATCH15_C = [
         ],
     ),
     R(
-        title='아게다시도후', tier='discovery', kind='fried', cuisine='japanese', meal=['side', 'main'], method='fry',
+        title='아게다시도후', servings=2, tier='discovery', kind='fried', cuisine='japanese', meal=['side', 'main'], method='fry',
         minutes=20, difficulty='easy', aliases=['일본식 두부튀김', '아게다시 두부', '쯔유 두부튀김'],
         summary='두부를 전분에 튀겨 따뜻한 쯔유 국물에 담가요. 바삭한 겉과 국물이 함께 오는 일본 선술집 두부예요.',
         groups=[

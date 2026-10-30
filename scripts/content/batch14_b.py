@@ -3,7 +3,7 @@ from dsl import R, G
 
 BATCH14_B = [
     R(
-        title='볶음김치', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
+        title='볶음김치', servings=4, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
         minutes=15, difficulty='very_easy', aliases=['김치볶음', '밑반찬 볶음김치'],
         summary='신김치를 설탕과 참기름에 볶아 밥반찬으로 두고 먹어요. 고기 없이 김치만 볶는 밑반찬이에요.',
         groups=[
@@ -23,7 +23,7 @@ BATCH14_B = [
         ],
     ),
     R(
-        title='무조림', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='무조림', servings=4, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=30, difficulty='very_easy', aliases=['무 간장조림', '매콤 무조림'],
         summary='무를 두껍게 썰어 간장과 고춧가루 양념에 자작하게 조려요. 생선 없이 무만 조려도 밥도둑이에요.',
         groups=[
@@ -45,7 +45,7 @@ BATCH14_B = [
         ],
     ),
     R(
-        title='연근조림', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='연근조림', servings=4, yield_note='밑반찬 한 번 만드는 양', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=30, difficulty='very_easy', aliases=['연근 간장조림', '아삭 연근조림'],
         summary='연근을 식초물에 데쳐 간장과 올리고당에 윤기 나게 조려요. 도시락 반찬 그 연근조림이에요.',
         groups=[
@@ -65,7 +65,7 @@ BATCH14_B = [
         ],
     ),
     R(
-        title='미역줄기볶음', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
+        title='미역줄기볶음', servings=4, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
         minutes=25, difficulty='very_easy', aliases=['미역줄기 볶음', '염장 미역줄기 볶음'],
         summary='염장 미역줄기를 물에 담가 짠기를 빼고 마늘과 간장에 볶아요. 반찬가게 그 미역줄기예요.',
         groups=[
@@ -103,7 +103,7 @@ BATCH14_B = [
         ],
     ),
     R(
-        title='배추겉절이', tier='basic', kind='side', cuisine='korean', meal=['side'], method='no_cook',
+        title='배추겉절이', servings=4, yield_note='한 번 무치는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='no_cook',
         minutes=40, difficulty='very_easy', aliases=['겉절이', '알배추 겉절이', '즉석 김치'],
         summary='배추를 소금에 30분 절여 고춧가루 양념에 버무려요. 숙성 없이 바로 먹는 김치예요. 수육이나 칼국수 짝이에요.',
         groups=[
@@ -123,7 +123,7 @@ BATCH14_B = [
         ],
     ),
     R(
-        title='봄동겉절이', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='no_cook',
+        title='봄동겉절이', servings=3, yield_note='한 번 무치는 양', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='no_cook',
         minutes=15, difficulty='very_easy', aliases=['봄동 무침', '봄동 겉절이'],
         summary='봄동을 절이지 않고 바로 액젓 양념에 무쳐요. 2~3월 한철만 되는 달큰한 겉절이예요.',
         groups=[
@@ -141,7 +141,7 @@ BATCH14_B = [
         ],
     ),
     R(
-        title='깍두기', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='no_cook',
+        title='깍두기', servings=6, yield_note='한 번 담그는 양 (무 1kg)', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='no_cook',
         minutes=60, difficulty='easy', aliases=['무 깍두기', '집 깍두기'],
         summary='무를 깍둑썰어 소금과 설탕에 절이고 고춧가루 양념에 버무려 이틀 익혀요. 담그면 2주는 먹는 김치예요.',
         groups=[
@@ -161,7 +161,7 @@ BATCH14_B = [
         ],
     ),
     R(
-        title='파김치', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='no_cook',
+        title='파김치', servings=6, yield_note='한 번 담그는 양 (쪽파 한 단)', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='no_cook',
         minutes=45, difficulty='easy', aliases=['쪽파 김치', '집 파김치'],
         summary='쪽파를 액젓에 절여 고춧가루 양념에 버무려요. 라면과 삼겹살 짝으로 한 단이면 2주 가요.',
         groups=[

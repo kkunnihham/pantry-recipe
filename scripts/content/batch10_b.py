@@ -47,7 +47,7 @@ BATCH10_B = [
         ],
     ),
     R(
-        title='두부 김치찌개', tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='두부 김치찌개', servings=2, tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=20, difficulty='very_easy', aliases=['고기 없는 김치찌개'],
         summary='고기 없이 두부를 듬뿍 넣고 들기름에 볶은 김치로 끓여요. 가볍지만 김치 맛이 진해요.',
         groups=[
@@ -207,7 +207,7 @@ BATCH10_B = [
         ],
     ),
     R(
-        title='두부 전골', tier='discovery', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='두부 전골', servings=2, tier='discovery', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=30, difficulty='easy', source='GRC-247',
         summary='두부와 버섯, 채소를 냄비에 둘러 담고 간장 육수를 부어 끓여요. 식탁에 올려두고 떠먹는 맑은 전골이에요.',
         groups=[

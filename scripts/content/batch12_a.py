@@ -106,7 +106,7 @@ BATCH12_A = [
         ],
     ),
     R(
-        title='깐풍기', tier='discovery', kind='fried', cuisine='chinese', meal=['main', 'snack'], method='fry',
+        title='깐풍기', servings=2, tier='discovery', kind='fried', cuisine='chinese', meal=['main', 'snack'], method='fry',
         minutes=35, difficulty='normal', aliases=['깐풍 치킨', '중국집 깐풍기'],
         summary='닭고기를 전분 옷에 튀기고 마늘, 고추, 간장 소스에 재빨리 볶아요. 국물 없이 소스가 닭에 달라붙는 중국집 요리예요.',
         groups=[
@@ -170,7 +170,7 @@ BATCH12_A = [
         ],
     ),
     R(
-        title='닭강정', tier='discovery', kind='fried', cuisine='korean', meal=['snack', 'main'], method='fry',
+        title='닭강정', servings=2, tier='discovery', kind='fried', cuisine='korean', meal=['snack', 'main'], method='fry',
         minutes=40, difficulty='normal', aliases=['간장 닭강정', '매콤 닭강정', '집 닭강정'],
         summary='닭고기를 전분에 튀겨 간장이나 고추장 양념에 버무려요. 소시지강정의 진짜 버전이에요.',
         groups=[

@@ -25,7 +25,7 @@ BATCH4_A = [
         ],
     ),
     R(
-        title='감자조림', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='감자조림', servings=3, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=25, difficulty='very_easy',
         summary='감자를 기름에 살짝 볶고 간장 양념에 자작하게 조려요. 겉은 윤기 나고 속은 포슬포슬해요.',
         groups=[
@@ -46,7 +46,7 @@ BATCH4_A = [
         ],
     ),
     R(
-        title='소고기 장조림', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='소고기 장조림', servings=4, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=70, difficulty='easy', source='GRC-077',
         summary='소고기 덩어리를 삶아 결대로 찢고 간장 국물에 조려요. 냉장고에서 열흘은 가는 반찬이에요.',
         groups=[
@@ -66,7 +66,7 @@ BATCH4_A = [
         ],
     ),
     R(
-        title='어묵볶음', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
+        title='어묵볶음', servings=3, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
         minutes=12, difficulty='very_easy', source='GRC-088',
         summary='어묵을 간장 양념에 볶아요. 끓는 물에 한 번 데치면 기름이 빠져 깔끔해요.',
         groups=[
@@ -125,7 +125,7 @@ BATCH4_A = [
         ],
     ),
     R(
-        title='마약계란', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='마약계란', servings=3, yield_note='한 번 만드는 양 (달걀 6개)', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=20, difficulty='very_easy', aliases=['간장 계란장', '계란장조림'],
         summary='반숙 달걀을 간장, 설탕, 물, 다진 채소 양념에 하룻밤 재워요. 밥 위에 올려 노른자를 터뜨려 먹어요.',
         groups=[
@@ -168,7 +168,7 @@ BATCH4_A = [
         ],
     ),
     R(
-        title='닭죽', tier='basic', kind='rice', cuisine='korean', meal=['main', 'breakfast'], method='boil',
+        title='닭죽', servings=2, tier='basic', kind='rice', cuisine='korean', meal=['main', 'breakfast'], method='boil',
         minutes=85, difficulty='easy',
         summary='닭을 삶은 국물에 쌀을 넣고 저어가며 끓여요. 속이 안 좋을 때나 추운 날 든든해요.',
         groups=[
@@ -236,7 +236,7 @@ BATCH4_A = [
         ],
     ),
     R(
-        title='닭갈비', tier='basic', kind='stirfry', cuisine='korean', meal=['main'], method='stirfry',
+        title='닭갈비', servings=2, tier='basic', kind='stirfry', cuisine='korean', meal=['main'], method='stirfry',
         minutes=35, difficulty='easy', source='GRC-011',
         summary='닭다리살을 고추장 양념에 재우고 양배추, 고구마, 떡과 함께 볶아요. 남은 양념에 밥을 볶아 먹어요.',
         groups=[

@@ -106,7 +106,7 @@ BATCH3_A = [
         ],
     ),
     R(
-        title='무생채', tier='basic', kind='side', cuisine='korean', meal=['side'], method='no_cook',
+        title='무생채', servings=3, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='no_cook',
         minutes=15, difficulty='very_easy', source='GRC-084',
         summary='채 썬 무를 고춧가루에 먼저 물들이고 양념에 무쳐요. 비빔밥에 넣으면 좋아요.',
         groups=[
@@ -124,7 +124,7 @@ BATCH3_A = [
         ],
     ),
     R(
-        title='멸치볶음', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
+        title='멸치볶음', servings=4, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='stirfry',
         minutes=10, difficulty='very_easy', source='GRC-081',
         summary='잔멸치를 기름 없이 먼저 볶아 비린내를 날리고 간장 올리고당에 볶아요. 일주일 밑반찬이에요.',
         groups=[
@@ -143,7 +143,7 @@ BATCH3_A = [
         ],
     ),
     R(
-        title='메추리알 장조림', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='메추리알 장조림', servings=4, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=25, difficulty='very_easy', source='GRC-078',
         summary='삶은 메추리알을 간장 국물에 조려요. 냉장고에서 일주일 가는 반찬이에요.',
         groups=[

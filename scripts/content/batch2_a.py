@@ -148,7 +148,7 @@ BATCH2_A = [
         ],
     ),
     R(
-        title='닭볶음탕', tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='닭볶음탕', servings=2, tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=45, difficulty='normal', source='GRC-018', aliases=['닭도리탕', '닭매운탕'],
         summary='닭과 감자, 당근을 고추장 양념에 자작하게 조려요. 국물에 밥 비벼 먹는 게 진짜예요.',
         groups=[
@@ -194,7 +194,7 @@ BATCH2_A = [
         ],
     ),
     R(
-        title='콩나물무침', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='콩나물무침', servings=3, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=12, difficulty='very_easy', source='GRC-086',
         summary='콩나물을 데쳐 소금, 마늘, 참기름에 무쳐요. 며칠 두고 먹는 기본 반찬이에요.',
         groups=[

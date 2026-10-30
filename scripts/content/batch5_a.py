@@ -87,7 +87,7 @@ BATCH5_A = [
         ],
     ),
     R(
-        title='찜닭', tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='찜닭', servings=3, tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=65, difficulty='normal', source='GRC-017', aliases=['안동찜닭'],
         summary='닭과 감자, 당근을 간장 양념에 조리고 당면을 넣어요. 달콤짭짤한 국물에 밥 비벼 먹어요.',
         groups=[
@@ -177,7 +177,7 @@ BATCH5_A = [
         ],
     ),
     R(
-        title='닭칼국수', tier='basic', kind='noodle', cuisine='korean', meal=['main', 'soup'], method='boil',
+        title='닭칼국수', servings=2, tier='basic', kind='noodle', cuisine='korean', meal=['main', 'soup'], method='boil',
         minutes=45, difficulty='easy',
         summary='닭을 삶은 국물에 칼국수를 넣고 끓여요. 호박과 감자, 찢은 닭살을 올려요.',
         groups=[

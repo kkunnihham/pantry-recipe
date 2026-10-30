@@ -3,7 +3,7 @@ from dsl import R, G
 
 BATCH15_A = [
     R(
-        title='두부짜글이', tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='두부짜글이', servings=2, tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=20, difficulty='very_easy', aliases=['짜글이', '두부 돼지고기 짜글이'],
         summary='국물을 적게 잡고 두부와 돼지고기를 고추장 양념에 자작하게 졸여요. 찌개와 볶음 사이, 밥에 비벼 먹는 짜글이예요.',
         groups=[
@@ -90,7 +90,7 @@ BATCH15_A = [
         ],
     ),
     R(
-        title='고추장 두부찌개', tier='basic', kind='soup', cuisine='korean', meal=['main', 'side'], method='boil',
+        title='고추장 두부찌개', servings=2, tier='basic', kind='soup', cuisine='korean', meal=['main', 'side'], method='boil',
         minutes=15, difficulty='very_easy', aliases=['두부 고추장찌개', '칼칼한 두부찌개'],
         summary='고추장 국물에 두부를 큼직하게 넣고 끓여요. 고기 없이도 칼칼해서 밥 한 공기가 금방이에요.',
         groups=[
@@ -258,7 +258,7 @@ BATCH15_A = [
         ],
     ),
     R(
-        title='치킨 프리카세', tier='discovery', kind='soup', cuisine='western', meal=['main'], method='boil',
+        title='치킨 프리카세', servings=2, tier='discovery', kind='soup', cuisine='western', meal=['main'], method='boil',
         minutes=40, difficulty='easy', aliases=['프랑스식 닭 크림 조림', '프리카세'],
         summary='닭고기를 색 내지 않고 버터에 익혀 버섯, 양파와 크림소스에 조려요. 치킨 크림 스튜보다 가볍고 부드러운 프랑스식이에요.',
         groups=[
@@ -280,7 +280,7 @@ BATCH15_A = [
         ],
     ),
     R(
-        title='고추장 달걀조림', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='고추장 달걀조림', servings=3, yield_note='한 번 만드는 양 (달걀 6개)', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=25, difficulty='very_easy', aliases=['매운 달걀조림', '고추장 계란조림'],
         summary='삶은 달걀을 고추장 양념에 조려요. 마약계란의 매콤한 버전으로 밑반찬이에요.',
         groups=[
@@ -301,7 +301,7 @@ BATCH15_A = [
         ],
     ),
     R(
-        title='표고버섯 장조림', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='표고버섯 장조림', servings=3, yield_note='밑반찬 한 번 만드는 양', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=25, difficulty='very_easy', aliases=['버섯 장조림', '표고 간장조림'],
         summary='표고버섯을 간장 물에 조려 고기 장조림처럼 먹어요. 쫄깃해서 고기 없이도 밥반찬이 돼요.',
         groups=[
@@ -359,7 +359,7 @@ BATCH15_A = [
         ],
     ),
     R(
-        title='총각김치', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='no_cook',
+        title='총각김치', servings=6, yield_note='한 번 담그는 양 (알타리무 1kg)', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='no_cook',
         minutes=90, difficulty='easy', aliases=['알타리김치', '알타리무 김치'],
         summary='알타리무를 잎째 절여 고춧가루 양념에 버무려요. 담가 일주일 익히면 아삭한 총각김치예요.',
         groups=[
@@ -381,7 +381,7 @@ BATCH15_A = [
         ],
     ),
     R(
-        title='열무김치', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='no_cook',
+        title='열무김치', servings=6, yield_note='한 번 담그는 양 (열무 한 단)', tier='discovery', kind='side', cuisine='korean', meal=['side'], method='no_cook',
         minutes=80, difficulty='easy', aliases=['여름 열무김치', '열무 겉절이'],
         summary='열무를 살짝 절여 고춧가루와 액젓 양념에 버무려요. 여름 국수와 비빔밥의 짝이에요. 세게 버무리면 풋내가 나니 살살.',
         groups=[

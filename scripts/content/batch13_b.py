@@ -239,7 +239,7 @@ BATCH13_B = [
         ],
     ),
     R(
-        title='허니 머스타드 치킨', tier='basic', kind='grill', cuisine='western', meal=['main'], method='grill',
+        title='허니 머스타드 치킨', servings=2, tier='basic', kind='grill', cuisine='western', meal=['main'], method='grill',
         minutes=25, difficulty='very_easy', aliases=['꿀 머스타드 닭구이', '허니 머스타드 닭다리살'],
         summary='닭다리살을 팬에 굽고 꿀과 머스타드, 간장 소스를 끼얹어요. 닭을 사게 만드는 달콤 짭짤한 소스예요.',
         groups=[

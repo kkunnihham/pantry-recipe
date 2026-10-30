@@ -3,7 +3,7 @@ from dsl import R, G
 
 BATCH14_A = [
     R(
-        title='육개장', tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='육개장', servings=3, tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=80, difficulty='easy', aliases=['소고기 육개장', '얼큰 소고기국'],
         summary='소고기를 푹 삶아 결대로 찢고 대파와 고사리, 숙주를 고춧가루 기름에 볶아 넣어요. 매운 정도는 고춧가루로 조절해요.',
         groups=[
@@ -25,7 +25,7 @@ BATCH14_A = [
         ],
     ),
     R(
-        title='감자탕', tier='discovery', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='감자탕', servings=4, tier='discovery', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=150, difficulty='normal', aliases=['뼈해장국', '등뼈 감자탕'],
         summary='돼지 등뼈를 푹 삶아 감자와 된장, 고춧가루 양념에 끓여요. 우거지 대신 배추를 넣고 깻잎과 들깨가루로 마무리해요. 주말 큰 냄비 요리예요.',
         groups=[
@@ -48,7 +48,7 @@ BATCH14_A = [
         ],
     ),
     R(
-        title='갈비탕', tier='discovery', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='갈비탕', servings=4, tier='discovery', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=130, difficulty='easy', aliases=['소갈비탕', '맑은 갈비탕'],
         summary='소갈비를 핏물 빼고 무와 함께 푹 끓여 맑은 국물을 내요. 당면과 대파를 넣으면 식당 갈비탕이에요.',
         groups=[
@@ -70,7 +70,7 @@ BATCH14_A = [
         ],
     ),
     R(
-        title='닭곰탕', tier='basic', kind='soup', cuisine='korean', meal=['main', 'breakfast'], method='boil',
+        title='닭곰탕', servings=3, tier='basic', kind='soup', cuisine='korean', meal=['main', 'breakfast'], method='boil',
         minutes=60, difficulty='very_easy', aliases=['닭국밥', '닭 국물 밥', '백숙 국밥'],
         summary='닭을 푹 삶아 살을 찢어 국물에 다시 넣고 밥을 말아요. 백숙 남은 국물로도 되는 담백한 국밥이에요.',
         groups=[
@@ -113,7 +113,7 @@ BATCH14_A = [
         ],
     ),
     R(
-        title='보쌈', tier='basic', kind='grill', cuisine='korean', meal=['main'], method='boil',
+        title='보쌈', servings=3, tier='basic', kind='grill', cuisine='korean', meal=['main'], method='boil',
         minutes=70, difficulty='easy', aliases=['수육', '삼겹살 수육', '돼지고기 수육'],
         summary='삼겹살이나 목살을 된장과 마늘 물에 삶아 썰어요. 김치나 쌈장, 새우젓에 싸 먹는 주말 메뉴예요.',
         groups=[
@@ -132,7 +132,7 @@ BATCH14_A = [
         ],
     ),
     R(
-        title='소갈비찜', tier='discovery', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='소갈비찜', servings=4, tier='discovery', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=145, difficulty='normal', aliases=['갈비찜', '간장 소갈비찜', '명절 갈비찜'],
         summary='소갈비를 핏물 빼고 간장 양념에 무, 당근과 푹 조려요. 명절 그 갈비찜인데 1kg이면 세 끼예요.',
         groups=[

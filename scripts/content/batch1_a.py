@@ -133,7 +133,7 @@ BATCH1_A = [
         ],
     ),
     R(
-        title='두부조림', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
+        title='두부조림', servings=2, yield_note='밑반찬 한 번 만드는 양', tier='basic', kind='side', cuisine='korean', meal=['side'], method='boil',
         minutes=20, difficulty='easy', source='GRC-428',
         summary='두부를 노릇하게 구운 뒤 간장 양념을 부어 자작하게 조려요. 밥반찬으로 며칠 두고 먹어요.',
         groups=[

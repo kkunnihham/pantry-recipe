@@ -67,7 +67,7 @@ BATCH12_B = [
         ],
     ),
     R(
-        title='참치김밥', tier='basic', kind='rice', cuisine='korean', meal=['main', 'snack'], method='no_cook',
+        title='참치김밥', servings=2, tier='basic', kind='rice', cuisine='korean', meal=['main', 'snack'], method='no_cook',
         minutes=30, difficulty='easy', aliases=['참치마요 김밥'],
         summary='참치마요와 깻잎을 넣고 마는 김밥이에요. 햄이나 달걀 없이도 되고 기본 김밥보다 쉬워요.',
         groups=[
@@ -298,7 +298,7 @@ BATCH12_B = [
         ],
     ),
     R(
-        title='두부 두루치기', tier='basic', kind='stirfry', cuisine='korean', meal=['main', 'side'], method='boil',
+        title='두부 두루치기', servings=2, tier='basic', kind='stirfry', cuisine='korean', meal=['main', 'side'], method='boil',
         minutes=20, difficulty='very_easy', aliases=['두부 김치 두루치기', '대전 두부두루치기'],
         summary='두부를 큼직하게 썰어 고춧가루 양념 국물에 자작하게 끓여요. 국물을 밥이나 소면에 비벼 먹는 대전 음식이에요.',
         groups=[

@@ -90,7 +90,7 @@ BATCH15_B = [
         ],
     ),
     R(
-        title='두부 소보로덮밥', tier='discovery', kind='rice', cuisine='japanese', meal=['main'], method='stirfry',
+        title='두부 소보로덮밥', servings=2, tier='discovery', kind='rice', cuisine='japanese', meal=['main'], method='stirfry',
         minutes=15, difficulty='very_easy', aliases=['두부 소보로', '으깬 두부 덮밥'],
         summary='두부를 으깨 고기처럼 볶아 간장 설탕으로 간하고 달걀 소보로와 함께 밥에 올려요. 고기 소보로동의 두부 버전이에요.',
         groups=[
@@ -111,7 +111,7 @@ BATCH15_B = [
         ],
     ),
     R(
-        title='매콤 두부덮밥', tier='basic', kind='rice', cuisine='korean', meal=['main'], method='stirfry',
+        title='매콤 두부덮밥', servings=2, tier='basic', kind='rice', cuisine='korean', meal=['main'], method='stirfry',
         minutes=15, difficulty='very_easy', aliases=['두부 고추장 조림 덮밥', '두부 양념 덮밥'],
         summary='두부를 구워 고춧가루 간장 양념에 조려 밥에 올려요. 두부조림을 덮밥으로 먹는 거예요.',
         groups=[
@@ -158,7 +158,7 @@ BATCH15_B = [
         ],
     ),
     R(
-        title='LA갈비', tier='basic', kind='grill', cuisine='korean', meal=['main'], method='grill',
+        title='LA갈비', servings=4, tier='basic', kind='grill', cuisine='korean', meal=['main'], method='grill',
         minutes=100, difficulty='easy', aliases=['LA 갈비 구이', '엘에이갈비 양념구이'],
         summary='얇게 썬 LA갈비를 간장 양념에 재워 팬에 구워요. 핏물만 빼면 어렵지 않은 주말 고기예요.',
         groups=[
@@ -180,7 +180,7 @@ BATCH15_B = [
         ],
     ),
     R(
-        title='항정살 된장구이', tier='discovery', kind='grill', cuisine='korean', meal=['main'], method='grill',
+        title='항정살 된장구이', servings=2, tier='discovery', kind='grill', cuisine='korean', meal=['main'], method='grill',
         minutes=35, difficulty='very_easy', aliases=['항정살 구이', '된장 항정살'],
         summary='항정살을 된장 양념에 재워 구워요. 쫄깃한 항정살에 된장 향이 배어요. 목살로도 돼요.',
         groups=[
@@ -198,7 +198,7 @@ BATCH15_B = [
         ],
     ),
     R(
-        title='지코바 스타일 닭다리살', tier='discovery', kind='grill', cuisine='korean', meal=['main', 'snack'], method='grill',
+        title='지코바 스타일 닭다리살', servings=2, tier='discovery', kind='grill', cuisine='korean', meal=['main', 'snack'], method='grill',
         minutes=40, difficulty='easy', aliases=['숯불 양념 닭다리살', '지코바 치킨', '양념 닭다리살 구이'],
         summary='닭다리살을 달콤 매콤한 고추장 양념에 재워 팬에 눌러 구워요. 밥이나 치밥으로 먹는 그 맛이에요.',
         groups=[
@@ -219,7 +219,7 @@ BATCH15_B = [
         ],
     ),
     R(
-        title='간장치킨', tier='discovery', kind='fried', cuisine='korean', meal=['main', 'snack'], method='fry',
+        title='간장치킨', servings=2, tier='discovery', kind='fried', cuisine='korean', meal=['main', 'snack'], method='fry',
         minutes=40, difficulty='normal', aliases=['순살 간장치킨', '집 간장치킨', '교촌 스타일 치킨'],
         summary='순살 닭을 튀김가루에 튀겨 간장 마늘 소스를 입혀요. 팬에 기름 1cm로 두 번 튀기면 바삭해요.',
         groups=[
@@ -282,7 +282,7 @@ BATCH15_B = [
         ],
     ),
     R(
-        title='삼겹살강정', tier='discovery', kind='fried', cuisine='korean', meal=['main', 'snack'], method='fry',
+        title='삼겹살강정', servings=2, tier='discovery', kind='fried', cuisine='korean', meal=['main', 'snack'], method='fry',
         minutes=30, difficulty='easy', aliases=['삼겹 강정', '돼지고기 강정'],
         summary='삼겹살을 전분에 묻혀 바삭하게 굽고 달콤한 간장 소스에 버무려요. 소시지강정의 진짜 고기 버전이에요.',
         groups=[
@@ -302,7 +302,7 @@ BATCH15_B = [
         ],
     ),
     R(
-        title='양파 닭가슴살', tier='basic', kind='stirfry', cuisine='korean', meal=['main'], method='stirfry',
+        title='양파 닭가슴살', servings=2, tier='basic', kind='stirfry', cuisine='korean', meal=['main'], method='stirfry',
         minutes=20, difficulty='very_easy', aliases=['양파 닭가슴살 간장조림', '닭가슴살 양파볶음'],
         summary='닭가슴살을 양파 듬뿍 넣고 간장에 조려요. 양파 단맛이 퍽퍽한 가슴살을 촉촉하게 해요.',
         groups=[

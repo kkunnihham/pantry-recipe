@@ -130,8 +130,10 @@ export interface Recipe {
   method: Method
   minutes: number
   difficulty: Difficulty
-  /** 항상 1. 인분 환산은 1~3 배수. */
-  baseServings: 1
+  /** 재료 양이 기준으로 삼는 인분. 앱은 (선택 인분 / 기준 인분) 배수로 환산한다. */
+  baseServings: number
+  /** 있으면 인분 환산을 끄고 이 문구로 표시한다 (예: '한 번 담그는 양'). */
+  fixedYield?: string
   tools: Tool[]
   groups: ReqGroup[]
   /** 레시피에 명시된 물. 재고와 무관. */

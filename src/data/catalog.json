@@ -1,6 +1,6 @@
 {
   "version": "batch15-441",
-  "generatedAt": "2026-10-30T16:25:36+00:00",
+  "generatedAt": "2026-10-30T17:17:11+00:00",
   "ingredients": [
     {
       "id": "I001",
@@ -8342,7 +8342,8 @@
       "method": "boil",
       "minutes": 20,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -13382,7 +13383,7 @@
       "method": "boil",
       "minutes": 45,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -13866,7 +13867,8 @@
       "method": "boil",
       "minutes": 12,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -18164,7 +18166,8 @@
       "method": "no_cook",
       "minutes": 15,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -18332,7 +18335,8 @@
       "method": "stirfry",
       "minutes": 10,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 4,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -18499,7 +18503,8 @@
       "method": "boil",
       "minutes": 25,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 4,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -22637,7 +22642,8 @@
       "method": "boil",
       "minutes": 25,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -22830,7 +22836,8 @@
       "method": "boil",
       "minutes": 70,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 4,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -23034,7 +23041,8 @@
       "method": "stirfry",
       "minutes": 12,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -23606,7 +23614,8 @@
       "method": "boil",
       "minutes": 20,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "한 번 만드는 양 (달걀 6개)",
       "tools": [],
       "groups": [
         {
@@ -24073,7 +24082,7 @@
       "method": "boil",
       "minutes": 85,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -24760,7 +24769,7 @@
       "method": "stirfry",
       "minutes": 35,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -26563,7 +26572,7 @@
       "method": "boil",
       "minutes": 40,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -29110,7 +29119,7 @@
       "method": "boil",
       "minutes": 65,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 3,
       "tools": [],
       "groups": [
         {
@@ -30098,7 +30107,7 @@
       "method": "boil",
       "minutes": 45,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -34034,7 +34043,7 @@
       "method": "grill",
       "minutes": 35,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -34841,7 +34850,7 @@
       "method": "air_fry",
       "minutes": 45,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "air_fryer"
       ],
@@ -36062,7 +36071,7 @@
       "method": "air_fry",
       "minutes": 55,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [
         "air_fryer"
       ],
@@ -40212,7 +40221,7 @@
       "method": "boil",
       "minutes": 45,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -41339,7 +41348,7 @@
       "method": "boil",
       "minutes": 80,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -43921,7 +43930,7 @@
       "method": "boil",
       "minutes": 85,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 3,
       "tools": [],
       "groups": [
         {
@@ -46023,7 +46032,7 @@
       "method": "grill",
       "minutes": 35,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -50405,7 +50414,8 @@
       "method": "boil",
       "minutes": 10,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -50571,7 +50581,8 @@
       "method": "boil",
       "minutes": 10,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -50722,7 +50733,8 @@
       "method": "stirfry",
       "minutes": 12,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -50887,7 +50899,8 @@
       "method": "no_cook",
       "minutes": 8,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -51053,7 +51066,8 @@
       "method": "steam",
       "minutes": 15,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -51232,7 +51246,8 @@
       "method": "stirfry",
       "minutes": 15,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -51420,7 +51435,8 @@
       "method": "stirfry",
       "minutes": 12,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -51641,7 +51657,8 @@
       "method": "no_cook",
       "minutes": 5,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -52290,7 +52307,8 @@
       "method": "boil",
       "minutes": 25,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -52515,7 +52533,8 @@
       "method": "stirfry",
       "minutes": 10,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 4,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -58254,7 +58273,7 @@
       "method": "boil",
       "minutes": 20,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -59918,7 +59937,7 @@
       "method": "boil",
       "minutes": 30,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -65555,7 +65574,7 @@
       "method": "boil",
       "minutes": 85,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 3,
       "tools": [],
       "groups": [
         {
@@ -67672,7 +67691,7 @@
       "method": "fry",
       "minutes": 35,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -68363,7 +68382,7 @@
       "method": "fry",
       "minutes": 40,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -69280,7 +69299,7 @@
       "method": "no_cook",
       "minutes": 30,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -71616,7 +71635,7 @@
       "method": "boil",
       "minutes": 20,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -72880,7 +72899,7 @@
       "method": "boil",
       "minutes": 90,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 3,
       "tools": [],
       "groups": [
         {
@@ -77753,7 +77772,7 @@
       "method": "grill",
       "minutes": 25,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -78003,7 +78022,7 @@
       "method": "boil",
       "minutes": 80,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 3,
       "tools": [],
       "groups": [
         {
@@ -78253,7 +78272,7 @@
       "method": "boil",
       "minutes": 150,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 4,
       "tools": [],
       "groups": [
         {
@@ -78514,7 +78533,7 @@
       "method": "boil",
       "minutes": 130,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 4,
       "tools": [],
       "groups": [
         {
@@ -78746,7 +78765,7 @@
       "method": "boil",
       "minutes": 60,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
       "tools": [],
       "groups": [
         {
@@ -79231,7 +79250,7 @@
       "method": "boil",
       "minutes": 70,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 3,
       "tools": [],
       "groups": [
         {
@@ -79463,7 +79482,7 @@
       "method": "boil",
       "minutes": 145,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 4,
       "tools": [],
       "groups": [
         {
@@ -79746,7 +79765,8 @@
       "method": "stirfry",
       "minutes": 15,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 4,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -79937,7 +79957,8 @@
       "method": "boil",
       "minutes": 30,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 4,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -80178,7 +80199,8 @@
       "method": "boil",
       "minutes": 30,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 4,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -80393,7 +80415,8 @@
       "method": "stirfry",
       "minutes": 25,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 4,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -80789,7 +80812,8 @@
       "method": "no_cook",
       "minutes": 40,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 4,
+      "fixedYield": "한 번 무치는 양",
       "tools": [],
       "groups": [
         {
@@ -81020,7 +81044,8 @@
       "method": "no_cook",
       "minutes": 15,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "한 번 무치는 양",
       "tools": [],
       "groups": [
         {
@@ -81222,7 +81247,8 @@
       "method": "no_cook",
       "minutes": 60,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 6,
+      "fixedYield": "한 번 담그는 양 (무 1kg)",
       "tools": [],
       "groups": [
         {
@@ -81434,7 +81460,8 @@
       "method": "no_cook",
       "minutes": 45,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 6,
+      "fixedYield": "한 번 담그는 양 (쪽파 한 단)",
       "tools": [],
       "groups": [
         {
@@ -81635,7 +81662,7 @@
       "method": "boil",
       "minutes": 20,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -82549,7 +82576,7 @@
       "method": "boil",
       "minutes": 15,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -84347,7 +84374,7 @@
       "method": "boil",
       "minutes": 40,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -84610,7 +84637,8 @@
       "method": "boil",
       "minutes": 25,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "한 번 만드는 양 (달걀 6개)",
       "tools": [],
       "groups": [
         {
@@ -84815,7 +84843,8 @@
       "method": "boil",
       "minutes": 25,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 3,
+      "fixedYield": "밑반찬 한 번 만드는 양",
       "tools": [],
       "groups": [
         {
@@ -85408,7 +85437,8 @@
       "method": "no_cook",
       "minutes": 90,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 6,
+      "fixedYield": "한 번 담그는 양 (알타리무 1kg)",
       "tools": [],
       "groups": [
         {
@@ -85645,7 +85675,8 @@
       "method": "no_cook",
       "minutes": 80,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 6,
+      "fixedYield": "한 번 담그는 양 (열무 한 단)",
       "tools": [],
       "groups": [
         {
@@ -86848,7 +86879,7 @@
       "method": "stirfry",
       "minutes": 15,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -87065,7 +87096,7 @@
       "method": "stirfry",
       "minutes": 15,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -87586,7 +87617,7 @@
       "method": "grill",
       "minutes": 100,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 4,
       "tools": [],
       "groups": [
         {
@@ -87826,7 +87857,7 @@
       "method": "grill",
       "minutes": 35,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -88034,7 +88065,7 @@
       "method": "grill",
       "minutes": 40,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -88285,7 +88316,7 @@
       "method": "fry",
       "minutes": 40,
       "difficulty": "normal",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -89036,7 +89067,7 @@
       "method": "fry",
       "minutes": 30,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -89277,7 +89308,7 @@
       "method": "stirfry",
       "minutes": 20,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -89514,7 +89545,7 @@
       "method": "fry",
       "minutes": 25,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -89731,7 +89762,7 @@
       "method": "fry",
       "minutes": 30,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -89956,7 +89987,7 @@
       "method": "fry",
       "minutes": 25,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -91013,7 +91044,7 @@
       "method": "fry",
       "minutes": 20,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -93644,7 +93675,7 @@
       "method": "grill",
       "minutes": 30,
       "difficulty": "easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {
@@ -94284,7 +94315,7 @@
       "method": "stirfry",
       "minutes": 10,
       "difficulty": "very_easy",
-      "baseServings": 1,
+      "baseServings": 2,
       "tools": [],
       "groups": [
         {

@@ -193,7 +193,7 @@ BATCH11_B = [
         ],
     ),
     R(
-        title='돼지갈비찜', tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='돼지갈비찜', servings=3, tier='basic', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=85, difficulty='easy', aliases=['매콤 돼지갈비찜', '돼지 등갈비찜'],
         summary='돼지갈비를 간장 양념에 재워 감자, 당근과 푹 조려요. 한 번 하면 이틀 먹는 주말 요리예요.',
         groups=[

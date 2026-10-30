@@ -54,7 +54,7 @@ def G(name: str, role: str, items: list[str], *, rule: str | None = None, weight
 def R(*, title: str, tier: str, kind: str, cuisine: str, meal: list[str], method: str, minutes: int,
       difficulty: str, summary: str, groups: list[dict], steps: list[tuple[str, int | None]],
       tools: list[str] | None = None, aliases: list[str] | None = None, water: list[tuple[str, int]] | None = None,
-      source: str | None = None, status: str = 'reviewed') -> dict:
+      source: str | None = None, status: str = 'reviewed', servings: int = 1, yield_note: str | None = None) -> dict:
     used = set()
     for i, g in enumerate(groups, start=1):
         if g['id'] is None:
@@ -64,7 +64,8 @@ def R(*, title: str, tier: str, kind: str, cuisine: str, meal: list[str], method
         used.add(g['id'])
     return {
         'title': title, 'aliases': aliases or [], 'summary': summary, 'tier': tier, 'kind': kind, 'cuisine': cuisine,
-        'meal': meal, 'method': method, 'minutes': minutes, 'difficulty': difficulty, 'baseServings': 1,
+        'meal': meal, 'method': method, 'minutes': minutes, 'difficulty': difficulty, 'baseServings': servings,
+        **({'fixedYield': yield_note} if yield_note else {}),
         'tools': tools or [], 'groups': groups,
         **({'water': [{'name': n, 'amountMl': ml} for n, ml in water]} if water else {}),
         'steps': [{'text': t, 'timerSeconds': sec} for t, sec in steps],

@@ -23,7 +23,7 @@ BATCH15_D = [
         ],
     ),
     R(
-        title='크림소스 치킨스테이크', tier='discovery', kind='grill', cuisine='western', meal=['main'], method='grill',
+        title='크림소스 치킨스테이크', servings=2, tier='discovery', kind='grill', cuisine='western', meal=['main'], method='grill',
         minutes=30, difficulty='easy', aliases=['치킨스테이크 크림소스', '버섯 크림 치킨'],
         summary='닭다리살을 노릇하게 굽고 같은 팬에 버섯 크림소스를 만들어 끼얹어요. 패밀리 레스토랑 치킨스테이크예요.',
         groups=[
@@ -82,7 +82,7 @@ BATCH15_D = [
         ],
     ),
     R(
-        title='두부 스크램블', tier='basic', kind='side', cuisine='western', meal=['breakfast', 'side'], method='stirfry',
+        title='두부 스크램블', servings=2, tier='basic', kind='side', cuisine='western', meal=['breakfast', 'side'], method='stirfry',
         minutes=10, difficulty='very_easy', aliases=['두부 스크램블 에그 스타일', '으깬 두부 볶음'],
         summary='두부를 으깨 강황가루와 소금으로 볶아 스크램블 에그처럼 먹어요. 달걀이 떨어졌을 때 아침이에요.',
         groups=[

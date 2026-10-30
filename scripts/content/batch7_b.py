@@ -102,7 +102,7 @@ BATCH7_B = [
         ],
     ),
     R(
-        title='바쿠테', tier='discovery', kind='soup', cuisine='southeast_asian', meal=['main', 'soup'], method='boil',
+        title='바쿠테', servings=3, tier='discovery', kind='soup', cuisine='southeast_asian', meal=['main', 'soup'], method='boil',
         minutes=85, difficulty='easy', aliases=['육골차', '싱가포르식 돼지갈비탕'],
         summary='돼지갈비를 마늘 한 통과 후추로 푹 끓여요. 향신료 없이 마늘과 후추만으로 싱가포르 맛이 나요.',
         groups=[

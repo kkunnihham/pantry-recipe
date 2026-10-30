@@ -1,9 +1,17 @@
 /** 수량을 인분에 맞춰 환산하고 사람이 읽기 좋게 만든다. */
 export function scaleAmount(amount: number | null, unit: string, servings: number): string {
   if (amount === null) return '적당량'
+  const raw = amount * servings
+  if (servings === 1) return `${formatNumber(raw)}${unit}`
   // 꼬집은 인분을 늘려도 1~2 정도로만
-  const v = unit === '꼬집' ? Math.min(amount * servings, 2) : amount * servings
-  return `${formatNumber(v)}${unit}`
+  if (unit === '꼬집') return `${Math.min(Math.max(1, Math.round(raw)), 2)}${unit}`
+  // 무게·부피는 5 단위로
+  if (unit === 'g' || unit === 'ml') return `${Math.max(5, Math.round(raw / 5) * 5)}${unit}`
+  // 숟가락은 0.5 단위, 반 큰술 미만이면 작은술로
+  if (unit === '큰술' && raw < 0.5) return `${Math.max(0.5, Math.round(raw * 3 * 2) / 2)}작은술`
+  if (unit === '큰술' || unit === '작은술' || unit === '컵') return `${Math.max(0.5, Math.round(raw * 2) / 2)}${unit}`
+  // 개수 단위는 0.5 단위
+  return `${formatNumber(Math.max(0.5, Math.round(raw * 2) / 2))}${unit}`
 }
 
 export function formatNumber(v: number): string {

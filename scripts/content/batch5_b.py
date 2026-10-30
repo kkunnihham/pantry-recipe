@@ -229,7 +229,7 @@ BATCH5_B = [
         ],
     ),
     R(
-        title='치킨 사테', tier='discovery', kind='grill', cuisine='southeast_asian', meal=['main', 'snack'], method='grill',
+        title='치킨 사테', servings=2, tier='discovery', kind='grill', cuisine='southeast_asian', meal=['main', 'snack'], method='grill',
         minutes=35, difficulty='easy', aliases=['땅콩 소스 닭꼬치'],
         summary='간장과 커리 페이스트에 재운 닭을 꼬치에 꿰어 굽고 땅콩버터 소스를 찍어요. 꼬치 없이 그냥 구워도 돼요. 특수 재료: 커리 페이스트, 코코넛밀크.',
         groups=[

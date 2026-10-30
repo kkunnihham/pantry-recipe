@@ -115,7 +115,7 @@ BATCH4_B = [
         ],
     ),
     R(
-        title='닭고기 쌀국수', tier='discovery', kind='noodle', cuisine='southeast_asian', meal=['main', 'soup'], method='boil',
+        title='닭고기 쌀국수', servings=2, tier='discovery', kind='noodle', cuisine='southeast_asian', meal=['main', 'soup'], method='boil',
         minutes=40, difficulty='easy', aliases=['포 가', '치킨 포'],
         summary='닭을 생강, 양파와 삶아 맑은 국물을 내고 쌀국수를 말아요. 고수와 라임을 올리면 베트남 식당이에요. 특수 재료: 쌀국수면, 고수.',
         groups=[

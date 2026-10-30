@@ -49,7 +49,7 @@ BATCH7_A = [
         ],
     ),
     R(
-        title='사자두', tier='discovery', kind='soup', cuisine='chinese', meal=['main'], method='boil',
+        title='사자두', servings=2, tier='discovery', kind='soup', cuisine='chinese', meal=['main'], method='boil',
         minutes=45, difficulty='normal', aliases=['사자머리 완자', '獅子頭'],
         summary='다진 돼지고기로 주먹만 한 완자를 빚어 겉을 굽고 배추와 함께 간장 국물에 조려요. 상하이식 큰 미트볼이에요.',
         groups=[
@@ -156,7 +156,7 @@ BATCH7_A = [
         ],
     ),
     R(
-        title='홍샤오러우', tier='discovery', kind='soup', cuisine='chinese', meal=['main'], method='boil',
+        title='홍샤오러우', servings=2, tier='discovery', kind='soup', cuisine='chinese', meal=['main'], method='boil',
         minutes=80, difficulty='normal', source='GRC-465', aliases=['동파육 풍', '중국식 삼겹살 조림'],
         summary='삼겹살을 설탕 캐러멜과 간장에 천천히 조려요. 젓가락으로 잘리는 삼겹살 조림이에요.',
         groups=[

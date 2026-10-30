@@ -61,7 +61,7 @@ BATCH8_A = [
         ],
     ),
     R(
-        title='간장 닭꼬치', tier='basic', kind='grill', cuisine='korean', meal=['snack', 'main'], method='grill',
+        title='간장 닭꼬치', servings=2, tier='basic', kind='grill', cuisine='korean', meal=['snack', 'main'], method='grill',
         minutes=35, difficulty='easy', aliases=['닭꼬치', '야키토리 풍'],
         summary='닭다리살과 대파를 번갈아 꿰어 굽고 간장 양념을 발라요. 길거리 닭꼬치를 집 팬에서 해요.',
         groups=[
