@@ -396,6 +396,11 @@
   margin-top: 8px;
 }
 
+/* 상세 화면은 하단 탭이 있으니 그 위에 띄운다. 탭 높이(약 78px)만큼 올린다. */
+.detail .sticky-cta {
+  bottom: calc(90px + env(safe-area-inset-bottom));
+}
+
 /* 냉장고 */
 .search {
   display: flex;
@@ -614,6 +619,7 @@
 
 .timer-ring {
   --p: 0;
+  position: relative;
   width: 92px;
   height: 92px;
   border-radius: 50%;

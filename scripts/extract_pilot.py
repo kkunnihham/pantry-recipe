@@ -148,7 +148,11 @@ def categorize(name: str) -> str:
     return 'fruit_etc'
 
 
-def main() -> None:
+def main() -> int:
+    # 이 스크립트는 초안 생성용이다. 검토를 마친 catalog.json 을 실수로 덮어쓰지 않게 막는다.
+    if OUT.exists() and '--force' not in sys.argv:
+        print(f'ERROR {OUT} 가 이미 있다. 지금 카탈로그는 content/ 모듈에서 build_catalog.py 로 만든다. 정말 다시 뽑으려면 --force 를 붙인다.')
+        return 1
     data = json.load(gzip.open(SRC, 'rt', encoding='utf-8'))['catalog']
     old_recipes = {r['id']: r for r in data['recipes']}
     old_ings = {i['id']: i for i in data['ingredients']}
@@ -268,6 +272,7 @@ def main() -> None:
         by_cat.setdefault(e['category'], []).append(e['name'])
     for cat, names in by_cat.items():
         print(f'[{cat}] {len(names)}: {", ".join(names)}')
+    return 0
 
 
 if __name__ == '__main__':
