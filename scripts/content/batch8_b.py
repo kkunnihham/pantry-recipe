@@ -8,7 +8,7 @@ BATCH8_B = [
         summary='또띠아에 설탕과 계피, 견과를 넣고 반으로 접어 버터에 구워요. 반죽 없이 호떡 맛이 나요.',
         groups=[
             G('또띠아', 'core', ['또띠아 2장']),
-            G('설탕 속', 'core', ['설탕 2큰술', '계피가루 0.5작은술'], rule='all_of', weight=8, subs={'설탕': [('흑설탕', 0.0, None) if False else ('꿀', 0.85, '접기 전에 발라요')]}),
+            G('설탕 속', 'core', ['설탕 2큰술', '계피가루 0.5작은술'], rule='all_of', weight=8, subs={'설탕': [('꿀', 0.85, '접기 전에 발라요')]}),
             G('버터', 'major', ['버터 15g'], weight=4, subs={'버터': [('식용유', 0.8, None)]}),
             G('견과', 'major', ['땅콩 1큰술', '호두 1큰술', '아몬드 1큰술', '깨 1작은술'], rule='at_least', min_count=1, weight=3),
             G('추가', 'optional', ['슬라이스 치즈 1장', '밀가루 1작은술']),
@@ -113,7 +113,7 @@ BATCH8_B = [
     ),
     R(
         title='감자 샐러드', tier='basic', kind='salad', cuisine='western', meal=['side', 'snack'], method='boil',
-        minutes=30, difficulty='very_easy', aliases=['마요 감자 샐러드', '감자 사라다'],
+        minutes=45, difficulty='very_easy', aliases=['마요 감자 샐러드', '감자 사라다'],
         summary='삶아 으깬 감자에 마요네즈와 삶은 달걀, 당근을 섞어요. 빵에 발라 먹어도 좋아요.',
         groups=[
             G('감자', 'core', ['감자 300g']),
@@ -167,7 +167,7 @@ BATCH8_B = [
     ),
     R(
         title='토마토 양파 샐러드', tier='discovery', kind='salad', cuisine='western', meal=['side'], method='no_cook',
-        minutes=10, difficulty='very_easy', source='GRC-1069', aliases=['칠레식 엔살라다'],
+        minutes=20, difficulty='very_easy', source='GRC-1069', aliases=['칠레식 엔살라다'],
         summary='토마토와 얇게 썬 양파에 레몬, 올리브유, 소금만 뿌려요. 고기 요리 옆에 두면 좋아요.',
         groups=[
             G('토마토', 'core', ['토마토 2개'], subs={'토마토': [('방울토마토', 0.95, '12개')]}),
@@ -203,7 +203,7 @@ BATCH8_B = [
     ),
     R(
         title='브로콜리 베이컨 샐러드', tier='discovery', kind='salad', cuisine='western', meal=['side'], method='boil',
-        minutes=15, difficulty='very_easy',
+        minutes=20, difficulty='very_easy',
         summary='살짝 데친 브로콜리에 바삭한 베이컨과 마요네즈 드레싱을 버무려요. 미국 가정식 반찬이에요.',
         groups=[
             G('브로콜리', 'core', ['브로콜리 200g']),
@@ -211,7 +211,7 @@ BATCH8_B = [
             G('드레싱', 'core', ['마요네즈 2큰술', '식초 1작은술', '설탕 1작은술'], rule='all_of', weight=7, subs={'마요네즈': [('플레인 요거트', 0.8, None)]}),
             G('양파', 'major', ['양파 30g'], weight=3),
             G('간', 'support', ['소금 2꼬집', '후추 1꼬집'], rule='all_of'),
-            G('추가', 'optional', ['체다치즈 30g', '건포도 1큰술', '해바라기씨 1큰술' if False else '아몬드 1큰술', '사과 0.25개']),
+            G('추가', 'optional', ['체다치즈 30g', '건포도 1큰술', '아몬드 1큰술', '사과 0.25개']),
         ],
         water=[('데칠 물', 800)],
         steps=[
@@ -222,7 +222,7 @@ BATCH8_B = [
     ),
     R(
         title='사과 양배추 샐러드', tier='discovery', kind='salad', cuisine='western', meal=['side'], method='no_cook',
-        minutes=10, difficulty='very_easy', source='GRC-1304' if False else None, aliases=['요거트 코울슬로'],
+        minutes=10, difficulty='very_easy', aliases=['요거트 코울슬로'],
         summary='채 썬 양배추와 사과를 요거트 드레싱에 버무려요. 코울슬로보다 가볍고 달아요.',
         groups=[
             G('양배추', 'core', ['양배추 150g']),

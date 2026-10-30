@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / 'content'
 OUT = ROOT.parent / 'src' / 'data' / 'catalog.json'
-VERSION = 'batch8-231'
+VERSION = 'batch8-232'
 
 
 def load(name: str):

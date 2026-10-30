@@ -1,6 +1,6 @@
 {
-  "version": "batch8-231",
-  "generatedAt": "2026-10-30T14:44:55+00:00",
+  "version": "batch8-232",
+  "generatedAt": "2026-10-30T14:47:02+00:00",
   "ingredients": [
     {
       "id": "I001",
@@ -46223,7 +46223,7 @@
         "snack"
       ],
       "method": "grill",
-      "minutes": 15,
+      "minutes": 20,
       "difficulty": "very_easy",
       "baseServings": 1,
       "tools": [],
@@ -47637,7 +47637,7 @@
       ],
       "steps": [
         {
-          "text": "과일은 한입 크기로 썰어요. 견과는 굵게 다져요. 오트밀을 쓴다면 마른 팬에 2분 볶아 고소하게 해요.",
+          "text": "과일은 한입 크기로 썰어요. 호두, 아몬드, 땅콩 같은 견과는 굵게 다져요. 오트밀을 쓴다면 마른 팬에 2분 볶아 고소하게 해요.",
           "timerSeconds": 120
         },
         {
@@ -47645,7 +47645,7 @@
           "timerSeconds": null
         },
         {
-          "text": "꿀이나 잼을 두르고 계피를 뿌려요. 바로 먹어요.",
+          "text": "꿀이나 잼, 설탕을 두르고 계피를 뿌려요. 바로 먹어요.",
           "timerSeconds": null
         }
       ],
@@ -48855,7 +48855,7 @@
         "snack"
       ],
       "method": "boil",
-      "minutes": 30,
+      "minutes": 45,
       "difficulty": "very_easy",
       "baseServings": 1,
       "tools": [],
@@ -49411,7 +49411,7 @@
         "side"
       ],
       "method": "no_cook",
-      "minutes": 10,
+      "minutes": 20,
       "difficulty": "very_easy",
       "baseServings": 1,
       "tools": [],
@@ -49819,7 +49819,7 @@
         "side"
       ],
       "method": "boil",
-      "minutes": 15,
+      "minutes": 20,
       "difficulty": "very_easy",
       "baseServings": 1,
       "tools": [],

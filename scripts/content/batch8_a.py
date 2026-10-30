@@ -12,7 +12,7 @@ BATCH8_A = [
             G('소스', 'core', ['토마토케첩 2큰술', '고추장 1작은술', '올리고당 1큰술'], rule='all_of', weight=7, subs={'올리고당': [('설탕', 0.9, None), ('꿀', 0.95, None)]}),
             G('식용유', 'major', ['식용유 1큰술'], weight=3),
             G('간장', 'support', ['간장 1작은술']),
-            G('추가', 'optional', ['마늘 0.5작은술', '머스타드 1작은술', '깨 1작은술', '치즈 1장' if False else '슬라이스 치즈 1장']),
+            G('추가', 'optional', ['마늘 0.5작은술', '머스타드 1작은술', '깨 1작은술', '슬라이스 치즈 1장']),
         ],
         steps=[
             ('떡은 끓는 물에 1분 데쳐 말랑하게 해요. 소시지는 칼집을 내요. 꼬치에 소시지, 떡, 소시지, 떡 순서로 꿰어요. 꼬치가 없으면 그냥 팬에 구워도 돼요.', 60),
@@ -31,7 +31,7 @@ BATCH8_A = [
             G('식용유', 'major', ['식용유 3큰술'], weight=4),
             G('간장', 'support', ['간장 1작은술']),
             G('마늘', 'support', ['마늘 0.5작은술'], weight=1),
-            G('추가', 'optional', ['고춧가루 0.5작은술', '깨 1작은술', '물엿 1큰술' if False else '올리고당 1큰술', '땅콩 1큰술']),
+            G('추가', 'optional', ['고춧가루 0.5작은술', '깨 1작은술', '올리고당 1큰술', '땅콩 1큰술']),
         ],
         water=[('소스 물', 30)],
         steps=[
@@ -101,7 +101,7 @@ BATCH8_A = [
     ),
     R(
         title='두부부침', tier='basic', kind='side', cuisine='korean', meal=['side', 'snack'], method='grill',
-        minutes=15, difficulty='very_easy', aliases=['두부구이', '두부 양념장'],
+        minutes=20, difficulty='very_easy', aliases=['두부구이', '두부 양념장'],
         summary='두부를 노릇하게 부치고 간장 양념장을 올려요. 가장 단순한 두부 반찬이에요.',
         groups=[
             G('두부', 'core', ['두부 1모']),
@@ -212,13 +212,12 @@ BATCH8_A = [
     ),
     R(
         title='바나나 땅콩버터 토스트', tier='discovery', kind='bread', cuisine='western', meal=['breakfast', 'snack'], method='grill',
-        minutes=8, difficulty='very_easy', source='GRC-096' if False else None,
-        summary='구운 식빵에 땅콩버터를 바르고 바나나를 올려요. 꿀과 계피를 뿌리면 디저트예요.',
+        minutes=8, difficulty='very_easy', summary='구운 식빵에 땅콩버터를 바르고 바나나를 올려요. 꿀과 계피를 뿌리면 디저트예요.',
         groups=[
             G('식빵', 'core', ['식빵 2장']),
             G('땅콩버터', 'core', ['땅콩버터 2큰술'], weight=8),
             G('바나나', 'core', ['바나나 1개'], weight=8),
-            G('추가', 'optional', ['꿀 1작은술', '계피가루 1꼬집', '버터 5g', '깨 1작은술', '초콜릿 1조각' if False else '견과류 1큰술' if False else '호두 1큰술']),
+            G('추가', 'optional', ['꿀 1작은술', '계피가루 1꼬집', '버터 5g', '깨 1작은술', '호두 1큰술']),
         ],
         steps=[
             ('식빵을 토스터나 마른 팬에 노릇하게 구워요. 바나나는 5mm 두께로 썰어요.', 120),
@@ -228,7 +227,7 @@ BATCH8_A = [
     ),
     R(
         title='요거트 과일 파르페', tier='discovery', kind='snack', cuisine='western', meal=['breakfast', 'snack'], method='no_cook',
-        minutes=5, difficulty='very_easy', source='GRC-1001' if False else None, aliases=['그래놀라 요거트 볼'],
+        minutes=5, difficulty='very_easy', aliases=['그래놀라 요거트 볼'],
         summary='요거트와 과일, 견과를 층층이 담아요. 그래놀라 대신 라면땅이나 식빵 러스크를 올려도 돼요.',
         groups=[
             G('요거트', 'core', ['플레인 요거트 150g', '그릭요거트 150g'], rule='one_of', weight=10),
@@ -238,9 +237,9 @@ BATCH8_A = [
             G('추가', 'optional', ['계피가루 1꼬집', '건포도 1큰술', '땅콩버터 1작은술', '깨 1작은술']),
         ],
         steps=[
-            ('과일은 한입 크기로 썰어요. 견과는 굵게 다져요. 오트밀을 쓴다면 마른 팬에 2분 볶아 고소하게 해요.', 120),
+            ('과일은 한입 크기로 썰어요. 호두, 아몬드, 땅콩 같은 견과는 굵게 다져요. 오트밀을 쓴다면 마른 팬에 2분 볶아 고소하게 해요.', 120),
             ('유리컵에 요거트, 과일, 견과 순서로 두 번 층을 쌓아요.', None),
-            ('꿀이나 잼을 두르고 계피를 뿌려요. 바로 먹어요.', None),
+            ('꿀이나 잼, 설탕을 두르고 계피를 뿌려요. 바로 먹어요.', None),
         ],
     ),
 ]
