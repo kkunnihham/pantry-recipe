@@ -102,7 +102,7 @@ export default function Fridge() {
             처음 한 번만
           </p>
           <p style={{ fontSize: 14, lineHeight: 1.5 }}>
-            소금, 설탕, 간장, 식용유 같은 기본 양념 {staples.length}가지를 한 번에 "있음"으로 넣을까요? 떨어지면 그때 바꾸면 돼요.
+            소금, 간장, 식용유, 양파, 달걀 같은 기본 재료 {staples.length}가지를 한 번에 "있음"으로 넣을까요? 떨어지면 그때 바꾸면 돼요.
           </p>
           <div style={{ display: 'flex', gap: 8 }}>
             <button className="btn btn--primary" onClick={markAllStaples}>
