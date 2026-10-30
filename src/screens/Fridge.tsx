@@ -6,7 +6,7 @@ import { CATEGORY_LABEL, TOOL_LABEL, type Ingredient, type IngredientCategory, t
 import type { StockState } from '../lib/db'
 import { setOwnedTools, setStaplesDone, setStock, setStocks, useAppState } from '../state/store'
 
-const CATEGORY_ORDER: IngredientCategory[] = ['veg', 'meat_egg', 'dairy', 'processed', 'grain', 'seafood', 'seasoning', 'fruit_etc']
+const CATEGORY_ORDER: IngredientCategory[] = ['veg', 'meat_egg', 'seafood', 'dairy', 'processed', 'grain', 'dried', 'seasoning', 'sauce', 'fruit_etc']
 const TOOL_CHOICES: Tool[] = ['air_fryer', 'microwave', 'rice_cooker', 'pressure_cooker', 'blender']
 const NEXT: Record<StockState, StockState> = { none: 'have', have: 'low', low: 'none' }
 

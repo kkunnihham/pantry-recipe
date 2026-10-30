@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 CAT = Path(__file__).resolve().parent.parent / 'src' / 'data' / 'catalog.json'
-CATEGORIES = {'veg', 'meat_egg', 'seafood', 'dairy', 'processed', 'grain', 'seasoning', 'fruit_etc'}
+CATEGORIES = {'veg', 'meat_egg', 'seafood', 'dried', 'dairy', 'processed', 'grain', 'seasoning', 'sauce', 'fruit_etc'}
 ROLES = {'core', 'major', 'support', 'optional'}
 RULES = {'one_of', 'all_of', 'at_least', 'optional'}
 TOOLS = {'air_fryer', 'microwave', 'rice_cooker', 'pressure_cooker', 'blender', 'oven'}

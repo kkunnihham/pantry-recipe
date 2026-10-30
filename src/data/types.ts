@@ -6,21 +6,25 @@
 export type IngredientCategory =
   | 'veg' // 채소·버섯
   | 'meat_egg' // 육류·달걀
-  | 'seafood' // 해산물·해조류
+  | 'seafood' // 생선·해물
+  | 'dried' // 건어물·육수
   | 'dairy' // 유제품·치즈
   | 'processed' // 가공식품·통조림·김치·두부
   | 'grain' // 곡물·면·빵
-  | 'seasoning' // 양념·소스·기름
+  | 'seasoning' // 기본 양념·기름
+  | 'sauce' // 소스·향신료
   | 'fruit_etc' // 과일·견과·기타
 
 export const CATEGORY_LABEL: Record<IngredientCategory, string> = {
   veg: '채소·버섯',
   meat_egg: '육류·달걀',
-  seafood: '해산물·해조류',
+  seafood: '생선·해물',
+  dried: '건어물·육수',
   dairy: '유제품·치즈',
   processed: '가공식품·통조림',
   grain: '곡물·면·빵',
-  seasoning: '양념·소스·기름',
+  seasoning: '기본 양념·기름',
+  sauce: '소스·향신료',
   fruit_etc: '과일·견과·기타',
 }
 
@@ -31,6 +35,8 @@ export interface Ingredient {
   category: IngredientCategory
   /** 기본 양념 체크리스트에 들어가는 상비 재료 */
   staple?: boolean
+  /** 냉장고·검색에서 숨김. ID는 유지. */
+  hidden?: boolean
   /** 옛 카탈로그 ID (추적용) */
   sourceIds?: string[]
 }
