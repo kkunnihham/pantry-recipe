@@ -123,6 +123,17 @@ describe('백업 가져오기', () => {
     for (const store of Object.values(context.stores)) expect(store.rows.size).toBe(0)
   })
 
+  it('kv는 아는 키의 올바른 값만 가져오고 나머지는 버린다', async () => {
+    await importAll({ ...backup(), kv: {
+      ownedTools: ['microwave', 'toaster', 5],
+      staplesDone: 'yes',
+      discoverySkips: { date: '2026-10-31', ids: 5 },
+      nearSkips: { date: '2026-10-31', ids: ['R001', 2] },
+      theme: 'light',
+    } })
+    expect(context.stores.kv.put.mock.calls).toEqual([[['microwave'], 'ownedTools']])
+  })
+
   it('쓰기 오류는 숨기지 않고 트랜잭션을 중단한다', async () => {
     const error = new Error('write failed')
     context.stores.shopping.put.mockRejectedValueOnce(error)

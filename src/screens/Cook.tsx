@@ -14,7 +14,10 @@ function useWakeLock(active: boolean) {
     let cancelled = false
     const request = async () => {
       try {
-        lock = await navigator.wakeLock.request('screen')
+        const got = await navigator.wakeLock.request('screen')
+        // 요청이 끝나기 전에 화면을 떠났으면 바로 풀어 준다.
+        if (cancelled) void got.release()
+        else lock = got
       } catch {
         lock = null
       }
@@ -97,7 +100,19 @@ function StepTimer({ seconds }: { seconds: number }) {
       </div>
       <div className="timer-actions">
         {!running ? (
-          <button type="button" className="btn btn--primary" onClick={() => setT((p) => ({ ...p, endAt: Date.now() + p.remaining * 1000, done: false }))} disabled={remaining === 0 && !t.done}>
+          <button
+            type="button"
+            className="btn btn--primary"
+            onClick={() => {
+              // "다시"는 처음부터. 끝난 뒤 남은 0초로 다시 돌리면 멈춤 상태로 굳어 버린다.
+              doneRef.current = false
+              setT((p) => {
+                const from = p.done ? p.total : p.remaining
+                return { ...p, endAt: Date.now() + from * 1000, remaining: from, done: false }
+              })
+            }}
+            disabled={remaining === 0 && !t.done}
+          >
             <Icon name="play" size={18} /> {t.done ? '다시' : remaining < t.total ? '계속' : '시작'}
           </button>
         ) : (
@@ -130,7 +145,9 @@ export default function Cook() {
   const s = useAppState()
   const recipe = id ? recipeById.get(id) : undefined
   const base = recipe?.baseServings ?? 1
-  const servings = recipe?.fixedYield ? base : Math.min(6, Math.max(1, Number(params.get('servings') ?? base) || base))
+  // 주소로 들어온 인분은 1~6 사이 정수로만 받는다 (2.5인분 같은 값 방지).
+  const requested = Math.round(Number(params.get('servings') ?? base)) || base
+  const servings = recipe?.fixedYield ? base : Math.min(6, Math.max(1, requested))
   const factor = servings / base
   const [step, setStep] = useState(0)
   const [finishing, setFinishing] = useState(false)

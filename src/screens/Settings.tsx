@@ -17,15 +17,21 @@ export default function Settings() {
   }
 
   async function download() {
-    const data = await exportAll()
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
-    const url = URL.createObjectURL(blob)
-    const a = document.createElement('a')
-    a.href = url
-    a.download = `pantry-backup-${new Date().toISOString().slice(0, 10)}.json`
-    a.click()
-    URL.revokeObjectURL(url)
-    setStatus('백업 파일을 내려받았어요.')
+    try {
+      const data = await exportAll()
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `pantry-backup-${new Date().toISOString().slice(0, 10)}.json`
+      a.click()
+      // 바로 해제하면 일부 브라우저(iOS Safari)가 내려받기를 놓친다.
+      setTimeout(() => URL.revokeObjectURL(url), 60_000)
+      setStatus('백업 파일을 내려받았어요.')
+    } catch (error) {
+      console.error('백업을 내보내지 못했어요', error)
+      setStatus('백업 파일을 만들지 못했어요. 다시 시도해 주세요.')
+    }
   }
 
   async function upload(event: ChangeEvent<HTMLInputElement>) {

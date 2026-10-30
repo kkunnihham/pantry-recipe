@@ -1,4 +1,5 @@
 import { openDB, type DBSchema, type IDBPDatabase } from 'idb'
+import { TOOL_LABEL } from '../data/types'
 
 /** 재고 상태. 수량은 추적하지 않는다. */
 export type StockState = 'have' | 'low' | 'none'
@@ -100,6 +101,23 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value)
 }
 
+function isStringArray(value: unknown): value is string[] {
+  return Array.isArray(value) && value.every((v) => typeof v === 'string')
+}
+
+/** 백업의 kv 중 앱이 아는 키만, 올바른 모양일 때만 받는다. 엉뚱한 값이 들어오면 로드 때 앱이 깨질 수 있다. */
+function sanitizeKv(kv: unknown): Array<[string, unknown]> {
+  if (!isRecord(kv)) return []
+  const out: Array<[string, unknown]> = []
+  if (Array.isArray(kv.ownedTools)) out.push(['ownedTools', kv.ownedTools.filter((t) => typeof t === 'string' && t in TOOL_LABEL)])
+  if (typeof kv.staplesDone === 'boolean') out.push(['staplesDone', kv.staplesDone])
+  for (const key of ['discoverySkips', 'nearSkips'] as const) {
+    const v = kv[key]
+    if (isRecord(v) && typeof v.date === 'string' && isStringArray(v.ids)) out.push([key, { date: v.date, ids: v.ids }])
+  }
+  return out
+}
+
 /** 백업용: 유효한 항목만 남기고 모든 사용자 데이터를 한 번에 교체한다. */
 export async function importAll(data: unknown): Promise<{ inventory: number; cookLog: number; ratings: number; shopping: number }> {
   if (!isRecord(data) || data.format !== 'pantry-recipe-backup' || data.version !== 1) {
@@ -147,9 +165,7 @@ export async function importAll(data: unknown): Promise<{ inventory: number; coo
     for (const row of cookLog) await tx.objectStore('cookLog').add(row)
     for (const row of ratings) await tx.objectStore('ratings').put(row)
     for (const row of shopping) await tx.objectStore('shopping').put(row)
-    if (isRecord(data.kv)) {
-      for (const [key, value] of Object.entries(data.kv)) await tx.objectStore('kv').put(value, key)
-    }
+    for (const [key, value] of sanitizeKv(data.kv)) await tx.objectStore('kv').put(value, key)
     const [inventoryCount, cookLogCount, ratingsCount, shoppingCount] = await Promise.all([
       tx.objectStore('inventory').count(),
       tx.objectStore('cookLog').count(),

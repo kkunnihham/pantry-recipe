@@ -117,6 +117,14 @@ describe('살 것 목록의 건전성', () => {
     }
   })
 
+  it('같은 재료가 두 핵심 그룹에 있으면 살 것에 한 번만 잡힌다 (유부초밥의 설탕)', () => {
+    const rec = evaluateRecipe(recipe('유부초밥'), { ...base, inventory: inv([...STAPLES.filter((s) => s !== '설탕'), '유부', '밥', '맛술', '식초']) })
+    expect(rec.bucket).toBe('near')
+    const buy = rec.missingCore.flatMap((m) => m.buy)
+    expect(buy).toEqual([id('설탕')])
+    expect(rec.purchaseCount).toBe(1)
+  })
+
   it('숨긴 레시피는 추천 대상에서 빠지지만 ID 조회는 된다', () => {
     expect(recipes.some((r) => r.hidden)).toBe(false)
     const hiddenOne = [...recipeById.values()].find((r) => r.hidden)

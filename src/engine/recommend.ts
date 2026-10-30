@@ -213,9 +213,15 @@ export function evaluateRecipe(recipe: Recipe, input: EngineInput): Recommendati
   const coreMatchPercent = weightedPercent(coreEvals, (e) => e.score)
   const postPurchasePercent = weightedPercent(evals, (e) => (e.group.isCoreGate && !e.gateOk ? 1 : e.score))
 
+  // 같은 재료가 두 핵심 그룹에 들어 있으면 (유부초밥의 설탕 등) 한 번만 사면 되니 중복을 뺀다.
+  const bought = new Set<string>()
   const missingCore: MissingCore[] = coreEvals
     .filter((e) => !e.gateOk)
-    .map((e) => ({ groupId: e.group.id, groupName: e.group.name, buy: e.buy }))
+    .map((e) => {
+      const buy = e.buy.filter((b) => !bought.has(b))
+      for (const b of buy) bought.add(b)
+      return { groupId: e.group.id, groupName: e.group.name, buy }
+    })
   const purchaseCount = missingCore.reduce((a, m) => a + m.buy.length, 0)
   const usedSubstitutions = evals
     .filter((e) => GATE_ROLES.includes(e.group.role))
