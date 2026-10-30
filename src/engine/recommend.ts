@@ -131,7 +131,8 @@ function evalItem(item: ReqItem, group: ReqGroup, inv: ReadonlyMap<string, Stock
       presentOk: true,
       substitution: { groupId: group.id, forIngredientId: item.ingredientId, viaIngredientIds: s.ingredientIds, fit: s.fit, note: s.note },
       lowIds: s.ingredientIds.filter((_id, i) => states[i] === 'low'),
-      buy: [],
+      // 적합도가 낮아 핵심 관문을 못 넘는 대체재뿐이면, 관문을 넘으려면 원래 재료를 사야 한다.
+      buy: gateOk ? [] : [item.ingredientId],
     }
     if (!best || cand.score > best.score) best = cand
   }
@@ -221,7 +222,10 @@ export function evaluateRecipe(recipe: Recipe, input: EngineInput): Recommendati
     .map((e) => e.substitution)
     .filter((s): s is UsedSubstitution => !!s)
   const lowIngredientIds = [...new Set(evals.flatMap((e) => e.lowIds))]
-  const missingOptionalNames = evals.filter((e) => !e.group.isCoreGate && e.score === 0).map((e) => e.group.name)
+  // 안내용: 핵심이 아닌데 없는 그룹. "추가", "고명" 같은 선택 그룹은 없어도 당연하니 뺀다.
+  const missingOptionalNames = evals
+    .filter((e) => !e.group.isCoreGate && e.group.role !== 'optional' && e.group.matchRule !== 'optional' && e.score === 0)
+    .map((e) => e.group.name)
 
   const base = {
     recipeId: recipe.id,

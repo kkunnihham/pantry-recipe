@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Icon from '../components/Icon'
 import { ingredientById, recipeById } from '../data/catalog'
@@ -6,7 +6,7 @@ import { KIND_LABEL, TOOL_LABEL, type ReqGroup, type Role } from '../data/types'
 import { CUISINE_LABEL, DIFFICULTY_LABEL, METHOD_LABEL, ROLE_LABEL } from '../data/labels'
 import type { Recommendation } from '../engine/recommend'
 import { useRecommendations } from '../engine/useRecommendations'
-import { formatMinutes, formatNumber, formatTimer, scaleAmount } from '../lib/format'
+import { formatMinutes, formatTimer, scaleAmount, scaleWater } from '../lib/format'
 import type { StockState } from '../lib/db'
 import { addToShopping, useAppState } from '../state/store'
 
@@ -100,6 +100,10 @@ export default function RecipeDetail() {
   const s = useAppState()
   const recs = useRecommendations()
   const [servings, setServings] = useState(() => Math.min(3, recipe?.baseServings ?? 1))
+  // 같은 화면에서 다른 레시피로 넘어가면 (기록 → 상세 등) 인분을 그 레시피 기준으로 되돌린다.
+  useEffect(() => {
+    setServings(Math.min(3, recipe?.baseServings ?? 1))
+  }, [id, recipe?.baseServings])
 
   if (!recipe) {
     return (
@@ -197,7 +201,7 @@ export default function RecipeDetail() {
                   <li key={w.name} className="ing-row">
                     <div className="ing-main">
                       <span className="ing-names">
-                        <span className="ing-name">{w.name}</span> <span className="ing-amount">{formatNumber(w.amountMl * factor)}ml</span>
+                        <span className="ing-name">{w.name}</span> <span className="ing-amount">{scaleWater(w.amountMl, factor)}</span>
                       </span>
                     </div>
                   </li>

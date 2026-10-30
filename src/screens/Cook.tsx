@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import Icon from '../components/Icon'
 import { ingredientById, recipeById } from '../data/catalog'
 import type { Rating, StockState } from '../lib/db'
-import { formatNumber, formatTimer, scaleAmount } from '../lib/format'
+import { formatTimer, scaleAmount, scaleWater } from '../lib/format'
 import { logCook, rateRecipe, setStocks, useAppState } from '../state/store'
 
 /** 화면 꺼짐 방지. 지원 안 하면 조용히 무시. */
@@ -140,6 +140,9 @@ export default function Cook() {
   const [saving, setSaving] = useState(false)
   const [showIngredients, setShowIngredients] = useState(false)
   useWakeLock(!!recipe && !finishing)
+  // 미리보기 URL은 사진이 바뀔 때만 만들고, 바뀌거나 화면을 떠날 때 해제한다.
+  const photoUrl = useMemo(() => (photo ? URL.createObjectURL(photo) : null), [photo])
+  useEffect(() => () => { if (photoUrl) URL.revokeObjectURL(photoUrl) }, [photoUrl])
 
   if (!recipe) {
     return (
@@ -164,15 +167,20 @@ export default function Cook() {
 
   async function save() {
     setSaving(true)
-    const changes: Array<[string, StockState]> = []
-    for (const [iid, u] of Object.entries(usage)) {
-      if (u === 'used') changes.push([iid, 'none'])
-      else if (u === 'low') changes.push([iid, 'low'])
+    try {
+      const changes: Array<[string, StockState]> = []
+      for (const [iid, u] of Object.entries(usage)) {
+        if (u === 'used') changes.push([iid, 'none'])
+        else if (u === 'low') changes.push([iid, 'low'])
+      }
+      if (changes.length) await setStocks(changes)
+      await logCook(recipe!.id, servings, photo ?? undefined)
+      if (rating) await rateRecipe(recipe!.id, rating)
+      navigate('/', { replace: true })
+    } catch (e) {
+      console.error('조리 기록을 저장하지 못했어요', e)
+      setSaving(false)
     }
-    if (changes.length) await setStocks(changes)
-    await logCook(recipe!.id, servings, photo ?? undefined)
-    if (rating) await rateRecipe(recipe!.id, rating)
-    navigate('/', { replace: true })
   }
 
   if (finishing) {
@@ -232,7 +240,7 @@ export default function Cook() {
             <Icon name="camera" size={18} /> {photo ? '다시 찍기' : '사진 남기기 (선택)'}
             <input type="file" accept="image/*" capture="environment" hidden onChange={(e) => setPhoto(e.target.files?.[0] ?? null)} />
           </label>
-          {photo && <img className="photo-preview" src={URL.createObjectURL(photo)} alt="완성 사진" />}
+          {photoUrl && <img className="photo-preview" src={photoUrl} alt="완성 사진" />}
         </section>
 
         <div className="sticky-cta">
@@ -285,7 +293,7 @@ export default function Cook() {
             {recipe.water?.map((w) => (
               <li key={w.name}>
                 <span>{w.name}</span>
-                <span className="meta">{formatNumber(w.amountMl * factor)}ml</span>
+                <span className="meta">{scaleWater(w.amountMl, factor)}</span>
               </li>
             ))}
           </ul>

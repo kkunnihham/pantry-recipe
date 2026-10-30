@@ -86,6 +86,45 @@ describe('핵심 관문과 구역', () => {
   })
 })
 
+describe('살 것 목록의 건전성', () => {
+  it('적합도 낮은 대체재만 있으면 원래 재료가 살 것으로 잡힌다 (undefined 금지)', () => {
+    // 재료 사전의 모든 조합을 돌려 보기엔 크니, 흔한 냉장고 몇 가지로 전체 레시피를 돌린다.
+    const fridges = [
+      inv(STAPLES),
+      inv([...STAPLES, '달걀', '양파', '대파', '밥', '배추김치', '두부', '밀가루', '양배추']),
+      inv([...STAPLES, '닭다리살', '밀가루', '대파', '우유', '슬라이스 치즈', '토마토소스']),
+    ]
+    for (const inventory of fridges) {
+      const r = evaluateAll(recipes, { ...base, inventory, config: { coreSubstituteMinFit: 0.9 } })
+      for (const rec of r.all) {
+        for (const m of rec.missingCore) {
+          expect(m.buy.every((b) => typeof b === 'string' && b.length > 0)).toBe(true)
+        }
+        expect(rec.purchaseCount).toBe(rec.missingCore.reduce((a, m) => a + m.buy.length, 0))
+      }
+    }
+  })
+
+  it('안내용 "없음" 목록에 선택 그룹(추가·고명)은 들어가지 않는다', () => {
+    const r = evaluateAll(recipes, { ...base, inventory: inv([...STAPLES, '달걀', '밥', '대파']) })
+    for (const rec of r.ready) {
+      const recipeGroups = recipeById.get(rec.recipeId)!.groups
+      for (const name of rec.missingOptionalNames) {
+        const g = recipeGroups.find((x) => x.name === name)!
+        expect(g.role).not.toBe('optional')
+        expect(g.matchRule).not.toBe('optional')
+      }
+    }
+  })
+
+  it('숨긴 레시피는 추천 대상에서 빠지지만 ID 조회는 된다', () => {
+    expect(recipes.some((r) => r.hidden)).toBe(false)
+    const hiddenOne = [...recipeById.values()].find((r) => r.hidden)
+    expect(hiddenOne).toBeDefined()
+    expect(recipes.find((r) => r.id === hiddenOne!.id)).toBeUndefined()
+  })
+})
+
 describe('도구·평가·최근 조리', () => {
   it('전자레인지가 없으면 떠먹는 치즈감자는 숨김', () => {
     const inventory = inv([...STAPLES, '감자', '모짜렐라치즈'])

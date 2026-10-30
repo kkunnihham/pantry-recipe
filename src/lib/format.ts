@@ -14,6 +14,12 @@ export function scaleAmount(amount: number | null, unit: string, servings: numbe
   return `${formatNumber(Math.max(0.5, Math.round(raw * 2) / 2))}${unit}`
 }
 
+/** 물 양을 인분에 맞춰 환산한다. 5ml 단위로 반올림해 162.5ml 같은 값이 안 나오게 한다. */
+export function scaleWater(amountMl: number, factor: number): string {
+  if (factor === 1) return `${formatNumber(amountMl)}ml`
+  return `${Math.max(5, Math.round((amountMl * factor) / 5) * 5)}ml`
+}
+
 export function formatNumber(v: number): string {
   if (Number.isInteger(v)) return String(v)
   const rounded = Math.round(v * 10) / 10

@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '../components/Icon'
-import { ingredients } from '../data/catalog'
+import { catalog, ingredients } from '../data/catalog'
 import { CATEGORY_LABEL, TOOL_LABEL, type Ingredient, type IngredientCategory, type Tool } from '../data/types'
 import type { StockState } from '../lib/db'
 import { setOwnedTools, setStaplesDone, setStock, setStocks, useAppState } from '../state/store'
@@ -40,12 +40,14 @@ export default function Fridge() {
   const [query, setQuery] = useState('')
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
 
+  // 숨긴 재료라도 재고에 남아 있으면 보여줘서 "없음"으로 바꿀 수 있게 한다.
+  const hiddenOwned = useMemo(() => catalog.ingredients.filter((i) => i.hidden && s.inventory.has(i.id)), [s.inventory])
   const byCategory = useMemo(() => {
     const m = new Map<IngredientCategory, Ingredient[]>()
     for (const c of CATEGORY_ORDER) m.set(c, [])
-    for (const i of ingredients) m.get(i.category)!.push(i)
+    for (const i of [...ingredients, ...hiddenOwned]) m.get(i.category)!.push(i)
     return m
-  }, [])
+  }, [hiddenOwned])
 
   const staples = useMemo(() => ingredients.filter((i) => i.staple), [])
   const haveCount = [...s.inventory.values()].filter((v) => v === 'have').length
