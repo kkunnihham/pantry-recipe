@@ -139,7 +139,7 @@ BATCH10_A = [
         ],
     ),
     R(
-        title='스팸 김치국', tier='basic', kind='soup', cuisine='korean', meal=['breakfast', 'main'], method='boil',
+        title='스팸 김치국', hidden=True, tier='basic', kind='soup', cuisine='korean', meal=['breakfast', 'main'], method='boil',
         minutes=12, difficulty='very_easy', aliases=['스팸 김칫국'],
         summary='스팸을 볶다가 김치와 물을 넣고 끓여요. 김치찌개보다 묽고 빠른 아침용이에요.',
         groups=[

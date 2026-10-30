@@ -328,7 +328,7 @@ BATCH15_C = [
         ],
     ),
     R(
-        title='식빵 츄러스', tier='basic', kind='snack', cuisine='western', meal=['snack'], method='air_fry',
+        title='식빵 츄러스', hidden=True, tier='basic', kind='snack', cuisine='western', meal=['snack'], method='air_fry',
         minutes=15, difficulty='very_easy', tools=['air_fryer'], aliases=['에어프라이어 츄러스', '식빵 시나몬 스틱'],
         summary='식빵을 길게 잘라 버터를 바르고 계피 설탕을 묻혀 에어프라이어에 구워요. 츄러스 맛 나는 5분 간식이에요.',
         groups=[

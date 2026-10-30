@@ -1,6 +1,6 @@
 {
   "version": "batch15-441",
-  "generatedAt": "2026-10-30T17:25:34+00:00",
+  "generatedAt": "2026-10-30T17:55:35+00:00",
   "ingredients": [
     {
       "id": "I001",
@@ -56570,6 +56570,7 @@
       "minutes": 12,
       "difficulty": "very_easy",
       "baseServings": 1,
+      "hidden": true,
       "tools": [],
       "groups": [
         {
@@ -58412,6 +58413,7 @@
       "minutes": 25,
       "difficulty": "very_easy",
       "baseServings": 1,
+      "hidden": true,
       "tools": [],
       "groups": [
         {
@@ -60164,6 +60166,7 @@
       "minutes": 30,
       "difficulty": "easy",
       "baseServings": 1,
+      "hidden": true,
       "tools": [],
       "groups": [
         {
@@ -78906,6 +78909,7 @@
       "minutes": 25,
       "difficulty": "very_easy",
       "baseServings": 1,
+      "hidden": true,
       "tools": [],
       "groups": [
         {
@@ -92872,6 +92876,7 @@
       "minutes": 15,
       "difficulty": "very_easy",
       "baseServings": 1,
+      "hidden": true,
       "tools": [
         "air_fryer"
       ],
@@ -96137,6 +96142,7 @@
       "minutes": 30,
       "difficulty": "easy",
       "baseServings": 2,
+      "hidden": true,
       "tools": [],
       "groups": [
         {

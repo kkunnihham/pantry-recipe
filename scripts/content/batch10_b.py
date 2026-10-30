@@ -69,7 +69,7 @@ BATCH10_B = [
         ],
     ),
     R(
-        title='콩나물 김치찌개', tier='discovery', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='콩나물 김치찌개', hidden=True, tier='discovery', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=25, difficulty='very_easy', aliases=['김치 콩나물찌개'],
         summary='김치찌개에 콩나물을 한 줌 넣어 시원하게 끓여요. 돼지고기가 있으면 넣고 없으면 없는 대로.',
         groups=[
@@ -230,7 +230,7 @@ BATCH10_B = [
         ],
     ),
     R(
-        title='소고기 버섯전골', tier='discovery', kind='soup', cuisine='korean', meal=['main'], method='boil',
+        title='소고기 버섯전골', hidden=True, tier='discovery', kind='soup', cuisine='korean', meal=['main'], method='boil',
         minutes=30, difficulty='easy', source='GRC-248', aliases=['불고기 전골', '소고기 전골'],
         summary='양념한 소고기와 버섯을 둘러 담고 국물을 넉넉히 부어 끓여요. 불고기 국물에 밥 말아 먹는 전골이에요.',
         groups=[

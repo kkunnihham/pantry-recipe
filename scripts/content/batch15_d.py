@@ -252,7 +252,7 @@ BATCH15_D = [
         ],
     ),
     R(
-        title='소고기 당면전골', servings=2, tier='discovery', kind='noodle', cuisine='korean', meal=['main'], method='boil',
+        title='소고기 당면전골', hidden=True, servings=2, tier='discovery', kind='noodle', cuisine='korean', meal=['main'], method='boil',
         minutes=30, difficulty='easy', aliases=['불고기 당면전골', '당면 소불고기 전골'],
         summary='불고기 양념 소고기와 당면을 넉넉한 국물에 끓여요. 당면이 국물을 먹어 면 요리처럼 먹는 전골이에요.',
         groups=[

@@ -92,7 +92,7 @@ BATCH14_A = [
         ],
     ),
     R(
-        title='멸치국수', tier='basic', kind='noodle', cuisine='korean', meal=['main'], method='boil',
+        title='멸치국수', hidden=True, tier='basic', kind='noodle', cuisine='korean', meal=['main'], method='boil',
         minutes=25, difficulty='very_easy', aliases=['멸치 육수 국수', '온국수', '멸치 소면'],
         summary='멸치와 다시마로 진한 육수를 내고 소면을 말아요. 잔치국수와 비슷하지만 고명 없이 육수 맛으로 먹는 국수예요.',
         groups=[
