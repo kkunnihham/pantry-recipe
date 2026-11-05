@@ -762,6 +762,50 @@
   white-space: nowrap;
 }
 
+.filter-label {
+  min-width: 44px;
+}
+
+.filter-actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.count-badge {
+  margin-left: 6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-size: 11px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 오늘 탭: 바로 가능 목록 위 종류 칩 */
+.kind-row {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+
+.kind-row::-webkit-scrollbar {
+  display: none;
+}
+
+.kind-row > * {
+  flex: none;
+  white-space: nowrap;
+}
+
 .recipe-row .card-body {
   gap: 2px;
   overflow-wrap: anywhere;

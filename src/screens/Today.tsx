@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '../components/Icon'
 import { ingredientById, recipeById } from '../data/catalog'
-import { KIND_LABEL } from '../data/types'
+import { KIND_LABEL, type RecipeKind } from '../data/types'
 import type { Recommendation } from '../engine/recommend'
 import { useRecommendations } from '../engine/useRecommendations'
 import { formatMinutes } from '../lib/format'
@@ -78,9 +78,19 @@ export default function Today() {
   const s = useAppState()
   const rec = useRecommendations()
   const [theme, setThemeState] = useState(getTheme())
-  const [showAll, setShowAll] = useState(false)
+  const [kind, setKind] = useState<RecipeKind | null>(null)
   const inventoryCount = s.inventory.size
-  const readyShown = showAll ? rec.ready : rec.ready.slice(0, 5)
+  // 바로 가능한 것 중에 있는 종류만 칩으로. 고른 종류가 없어지면(재료 변경) 전체로 돌아간다.
+  const kindCounts = new Map<RecipeKind, number>()
+  for (const x of rec.ready) {
+    const k = recipeById.get(x.recipeId)!.kind
+    kindCounts.set(k, (kindCounts.get(k) ?? 0) + 1)
+  }
+  const kindOptions = (Object.keys(KIND_LABEL) as RecipeKind[]).filter((k) => kindCounts.has(k))
+  const activeKind = kind && kindCounts.has(kind) ? kind : null
+  const readyFiltered = activeKind ? rec.ready.filter((x) => recipeById.get(x.recipeId)!.kind === activeKind) : rec.ready
+  const readyShown = readyFiltered.slice(0, 5)
+  const allLink = `/recipes?status=exact,sub${activeKind ? `&kind=${activeKind}` : ''}`
   const discoveryRecipe = rec.discovery ? recipeById.get(rec.discovery.recipeId) : null
   const nearRecipe = rec.nearDiscovery ? recipeById.get(rec.nearDiscovery.recipeId) : null
   const nearBuyId = rec.nearDiscovery?.missingCore.flatMap((m) => m.buy)[0]
@@ -117,12 +127,24 @@ export default function Today() {
       <section className="section">
         <div className="section-head">
           <h2 className="section-title">지금 바로 가능</h2>
-          {rec.ready.length > 5 && (
-            <button type="button" className="link" onClick={() => setShowAll((v) => !v)}>
-              {showAll ? '접기' : `${rec.ready.length}개 모두`}
-            </button>
+          {readyFiltered.length > 5 && (
+            <Link to={allLink} className="link">
+              {readyFiltered.length}개 모두
+            </Link>
           )}
         </div>
+        {kindOptions.length > 1 && (
+          <div className="kind-row" role="group" aria-label="종류">
+            <button type="button" className={`stock-chip ${activeKind === null ? 'is-have' : 'is-none'}`} aria-pressed={activeKind === null} onClick={() => setKind(null)}>
+              전체 {rec.ready.length}
+            </button>
+            {kindOptions.map((k) => (
+              <button key={k} type="button" className={`stock-chip ${activeKind === k ? 'is-have' : 'is-none'}`} aria-pressed={activeKind === k} onClick={() => setKind(k)}>
+                {KIND_LABEL[k]} {kindCounts.get(k)}
+              </button>
+            ))}
+          </div>
+        )}
         {rec.ready.length === 0 ? (
           <div className="card empty">
             {inventoryCount === 0 ? (
