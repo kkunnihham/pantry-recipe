@@ -11,6 +11,7 @@
   --text-muted: #7a6d65;
   --primary: #e69070;
   --primary-hover: #ec9d80;
+  --link: #e69070;
   --on-primary: #3a160a;
   --chip: #3a2a22;
   --chip-text: #f0c3ae;
@@ -42,6 +43,8 @@
   --text-muted: #a3958c;
   --primary: #b9582f;
   --primary-hover: #a84d27;
+  /* 13px 글자용. 라이트 배경에서 --primary 는 대비 4.38:1 이라 조금 어둡게 (5.2:1) */
+  --link: #a84d27;
   --on-primary: #ffffff;
   --chip: #f6e4da;
   --chip-text: #7a3a22;

@@ -18,6 +18,13 @@ const STATUS_OPTIONS: { value: Status; label: string; buckets: Bucket[] }[] = [
 ]
 const DEFAULT_STATUS: Status[] = ['exact', 'sub']
 const BUCKET_RANK: Record<Bucket, number> = { ready_exact: 0, ready_substituted: 1, near: 2, hidden: 3 }
+/** 결과는 상태별 섹션으로. 만들 수 있는 것부터 보인다. */
+const SECTIONS: { bucket: Bucket; title: string }[] = [
+  { bucket: 'ready_exact', title: '바로 가능' },
+  { bucket: 'ready_substituted', title: '대체해서 가능' },
+  { bucket: 'near', title: '1~2개만 사면' },
+  { bucket: 'hidden', title: '지금은 못 만듦' },
+]
 
 const KIND_OPTIONS = (Object.keys(KIND_LABEL) as RecipeKind[])
   .filter((value) => recipes.some((r) => r.kind === value))
@@ -52,7 +59,7 @@ function toggle<T>(selected: T[], value: T): T[] {
 function readList<T extends string>(params: URLSearchParams, key: string, allowed: readonly T[]): T[] {
   const raw = params.get(key)
   if (!raw) return []
-  return raw.split(',').filter((v): v is T => (allowed as readonly string[]).includes(v))
+  return [...new Set(raw.split(',').filter((v): v is T => (allowed as readonly string[]).includes(v)))]
 }
 
 function FilterRow<T extends string>({ label, options, selected, onToggle, lead }: {
@@ -91,9 +98,10 @@ export default function Recipes() {
   const [params, setParams] = useSearchParams()
   const [query, setQuery] = useState('')
 
-  // 주소에서 읽는 필터. status 는 'all' 이면 전체, 없으면 기본값.
+  // 주소에서 읽는 필터. status 는 'all' 이면 전체, 없거나 엉뚱한 값이면 기본값.
   const statusRaw = params.get('status')
-  const statuses: Status[] = statusRaw === null ? DEFAULT_STATUS : statusRaw === 'all' ? [] : readList(params, 'status', ['exact', 'sub', 'near'] as const)
+  const statusList = readList(params, 'status', ['exact', 'sub', 'near'] as const)
+  const statuses: Status[] = statusRaw === 'all' ? [] : statusList.length > 0 ? statusList : DEFAULT_STATUS
   const kinds = readList(params, 'kind', KIND_OPTIONS.map((o) => o.value))
   const mains = readList(params, 'main', MAIN_BUCKET_ORDER)
   const cuisines = readList(params, 'cuisine', CUISINE_OPTIONS.map((o) => o.value))
@@ -158,8 +166,6 @@ export default function Recipes() {
     return rows
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query, params, rec.byId])
-
-  const tiers: Array<'basic' | 'discovery'> = ['basic', 'discovery']
 
   return (
     <main className="screen">
@@ -227,27 +233,28 @@ export default function Recipes() {
           {statuses.length > 0 ? '상태를 "전체"로 바꾸거나 필터를 줄여 보세요.' : '검색어나 필터를 줄여 보세요.'}
         </div>
       )}
-      {tiers.map((tier) => {
-        const list = results.filter(({ recipe }) => recipe.tier === tier)
+      {SECTIONS.map(({ bucket, title }) => {
+        const list = results.filter(({ recommendation }) => (recommendation?.bucket ?? 'hidden') === bucket)
         if (list.length === 0) return null
         return (
-          <section className="section" key={tier}>
+          <section className="section" key={bucket}>
             <div className="section-head">
-              <h2 className="section-title">{TIER_LABEL[tier]}</h2>
+              <h2 className="section-title">{title}</h2>
               <span className="meta">{list.length}개</span>
             </div>
             <div className="row-list">
               {list.map(({ recipe: r, recommendation, ingredientNames }) => (
                 <Link key={r.id} to={`/recipe/${r.id}`} className="row recipe-row">
                   <div className="card-body">
-                    <span className="card-title">{r.title}</span>
+                    <span className="card-title">
+                      {r.title}
+                      {r.tier === 'discovery' && <span className="tag">{TIER_LABEL.discovery}</span>}
+                    </span>
                     <span className="meta">
                       {KIND_LABEL[r.kind]} · {CUISINE_LABEL[r.cuisine]} · {formatMinutes(r.minutes)} · {DIFFICULTY_LABEL[r.difficulty]}
                     </span>
                     {ingredientNames.length > 0 && <span className="meta">재료: {ingredientNames.join(', ')}</span>}
                   </div>
-                  {recommendation?.bucket === 'ready_exact' && <span className="chip recipe-status">바로 가능</span>}
-                  {recommendation?.bucket === 'ready_substituted' && <span className="chip recipe-status">대체 가능</span>}
                   {recommendation?.bucket === 'near' && <span className="chip chip--muted recipe-status">{recommendation.purchaseCount}개만 사면</span>}
                   <Icon name="chevron" size={18} className="recipe-chevron" />
                 </Link>

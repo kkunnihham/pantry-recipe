@@ -29,6 +29,7 @@ describe('주 재료 버킷', () => {
     expect(mainBucketsOf(byTitle('토마토 파스타'))).toEqual(['noodle'])
     expect(mainBucketsOf(byTitle('어니언링'))).toEqual(['veg'])
     expect(mainBucketsOf(byTitle('멸치볶음'))).toEqual(['seafood'])
+    expect(mainBucketsOf(byTitle('어묵볶음'))).toEqual(['seafood'])
   })
 
   it('양파·대파 같은 흔한 재료만으로는 채소 버킷이 되지 않는다', () => {

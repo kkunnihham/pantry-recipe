@@ -54,7 +54,7 @@
 
 .link {
   font-size: 13px;
-  color: var(--primary);
+  color: var(--link);
   min-height: var(--tap);
   display: inline-flex;
   align-items: center;
